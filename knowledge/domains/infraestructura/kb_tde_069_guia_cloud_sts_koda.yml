@@ -1,0 +1,53 @@
+# TDE Domain Guide 069 - Guía de Servicios en la Nube
+# Dominio: Infraestructura / Cloud
+
+_manifest:
+  urn: "urn:knowledge:tde:infraestructura:tde-069-guia-cloud-sts:1.0.0"
+  federation:
+    visibility: public
+    license: "CC-BY-4.0"
+  compatibility:
+    min_consumer_version: "1.0.0"
+    breaking_changes_from: null
+  resolution:
+    canonical_url: "file://knowledge/domains/infraestructura/kb_tde_069_guia_cloud_sts_koda.yml"
+    mirrors: []
+  dependencies:
+    requires:
+      - "urn:knowledge:koda:core:spec:1.0.0"
+      - "urn:knowledge:koda:core:transform:1.0.0"
+    source_files:
+      - "sources/tde_knowledge/kb_tde_069_guia_cloud_sts.md"
+  provenance:
+    created_by: "FS"
+    created_at: "2025-12-01"
+    last_modified_by: "FS"
+    last_modified_at: "2025-12-01"
+    signature: null
+
+ID: TDE-INFRA-069
+Version: 1.0.0
+Status: Draft
+Human-Creator: FS
+Human-Editor: FS
+Model-Collaborator: IA-CLAUDE
+Creation-Date: 2025-12-01
+Modification-Date: 2025-12-01
+Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para guía de cloud TDE."
+Ctx: "Guía para adquisición y operación de servicios en la nube para OAEs, alineada a la Norma Técnica TDE."
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-TDE-CLOUD-069
+  Req: "Mandatory block following Metadata."
+  Prohib: "Tratar esta guía como recomendación informal; muchas secciones son requisitos para contratación cloud."
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA/Spec artifact for cloud guidance.
+    1. Distingue claramente entre requisitos de seguridad, continuidad y ubicación de datos.
+    2. Mantén los vínculos con ciberseguridad, interoperabilidad y gestión documental cuando existan referencias cruzadas.
+    END_LLM_INSTRUCTIONS
+
+Section_1_Overview:
+  ID: TDE-CLOUD-OVERVIEW-01
+  Purp: "Dar visión general de lineamientos para servicios en la nube en el Estado."
+

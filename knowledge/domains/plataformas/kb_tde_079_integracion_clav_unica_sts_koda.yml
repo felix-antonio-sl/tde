@@ -1,0 +1,53 @@
+# TDE Domain Guide 079 - Integración ClaveÚnica
+# Dominio: Plataformas / ClaveÚnica
+
+_manifest:
+  urn: "urn:knowledge:tde:plataformas:tde-079-integracion-clave-unica-sts:1.0.0"
+  federation:
+    visibility: public
+    license: "CC-BY-4.0"
+  compatibility:
+    min_consumer_version: "1.0.0"
+    breaking_changes_from: null
+  resolution:
+    canonical_url: "file://knowledge/domains/plataformas/kb_tde_079_integracion_clav_unica_sts_koda.yml"
+    mirrors: []
+  dependencies:
+    requires:
+      - "urn:knowledge:koda:core:spec:1.0.0"
+      - "urn:knowledge:koda:core:transform:1.0.0"
+    source_files:
+      - "sources/tde_knowledge/kb_tde_079_integracion_clav_unica_sts.md"
+  provenance:
+    created_by: "FS"
+    created_at: "2025-12-01"
+    last_modified_by: "FS"
+    last_modified_at: "2025-12-01"
+    signature: null
+
+ID: TDE-PLAT-079
+Version: 1.0.0
+Status: Draft
+Human-Creator: FS
+Human-Editor: FS
+Model-Collaborator: IA-CLAUDE
+Creation-Date: 2025-12-01
+Modification-Date: 2025-12-01
+Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Guía de Integración ClaveÚnica."
+Ctx: "Guía para la integración de ClaveÚnica en servicios y plataformas del Estado."
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-TDE-PLAT-079
+  Req: "Mandatory block following Metadata."
+  Prohib: "Tratar ClaveÚnica como un simple login; respeta sus requisitos de seguridad y flujos de autenticación."
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA/Spec artifact for the ClaveÚnica integration guide.
+    1. Mantén claro el rol de ClaveÚnica como proveedor de identidad.
+    2. No inventes scopes o flujos de autenticación no documentados.
+    END_LLM_INSTRUCTIONS
+
+Section_1_Overview:
+  ID: TDE-PLAT-CLAVE-UNICA-OVERVIEW-01
+  Purp: "Resumir objetivos y consideraciones clave para integrar ClaveÚnica."
+

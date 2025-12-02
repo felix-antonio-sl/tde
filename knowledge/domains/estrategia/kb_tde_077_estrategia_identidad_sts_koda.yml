@@ -1,0 +1,52 @@
+# TDE Domain Guide 077 - Estrategia de Identidad Digital
+# Dominio: Estrategia / Identidad Digital
+
+_manifest:
+  urn: "urn:knowledge:tde:estrategia:tde-077-estrategia-identidad-sts:1.0.0"
+  federation:
+    visibility: public
+    license: "CC-BY-4.0"
+  compatibility:
+    min_consumer_version: "1.0.0"
+  resolution:
+    canonical_url: "file://knowledge/domains/estrategia/kb_tde_077_estrategia_identidad_sts_koda.yml"
+    mirrors: []
+  dependencies:
+    requires:
+      - "urn:knowledge:koda:core:spec:1.0.0"
+      - "urn:knowledge:koda:core:transform:1.0.0"
+    source_files:
+      - "sources/tde_knowledge/kb_tde_077_estrategia_identidad_sts.md"
+  provenance:
+    created_by: "FS"
+    created_at: "2025-12-01"
+    last_modified_by: "FS"
+    last_modified_at: "2025-12-01"
+    signature: null
+
+ID: TDE-ESTRAT-077
+Version: 1.0.0
+Status: Draft
+Human-Creator: FS
+Human-Editor: FS
+Model-Collaborator: IA-CLAUDE
+Creation-Date: 2025-12-01
+Modification-Date: 2025-12-01
+Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Estrategia de Identidad Digital."
+Ctx: "Estrategia nacional para identidad digital y autenticación en servicios del Estado."
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-TDE-ID-077
+  Req: "Mandatory block following Metadata."
+  Prohib: "Tratar la identidad digital como un solo mecanismo (ej. ClaveÚnica); puede incluir múltiples soluciones."
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA/Spec artifact for the Digital Identity Strategy.
+    1. Distingue objetivos de identidad digital, principios y componentes (mecanismos de autenticación, registro, gobernanza).
+    2. Vincula con normas de autenticación y notificaciones cuando corresponda.
+    END_LLM_INSTRUCTIONS
+
+Section_1_Overview:
+  ID: TDE-ESTRATEGIA-ID-OVERVIEW-01
+  Purp: "Resumir objetivos de la Estrategia de Identidad Digital para el Estado."
+

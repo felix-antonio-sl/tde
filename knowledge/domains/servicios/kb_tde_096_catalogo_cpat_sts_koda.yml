@@ -1,0 +1,53 @@
+# TDE Domain Guide 096 - Catálogo CPAT
+# Dominio: Servicios / CPAT
+
+_manifest:
+  urn: "urn:knowledge:tde:servicios:tde-096-catalogo-cpat-sts:1.0.0"
+  federation:
+    visibility: public
+    license: "CC-BY-4.0"
+  compatibility:
+    min_consumer_version: "1.0.0"
+    breaking_changes_from: null
+  resolution:
+    canonical_url: "file://knowledge/domains/servicios/kb_tde_096_catalogo_cpat_sts_koda.yml"
+    mirrors: []
+  dependencies:
+    requires:
+      - "urn:knowledge:koda:core:spec:1.0.0"
+      - "urn:knowledge:koda:core:transform:1.0.0"
+    source_files:
+      - "sources/tde_knowledge/kb_tde_096_catalogo_cpat_sts.md"
+  provenance:
+    created_by: "FS"
+    created_at: "2025-12-01"
+    last_modified_by: "FS"
+    last_modified_at: "2025-12-01"
+    signature: null
+
+ID: TDE-SERV-096
+Version: 1.0.0
+Status: Draft
+Human-Creator: FS
+Human-Editor: FS
+Model-Collaborator: IA-CLAUDE
+Creation-Date: 2025-12-01
+Modification-Date: 2025-12-01
+Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Catálogo CPAT (Ñuble)."
+Ctx: "Catálogo de procedimientos y trámites (CPAT), con foco en la realidad del GORE Ñuble."
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-TDE-SERV-096
+  Req: "Mandatory block following Metadata."
+  Prohib: "Tratar el catálogo solo como ejemplo genérico; refleja datos específicos de procedimientos."
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA/Spec artifact for the CPAT Catalog.
+    1. No inventes procedimientos; limítate a los descritos en el catálogo.
+    2. Usa el catálogo como base para ejemplos, explicitando que son casos CPAT.
+    END_LLM_INSTRUCTIONS
+
+Section_1_Overview:
+  ID: TDE-SERV-CATALOGO-CPAT-OVERVIEW-01
+  Purp: "Resumir propósito y estructura del catálogo CPAT utilizado en TDE."
+

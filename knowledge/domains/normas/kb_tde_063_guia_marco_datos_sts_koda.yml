@@ -1,0 +1,202 @@
+# TDE Domain Guide 063 - Marco de Referencia de Gestión de Datos del Estado (MGDE)
+# Dominio: Normas / Gestión de Datos
+
+_manifest:
+  urn: "urn:knowledge:tde:normas:tde-063-guia-marco-datos-sts:1.0.0"
+  federation:
+    visibility: public
+    license: "CC-BY-4.0"
+  compatibility:
+    min_consumer_version: "1.0.0"
+    breaking_changes_from: null
+  resolution:
+    canonical_url: "file://knowledge/domains/normas/kb_tde_063_guia_marco_datos_sts_koda.yml"
+    mirrors: []
+  dependencies:
+    requires:
+      - "urn:knowledge:koda:core:spec:1.0.0"
+      - "urn:knowledge:koda:core:transform:1.0.0"
+    source_files:
+      - "sources/tde_knowledge/kb_tde_063_guia_marco_datos_sts.md"
+  provenance:
+    created_by: "FS"
+    created_at: "2025-12-01"
+    last_modified_by: "FS"
+    last_modified_at: "2025-12-01"
+    signature: null
+
+ID: TDE-NORMAS-063
+Version: 1.0.0
+Status: Draft
+Human-Creator: FS
+Human-Editor: FS
+Model-Collaborator: IA-CLAUDE
+Creation-Date: 2025-12-01
+Modification-Date: 2025-12-01
+Version-Notes: "v1.0.0 - Esqueleto KODA/Spec del Marco de Referencia de Gestión de Datos del Estado (MGDE)."
+Ctx: "MGDE como marco nacional para gestión de datos en OAEs: fundamentos, dimensiones, modelo de madurez e implementación."
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-TDE-MGDE-063
+  Req: "Mandatory block following Metadata."
+  Prohib: "Tratar el MGDE como recomendación opcional; es marco de referencia formal."
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA/Spec artifact for the MGDE.
+    1. Usa IDs GESTDAT-* como anclas para secciones específicas.
+    2. Mantén clara la separación entre Fundamentos, Dimensiones, Modelo de Madurez e Implementación.
+    3. Conserva verbos normativos (Req) cuando existan obligaciones para OAEs.
+    4. Indica explícitamente cuando algo es ejemplo, recomendación o definición.
+    END_LLM_INSTRUCTIONS
+
+Section_1_Fundamentos_MGDE:
+  ID: GESTDAT-MGDE-FUNDAMENTOS-ROOT-01
+  Purp: "Establecer contexto, propósito y principios del MGDE."
+  Subsections:
+    - Ref: GESTDAT-MGDE-FUNDAMENTOS-PROPOSITO-01
+    - Ref: GESTDAT-MGDE-PRINCIPIOS-01
+    - Ref: GESTDAT-MGDE-CICLOVIDA-01
+
+  GESTDAT-MGDE-FUNDAMENTOS-PROPOSITO-01:
+    ID: GESTDAT-MGDE-FUNDAMENTOS-PROPOSITO-01
+    Obj:
+      - "Orientar a los OAEs en la adopción de buenas prácticas de gestión de datos usando el MGDE."
+    Fnd:
+      - "La gestión de datos es crítica para éxito organizacional y generación de valor público."
+      - "Se alinea con la OCDE y sus dimensiones de Gobierno Digital (digital por diseño, impulsado por datos, plataforma, abierto por defecto, dirigido por usuario, proactivo)."
+    Beneficios:
+      - "Alinear gestión de datos con objetivos estratégicos."
+      - "Mejorar calidad del servicio y eficiencia de procesos."
+      - "Disminuir tiempos de diseño y desarrollo."
+      - "Optimizar costos del ciclo de vida de soluciones."
+      - "Definir roles y responsabilidades."
+      - "Generar sinergias entre personas, procesos, información y tecnología."
+      - "Homogenizar comprensión de datos en el Estado."
+    Fnd_Legal:
+      - "Ley 21.658 (crea SGD, con misión de proponer Estrategia de Gobierno Digital y coordinar uso estratégico de datos)."
+      - "Ley 18.575 (Bases Generales de la Administración del Estado)."
+
+  GESTDAT-MGDE-PRINCIPIOS-01:
+    ID: GESTDAT-MGDE-PRINCIPIOS-01
+    Req:
+      - "Los OAEs deben suscribir e incorporar estos principios en su política de gobernanza de datos."
+    Principios:
+      - "Gestión de datos orientada a mejorar servicios a las personas."
+      - "Datos (internos/externos) como activos estratégicos (incluyendo documentos y contenidos digitales)."
+      - "Todo activo/conjunto de datos será catalogado y documentado con metadatos."
+      - "Cada activo/conjunto tendrá un responsable claro (administrador/custodio)."
+      - "Promover digitalización, uso analítico y trabajo colaborativo en torno a datos."
+      - "Promover evaluación sistemática de calidad de datos."
+      - "Promover interoperabilidad interna y externa."
+      - "Procurar uso ético de datos, cumpliendo normativa (especialmente protección de datos personales)."
+      - "Definir roles y responsabilidades de acceso a datos en contexto de seguridad institucional."
+      - "Planificar, implementar, evaluar y mejorar la gestión de datos de forma continua."
+
+  GESTDAT-MGDE-CICLOVIDA-01:
+    ID: GESTDAT-MGDE-CICLOVIDA-01
+    Purp: "Describir las 8 etapas del ciclo de vida de los datos."
+    Etapas:
+      - "Generación: creación de datos dentro o fuera de la organización."
+      - "Recolección: captura (formularios, apps, interoperabilidad, streaming)."
+      - "Procesamiento: conversiones, compresión, encriptación."
+      - "Almacenamiento: guardado para uso posterior."
+      - "Administración: gestión de calidad, seguridad y acceso."
+      - "Análisis: uso de datos para conocimiento y decisiones (incluye ciencia de datos e IA)."
+      - "Visualización: representaciones gráficas para comprensión."
+      - "Interpretación: entendimiento para toma de decisiones."
+
+Section_2_Dimensiones_MGDE:
+  ID: GESTDAT-MGDE-DIMENSIONES-ROOT-01
+  Purp: "Organizar buenas prácticas del MGDE en 12 dimensiones evaluadas por criterios y preguntas."
+  Resumen:
+    ID: GESTDAT-MGDE-DIMENSIONES-RESUMEN-01
+    Tabla_Dimensiones:
+      - Dim: "Visión estratégica"
+        Criterios: 7
+        Preguntas: 7
+      - Dim: "Gobernanza de datos"
+        Criterios: 7
+        Preguntas: 7
+      - Dim: "Arquitectura, diseño y documentación"
+        Criterios: 4
+        Preguntas: 6
+      - Dim: "Almacenamiento y operación"
+        Criterios: 1
+        Preguntas: 1
+      - Dim: "Seguridad y ciberseguridad de datos"
+        Criterios: 4
+        Preguntas: 6
+      - Dim: "Integración e interoperabilidad"
+        Criterios: 2
+        Preguntas: 4
+      - Dim: "Documentos y contenidos"
+        Criterios: 4
+        Preguntas: 4
+      - Dim: "Datos maestros y de referencia"
+        Criterios: 3
+        Preguntas: 3
+      - Dim: "Analítica e inteligencia de negocios"
+        Criterios: 3
+        Preguntas: 3
+      - Dim: "Calidad de datos"
+        Criterios: 2
+        Preguntas: 2
+      - Dim: "Datos abiertos"
+        Criterios: 3
+        Preguntas: 7
+      - Dim: "Aspectos legales y normativos"
+        Criterios: 2
+        Preguntas: 2
+
+Section_3_Modelo_Madurez:
+  ID: GESTDAT-MGDE-IMPL-MADUREZ-01
+  Purp: "Medir grado de desarrollo de la gestión de datos en una institución."
+  Niveles_Madurez:
+    - Nivel: 1
+      Nombre: "Insuficiente"
+      Desc: "No se cumplen los mínimos deseables."
+    - Nivel: 2
+      Nombre: "Básico"
+      Desc: "Se cumplen los mínimos deseables."
+    - Nivel: 3
+      Nombre: "Medio"
+      Desc: "Se profundiza en cada dimensión."
+    - Nivel: 4
+      Nombre: "Avanzado"
+      Desc: "Se aborda a cabalidad cada dimensión."
+  Metodo_Autoevaluacion:
+    ID: GESTDAT-MGDE-IMPL-AUTOEVAL-01
+    Mech:
+      - "Uso de matriz de evaluación (Anexo) con preguntas y respuestas por nivel."
+      - "Puntajes por respuesta: Insuficiente=0, Básico=2, Medio=4, Avanzado=6."
+      - "Cálculo de puntajes por dimensión y global; clasificación por intervalos de porcentaje."
+
+Section_4_Implementacion:
+  ID: GESTDAT-MGDE-IMPL-PLAN-01
+  Purp: "Estructurar proceso de implementación del MGDE en un OAE."
+  Hoja_Ruta:
+    Req:
+      - "Definir nivel de madurez esperado."
+      - "Priorizar dimensiones críticas (al menos 3)."
+      - "Combinar enfoques top-down y bottom-up."
+      - "Alinear con marcos de trabajo existentes (procesos, calidad, TI, TD, gestión documental, arquitectura)."
+  Etapas_Plan:
+    - Etapa: 1
+      Nombre: "Diagnóstico y Estrategia"
+      Duracion_Referencial: "4-8 meses"
+    - Etapa: 2
+      Nombre: "Implementación Básica"
+      Duracion_Referencial: "8-12 meses"
+    - Etapa: 3
+      Nombre: "Implementación Avanzada"
+      Duracion_Referencial: "12-18 meses"
+  Organizacion_Roles:
+    Esquemas_Organicos:
+      - "Equipos Compartidos (modelo descentralizado)."
+      - "Equipo Dedicado (unidad centralizada)."
+      - "Esquema Mixto con matriz RACI."
+    Roles_Claves:
+      - "Director de Datos (CDO)"
+      - "Administrador/Custodio de Datos (Data Steward)"
+      - "Analista de Datos (Data Analyst)"
+      - "Arquitecto de Datos (Data Architect)"

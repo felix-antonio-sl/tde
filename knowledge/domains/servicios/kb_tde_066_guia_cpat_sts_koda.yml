@@ -1,0 +1,53 @@
+# TDE Domain Guide 066 - Guía CPAT
+# Dominio: Servicios / CPAT
+
+_manifest:
+  urn: "urn:knowledge:tde:servicios:tde-066-guia-cpat-sts:1.0.0"
+  federation:
+    visibility: public
+    license: "CC-BY-4.0"
+  compatibility:
+    min_consumer_version: "1.0.0"
+    breaking_changes_from: null
+  resolution:
+    canonical_url: "file://knowledge/domains/servicios/kb_tde_066_guia_cpat_sts_koda.yml"
+    mirrors: []
+  dependencies:
+    requires:
+      - "urn:knowledge:koda:core:spec:1.0.0"
+      - "urn:knowledge:koda:core:transform:1.0.0"
+    source_files:
+      - "sources/tde_knowledge/kb_tde_066_guia_cpat_sts.md"
+  provenance:
+    created_by: "FS"
+    created_at: "2025-12-01"
+    last_modified_by: "FS"
+    last_modified_at: "2025-12-01"
+    signature: null
+
+ID: TDE-SERV-066
+Version: 1.0.0
+Status: Draft
+Human-Creator: FS
+Human-Editor: FS
+Model-Collaborator: IA-CLAUDE
+Creation-Date: 2025-12-01
+Modification-Date: 2025-12-01
+Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Guía CPAT."
+Ctx: "Guía para gestión del Catálogo de Procedimientos y Trámites (CPAT)."
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-TDE-SERV-066
+  Req: "Mandatory block following Metadata."
+  Prohib: "Confundir CPAT con un listado informal; es un catálogo estructurado de procedimientos y trámites."
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA/Spec artifact for the CPAT Guide.
+    1. Trata CPAT como instrumento estructurado de gestión de trámites.
+    2. Distingue claramente entre campos, atributos y usos del catálogo.
+    END_LLM_INSTRUCTIONS
+
+Section_1_Overview:
+  ID: TDE-SERV-CPAT-OVERVIEW-01
+  Purp: "Resumir propósito del CPAT y su rol en la gestión de servicios."
+

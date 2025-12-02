@@ -1,0 +1,53 @@
+# TDE Domain Guide 071 - Guía de Institucionalidad TIC
+# Dominio: Plataformas / Institucionalidad
+
+_manifest:
+  urn: "urn:knowledge:tde:plataformas:tde-071-guia-institucionalidad-sts:1.0.0"
+  federation:
+    visibility: public
+    license: "CC-BY-4.0"
+  compatibility:
+    min_consumer_version: "1.0.0"
+    breaking_changes_from: null
+  resolution:
+    canonical_url: "file://knowledge/domains/plataformas/kb_tde_071_guia_institucionalidad_sts_koda.yml"
+    mirrors: []
+  dependencies:
+    requires:
+      - "urn:knowledge:koda:core:spec:1.0.0"
+      - "urn:knowledge:koda:core:transform:1.0.0"
+    source_files:
+      - "sources/tde_knowledge/kb_tde_071_guia_institucionalidad_sts.md"
+  provenance:
+    created_by: "FS"
+    created_at: "2025-12-01"
+    last_modified_by: "FS"
+    last_modified_at: "2025-12-01"
+    signature: null
+
+ID: TDE-PLAT-071
+Version: 1.0.0
+Status: Draft
+Human-Creator: FS
+Human-Editor: FS
+Model-Collaborator: IA-CLAUDE
+Creation-Date: 2025-12-01
+Modification-Date: 2025-12-01
+Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Guía de Institucionalidad TIC."
+Ctx: "Guía sobre institucionalidad y gobernanza TIC en el Estado."
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-TDE-PLAT-071
+  Req: "Mandatory block following Metadata."
+  Prohib: "Confundir institucionalidad TIC con estructura cualquiera; respeta los roles y órganos definidos."
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA/Spec artifact for the ICT Institutional Framework guide.
+    1. Distingue claramente roles, responsabilidades y órganos de gobernanza.
+    2. No inventes estructuras organizacionales fuera de lo descrito.
+    END_LLM_INSTRUCTIONS
+
+Section_1_Overview:
+  ID: TDE-PLAT-INSTITUCIONALIDAD-OVERVIEW-01
+  Purp: "Resumir los elementos clave de la institucionalidad TIC descrita en la guía."
+

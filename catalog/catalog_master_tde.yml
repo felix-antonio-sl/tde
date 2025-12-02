@@ -19,8 +19,12 @@ Catalog:
     #   file: "knowledge/core/guide_core_001_example_tde.yml"
     #   status: draft
 
-  Agents: []
-    # Add your agents here
+  Agents:
+    - urn: "urn:knowledge:tde:agents:digitrans:1.0.0"
+      title: "DIGITRANS Agent"
+      description: "Expert advisor for Digital Transformation of the State (TDE) - Chile"
+      file: "agents/digitrans/agent_digitrans.yaml"
+      status: published
 
   Schemas: []
     # Add your schemas here
@@ -29,9 +33,9 @@ Catalog:
     # Add domain-specific knowledge here
 
 Statistics:
-  total_artifacts: 0
+  total_artifacts: 1
   core_guides: 0
-  agents: 0
+  agents: 1
   schemas: 0
   domains: 0
-  last_updated: "2025-11-29"
+  last_updated: "2025-12-01"

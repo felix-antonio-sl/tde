@@ -10,8 +10,8 @@ _meta:
 
 self:
   namespace: "tde"
-  repository: "github.com/Transformación Digital del Estado/tde"
-  visibility: public
+  repository: "github.com/felix-antonio-sl/tde"
+  visibility: private
   maintainer: "maintainer@example.com"
 
 namespaces:

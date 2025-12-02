@@ -1,0 +1,53 @@
+# TDE Domain Guide 078 - Guía SIMPLE SaaS
+# Dominio: Plataformas / SIMPLE SaaS
+
+_manifest:
+  urn: "urn:knowledge:tde:plataformas:tde-078-guia-simple-saas-sts:1.0.0"
+  federation:
+    visibility: public
+    license: "CC-BY-4.0"
+  compatibility:
+    min_consumer_version: "1.0.0"
+    breaking_changes_from: null
+  resolution:
+    canonical_url: "file://knowledge/domains/plataformas/kb_tde_078_guia_simple_saas_sts_koda.yml"
+    mirrors: []
+  dependencies:
+    requires:
+      - "urn:knowledge:koda:core:spec:1.0.0"
+      - "urn:knowledge:koda:core:transform:1.0.0"
+    source_files:
+      - "sources/tde_knowledge/kb_tde_078_guia_simple_saas_sts.md"
+  provenance:
+    created_by: "FS"
+    created_at: "2025-12-01"
+    last_modified_by: "FS"
+    last_modified_at: "2025-12-01"
+    signature: null
+
+ID: TDE-PLAT-078
+Version: 1.0.0
+Status: Draft
+Human-Creator: FS
+Human-Editor: FS
+Model-Collaborator: IA-CLAUDE
+Creation-Date: 2025-12-01
+Modification-Date: 2025-12-01
+Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Guía SIMPLE SaaS."
+Ctx: "Guía para uso e implementación de la plataforma SIMPLE SaaS."
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-TDE-PLAT-078
+  Req: "Mandatory block following Metadata."
+  Prohib: "Tratar SIMPLE como plataforma genérica; respeta sus componentes y restricciones."
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA/Spec artifact for the SIMPLE SaaS guide.
+    1. Mantén claro el alcance de SIMPLE (tipos de trámites/procesos que cubre).
+    2. No extrapoles funcionalidades que la guía no describa.
+    END_LLM_INSTRUCTIONS
+
+Section_1_Overview:
+  ID: TDE-PLAT-SIMPLE-OVERVIEW-01
+  Purp: "Resumir propósito y alcance de la plataforma SIMPLE SaaS."
+

@@ -1,0 +1,174 @@
+# TDE Domain Guide 064 - Metadatos para Documentos y Expedientes Electrónicos
+# Dominio: Normas / Metadatos Documentales
+
+_manifest:
+  urn: "urn:knowledge:tde:normas:tde-064-guia-metadatos-docs-sts:1.0.0"
+  federation:
+    visibility: public
+    license: "CC-BY-4.0"
+  compatibility:
+    min_consumer_version: "1.0.0"
+    breaking_changes_from: null
+  resolution:
+    canonical_url: "file://knowledge/domains/normas/kb_tde_064_guia_metadatos_docs_sts_koda.yml"
+    mirrors: []
+  dependencies:
+    requires:
+      - "urn:knowledge:koda:core:spec:1.0.0"
+      - "urn:knowledge:koda:core:transform:1.0.0"
+    source_files:
+      - "sources/tde_knowledge/kb_tde_064_guia_metadatos_docs_sts.md"
+  provenance:
+    created_by: "FS"
+    created_at: "2025-12-01"
+    last_modified_by: "FS"
+    last_modified_at: "2025-12-01"
+    signature: null
+
+ID: TDE-NORMAS-064
+Version: 1.0.0
+Status: Draft
+Human-Creator: FS
+Human-Editor: FS
+Model-Collaborator: IA-CLAUDE
+Creation-Date: 2025-12-01
+Modification-Date: 2025-12-01
+Version-Notes: "v1.0.0 - Esqueleto KODA/Spec de la guía de metadatos para documentos y expedientes electrónicos."
+Ctx: "Guía técnica que operacionaliza la Norma Técnica de Documentos y Expedientes Electrónicos, definiendo metadatos para expedientes y documentos."
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-TDE-META-064
+  Req: "Mandatory block following Metadata."
+  Prohib: "Simplificar metadatos a 'campos opcionales'; muchos son obligatorios/condicionales."
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA/Spec artifact for TDE metadata.
+    1. Distingue claramente entre metadatos obligatorios, condicionales y sugeridos.
+    2. Usa los códigos MGDEE* y MGDDE* como anclas, sin inventar nuevos códigos.
+    3. Si una pregunta es de implementación, responde desde la guía (no desde preferencias de software específicas).
+    END_LLM_INSTRUCTIONS
+
+Section_1_Introduccion:
+  ID: GDE-META-INTRO-01
+  Purp: "Establecer contexto legal, normativo y técnico para metadatos en gestión documental del Estado."
+  Fnd:
+    - "Ley 21.180 (Transformación Digital del Estado)."
+    - "DS N° 4, 2020 (Reglamento TDE)."
+    - "DS N° 10, 2023 (Norma Técnica de Documentos y Expedientes Electrónicos)."
+  Fnd_ISO:
+    - "ISO 15489 (Gestión de documentos)."
+    - "ISO 23081 (Metadatos para gestión de documentos)."
+
+Section_2_Esquema_General:
+  ID: GDE-META-ESQUEMA-ROOT-01
+  Purp: "Presentar estructura general de metadatos para expedientes y documentos."
+  Entidades_Principales:
+    - "Documento"
+    - "Expediente"
+    - "Actor (institución o persona)"
+    - "Relación (asociaciones entre entidades)"
+  Cuantificacion:
+    Expediente:
+      Total_Elementos: 29
+      Obligatorios: 18
+      Condicionales: 5
+      Sugeridos: 6
+    Documento:
+      Total_Elementos: 46
+      Obligatorios: 12
+      Condicionales: 16
+      Sugeridos: 18
+  Leyenda:
+    ID: GDE-META-ESQUEMA-LEYENDA-01
+    Cpt:
+      - "Color-Verde: metadato obligatorio."
+      - "Color-Amarillo: metadato condicional."
+      - "Color-Blanco: metadato sugerido."
+      - "AN: requerido por Archivo Nacional para transferencia."
+      - "MU: metadato múltiple (varios valores)."
+
+Section_3_Metadatos_Expedientes:
+  ID: GDE-META-EXPEDIENTES-ROOT-01
+  Purp: "Definir conjunto de metadatos aplicables a un expediente electrónico."
+  Tabla_Resumen:
+    ID: GDE-META-EXPEDIENTES-TABLA-01
+    Grupos:
+      - Grupo: "Identificación"
+        Codificacion: 1
+        Elementos:
+          - Cod: MGDEE1_1
+            Nombre: "Identificador de expediente"
+            Def: "Número único (ID) asignado automáticamente a un expediente."
+            Flags: ["AN"]
+          - Cod: MGDEE1_2
+            Nombre: "Código serie"
+          - Cod: MGDEE1_3
+            Nombre: "Número del expediente"
+          - Cod: MGDEE1_4
+            Nombre: "Estado"
+          - Cod: MGDEE1_5
+            Nombre: "Título del expediente"
+            Flags: ["AN"]
+      - Grupo: "Descripción"
+        Codificacion: 2
+        Elementos:
+          - Cod: MGDEE2_1
+            Nombre: "Resumen"
+          - Cod: MGDEE2_2
+            Nombre: "Asunto del expediente"
+            Flags: ["AN"]
+      - Grupo: "Temporalidad"
+        Codificacion: 3
+        Elementos:
+          - Cod: MGDEE3_1
+            Nombre: "Fecha de creación"
+            Flags: ["AN"]
+          - Cod: MGDEE3_2
+            Nombre: "Fecha de finalización"
+            Flags: ["AN"]
+      - Grupo: "Relaciones con OAEs"
+        Codificacion: 5.1
+        Elementos:
+          - Cod: MGDEE51_1
+            Nombre: "Código de OAE productor"
+            Flags: ["AN"]
+          - Cod: MGDEE51_3
+            Nombre: "Tipo Relación OAE"
+            Flags: ["MU"]
+          - Cod: MGDEE51_4
+            Nombre: "Código de OAE relacionado"
+            Flags: ["MU"]
+
+Section_4_Metadatos_Documentos:
+  ID: GDE-META-DOC-ROOT-01
+  Purp: "Definir metadatos aplicables a documentos electrónicos."
+  Ejemplos_Clave:
+    - Cod: MGDDE1_6
+      Nombre: "Título del documento"
+      Flags: []
+      Mech: "Manual"
+      Tipo_Dato: "Texto"
+    - Cod: MGDDE2_3
+      Nombre: "Formato"
+      Mech: "Automático"
+      Tipo_Dato: "Texto"
+      Ej: "pdf"
+    - Cod: MGDDE3_2
+      Nombre: "Palabras claves documento"
+      Mech: "Manual o vocabulario controlado"
+      Tipo_Dato: "Texto"
+    - Cod: MGDDE4_1
+      Nombre: "Fecha de creación"
+      Mech: "Automático"
+      Tipo_Dato: "Fecha/Hora (ISO 8601)"
+    - Cod: MGDDE5_1
+      Nombre: "Tipo documental"
+      Mech: "Manual, lista controlada"
+      Cond: "Obligatorio cuando exista tipificación documental."
+
+Section_5_Implementacion:
+  ID: GDE-META-IMPLEMENTACION-01
+  Purp: "Orientar a OAEs sobre implementación práctica de metadatos."
+  Req:
+    - "Cada institución debe disponer cómo implementa el registro (repositorios, BBDD, etc.), garantizando que todos los expedientes y documentos cuenten con metadatos."
+    - "Metadatos deben generarse en formato estandarizado compatible con interoperabilidad y transferencia al Archivo Nacional."

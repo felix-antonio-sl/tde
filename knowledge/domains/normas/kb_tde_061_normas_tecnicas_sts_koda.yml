@@ -1,0 +1,215 @@
+# TDE Domain Guide 061 - Normas Técnicas para la Transformación Digital del Estado
+# Dominio: Normas Técnicas (Seguridad, Documentos/Expedientes, Interoperabilidad, Calidad)
+
+_manifest:
+  urn: "urn:knowledge:tde:normas:tde-061-normas-tecnicas-sts:1.0.0"
+  federation:
+    visibility: public
+    license: "CC-BY-4.0"
+  compatibility:
+    min_consumer_version: "1.0.0"
+    breaking_changes_from: null
+  resolution:
+    canonical_url: "file://knowledge/domains/normas/kb_tde_061_normas_tecnicas_sts_koda.yml"
+    mirrors: []
+  dependencies:
+    requires:
+      - "urn:knowledge:koda:core:spec:1.0.0"
+      - "urn:knowledge:koda:core:transform:1.0.0"
+    source_files:
+      - "sources/tde_knowledge/kb_tde_061_normas_tecnicas_sts.md"  # Legacy STS source
+  provenance:
+    created_by: "FS"
+    created_at: "2025-12-01"
+    last_modified_by: "FS"
+    last_modified_at: "2025-12-01"
+    signature: null
+
+ID: TDE-NORMAS-061
+Version: 1.0.0
+Status: Draft
+Human-Creator: FS
+Human-Editor: FS
+Model-Collaborator: IA-CLAUDE
+Creation-Date: 2025-12-01
+Modification-Date: 2025-12-01
+Version-Notes: "v1.0.0 - Esqueleto KODA/Spec de las Normas Técnicas TDE, derivado de kb_tde_061_normas_tecnicas_sts.md."
+Ctx: "Normas técnicas que desarrollan la Ley 21.180 y el Reglamento (DS 4/2020) para seguridad de la información, documentos/expedientes electrónicos, interoperabilidad y calidad de plataformas."
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-TDE-NORMAS-061
+  Req: "Mandatory block following Metadata."
+  Prohib: "Usar este artifact para reinterpretar normas técnicas; es una cartografía estructurada."
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA/Spec artifact for TDE Technical Norms.
+    Your job is to:
+    1. Preservar la estructura por Norma → Artículo → Subtema.
+    2. Tratar cada ID como ancla normativa estable (no inventar nuevos IDs).
+    3. Al responder, citar siempre el ID más específico disponible.
+    4. Mantener verbos normativos (Req, Prohib, Cond, Act, Res, Cpt, Mech).
+    5. Declarar incertidumbre cuando la pregunta exceda el ámbito de estas normas.
+    END_LLM_INSTRUCTIONS
+
+Section_1_Overview:
+  ID: TDE-NORMAS-OVERVIEW-01
+  Src: LT-TD-NORMAS-01
+  Purp: "Consolidar el panorama de las Normas Técnicas que habilitan la Transformación Digital del Estado."
+  Def: |
+    Las Normas Técnicas desarrollan la Ley 21.180 y su Reglamento, estableciendo
+    requisitos obligatorios para seguridad de la información y ciberseguridad,
+    documentos y expedientes electrónicos, calidad de plataformas y operación
+    de interoperabilidad.
+  Normas_Principales:
+    - Ref: LT-NORMA-CIBERSEG-DS7-01
+      Desc: "Norma Técnica de Seguridad de la Información y Ciberseguridad (DS 7/2023)."
+    - Ref: LT-NORMA-DOCEXP-DS10-01
+      Desc: "Norma Técnica de Documentos y Expedientes Electrónicos (DS 10/2023)."
+    - Ref: LT-NORMA-AUTENT-DS9-01
+      Desc: "Norma Técnica de Autenticación y Firma Electrónica (DS 9/2023)."
+    - Ref: LT-NORMA-INTEROP-DS12-01
+      Desc: "Norma Técnica de Interoperabilidad (DS 12/2023)."
+    - Ref: LT-NORMA-CALIDAD-DS11-01
+      Desc: "Norma Técnica de Calidad y Funcionamiento de Plataformas Electrónicas (DS 11/2023)."
+
+Section_2_Norma_Ciberseguridad:
+  ID: LT-NORMA-CIBERSEG-DS7-01
+  Nat: "Norma Técnica"
+  Titulo: "Seguridad de la Información y Ciberseguridad"
+  Purp: "Establecer estándares y directrices técnicas sobre seguridad de la información y ciberseguridad para plataformas electrónicas TDE."
+  Fnd:
+    - "Decreto Supremo N° 7, 2023, MINSEGPRES"
+    - "Ley 21.180 (Transformación Digital del Estado)"
+    - "Ley 19.880 (Bases de los Procedimientos Administrativos)"
+    - "DS N° 4, 2020 (Reglamento Ley 21.180)"
+    - "DFL N° 1, 2020 (Gradualidad Ley 21.180)"
+    - "DS N° 83, 2004 (Seguridad de documentos electrónicos)"
+    - "Instructivo Presidencial N° 8, 2018 (Ciberseguridad)"
+  Ctx:
+    Promulgacion: "2023-05-19"
+    Publicacion: "2023-08-17"
+  Subsections:
+    - Ref: LT-NORMA-CIBERSEG-ART1-OBJETO-01
+    - Ref: LT-NORMA-CIBERSEG-ART2-DEFINICIONES-01
+    - Ref: LT-NORMA-CIBERSEG-ART3-MARCO-01
+    - Ref: LT-NORMA-CIBERSEG-ART4-DIAGNOSTICO-01
+    - Ref: LT-NORMA-CIBERSEG-ART5-POLITICA-01
+    - Ref: LT-NORMA-CIBERSEG-FUNCIONES-INTRO-01
+    - Ref: LT-NORMA-CIBERSEG-ART7-IDENTIFICACION-01
+    - Ref: LT-NORMA-CIBERSEG-ART8-PROTECCION-01
+    - Ref: LT-NORMA-CIBERSEG-ART9-DETECCION-01
+    - Ref: LT-NORMA-CIBERSEG-ART10-RESPUESTA-01
+    - Ref: LT-NORMA-CIBERSEG-ART11-RECUPERACION-01
+
+  LT-NORMA-CIBERSEG-ART1-OBJETO-01:
+    ID: LT-NORMA-CIBERSEG-ART1-OBJETO-01
+    Purp: "Definir estándares y directrices técnicas sobre seguridad de la información y ciberseguridad."
+    Dest: "Órganos de la Administración del Estado (OAE)."
+    Obj:
+      - "Resguardar confidencialidad, integridad y disponibilidad (CID) de información e infraestructura."
+      - "Aplicarse a plataformas electrónicas usadas en procedimientos administrativos."
+
+  LT-NORMA-CIBERSEG-ART2-DEFINICIONES-01:
+    ID: LT-NORMA-CIBERSEG-ART2-DEFINICIONES-01
+    Defs_Clave:
+      - Term: "Activo"
+        Def: "Elemento lógico o físico relacionado con el ciclo de vida de la información."
+      - Term: "Activo de Información"
+        Def: "Datos/información esenciales para el OAE que requieren protección CID."
+      - Term: "Ciberseguridad y Seguridad de la Información"
+        Def: "Conjunto de acciones y políticas preventivas/reactivas para gestionar amenazas y proteger la CID."
+      - Term: "Incidente de Seguridad"
+        Def: "Evento indeseado que compromete la CID de sistemas, activos o servicios."
+      - Term: "Gestión de Riesgo"
+        Def: "Proceso estructurado para identificar, evaluar y tratar riesgos."
+
+  LT-NORMA-CIBERSEG-ART3-MARCO-01:
+    ID: LT-NORMA-CIBERSEG-ART3-MARCO-01
+    Instr: "Estructurar el trabajo de seguridad a partir de diagnóstico inicial y funciones/categorías."
+    Req:
+      - "Realizar diagnóstico inicial de ciberseguridad (Ref: LT-NORMA-CIBERSEG-ART4-DIAGNOSTICO-01)."
+      - "Definir funciones y categorías (Ref: LT-NORMA-CIBERSEG-FUNCIONES-INTRO-01)."
+      - "Generar e implementar Política de Seguridad (Ref: LT-NORMA-CIBERSEG-ART5-POLITICA-01)."
+
+  LT-NORMA-CIBERSEG-ART5-POLITICA-01:
+    ID: LT-NORMA-CIBERSEG-ART5-POLITICA-01
+    Req:
+      - "Cada OAE debe elaborar una Política de Seguridad de la Información y Ciberseguridad."
+      - "La Política debe ser aprobada por acto administrativo del Jefe Superior de Servicio."
+    Contenido_Minimo:
+      - "Objetivos generales y específicos."
+      - "Alcance: activos a proteger, roles y funciones."
+      - "Legislación y normativa aplicable."
+      - "Roles y responsables (Responsable Institucional y de Activos de Información, no externalizables)."
+
+  LT-NORMA-CIBERSEG-FUNCIONES-INTRO-01:
+    ID: LT-NORMA-CIBERSEG-FUNCIONES-INTRO-01
+    Purp: "Introducir 5 funciones clave para implementar la Política de Seguridad."
+    Funciones:
+      - "Identificación (ID: LT-NORMA-CIBERSEG-ART7-IDENTIFICACION-01)."
+      - "Protección (ID: LT-NORMA-CIBERSEG-ART8-PROTECCION-01)."
+      - "Detección (ID: LT-NORMA-CIBERSEG-ART9-DETECCION-01)."
+      - "Respuesta (ID: LT-NORMA-CIBERSEG-ART10-RESPUESTA-01)."
+      - "Recuperación (ID: LT-NORMA-CIBERSEG-ART11-RECUPERACION-01)."
+
+Section_3_Norma_Documentos_Expedientes:
+  ID: LT-NORMA-DOCEXP-DS10-01
+  Nat: "Norma Técnica"
+  Titulo: "Documentos y Expedientes Electrónicos"
+  Purp: "Definir requisitos para la gestión de documentos y expedientes electrónicos en plataformas TDE."
+  Fnd:
+    - "Decreto Supremo N° 10, 2023, MINSEGPRES"
+    - "Ley 21.180"
+    - "DS N° 4, 2020 (Reglamento)"
+  Subsections:
+    - Ref: LT-NORMA-DOCEXP-ART1-OBJETO-01
+    - Ref: LT-NORMA-DOCEXP-ART5-SISTEMA-01
+    - Ref: LT-NORMA-DOCEXP-ART6-PLATAFORMA-GE-01
+    - Ref: LT-NORMA-DOCEXP-ART7-REPOSITORIO-01
+    - Ref: LT-NORMA-DOCEXP-ART11-TRAZABILIDAD-MINIMA-01
+    - Ref: LT-NORMA-DOCEXP-ART12-ESTRUCTURA-DOC-E-01
+    - Ref: LT-NORMA-DOCEXP-ART14-METADATOS-DOC-E-01
+    - Ref: LT-NORMA-DOCEXP-ART18-CREACION-EXP-E-01
+    - Ref: LT-NORMA-DOCEXP-ART19-ESQUEMA-ESTRUCTURAL-01
+    - Ref: LT-NORMA-DOCEXP-ART21-INCORPORACION-DOCS-01
+    - Ref: LT-NORMA-DOCEXP-ART24-DATOS-INTEROP-01
+    - Ref: LT-NORMA-DOCEXP-ART25-MICROFORMAS-01
+    - Ref: LT-NORMA-DOCEXP-ART26-EXPEDIENTES-HIBRIDOS-01
+    - Ref: LT-NORMA-DOCEXP-ART30-CERTIFICADO-PRESENTACION-01
+
+  LT-NORMA-DOCEXP-ART11-TRAZABILIDAD-MINIMA-01:
+    ID: LT-NORMA-DOCEXP-ART11-TRAZABILIDAD-MINIMA-01
+    Purp: "Definir trazabilidad mínima obligatoria para plataformas de gestión documental."
+    Req:
+      - "Registrar creación, incorporación, modificación, transferencia y eliminación de documentos/expedientes."
+      - "Registrar accesos al expediente."
+      - "Registrar autorizaciones de poderes cuando proceda."
+
+  LT-NORMA-DOCEXP-ART19-ESQUEMA-ESTRUCTURAL-01:
+    ID: LT-NORMA-DOCEXP-ART19-ESQUEMA-ESTRUCTURAL-01
+    Cpt:
+      - "Documentos electrónicos estandarizados."
+      - "Índice electrónico."
+      - "Metadatos estandarizados."
+      - "Registro de trazabilidad."
+      - "Registro de accesos."
+      - "Registro de actos administrativos y otras acciones de gestión documental."
+
+Section_4_Norma_Calidad_Plataformas:
+  ID: LT-NORMA-CALIDAD-DS11-01
+  Nat: "Norma Técnica"
+  Titulo: "Calidad y Funcionamiento de Plataformas Electrónicas"
+  Purp: "Definir estándares de calidad, continuidad y resiliencia para plataformas electrónicas TDE."
+  Fnd:
+    - "Decreto Supremo N° 11, 2023, MINSEGPRES"
+  Subsections:
+    - Ref: LT-NORMA-CALIDAD-ART1-OBJETO-01
+    - Ref: LT-NORMA-CALIDAD-ART2-DEFINICIONES-01
+    - Ref: LT-NORMA-CALIDAD-ART3-CATALOGO-01
+
+  LT-NORMA-CALIDAD-ART3-CATALOGO-01:
+    ID: LT-NORMA-CALIDAD-ART3-CATALOGO-01
+    Purp: "Regular el catálogo de plataformas electrónicas y su línea base."
+    Req:
+      - "Cada OAE debe elaborar un Catálogo de Plataformas Electrónicas antes del ciclo de gestión de calidad."
+      - "El catálogo debe incluir una línea de base (estado inicial) de cada plataforma."

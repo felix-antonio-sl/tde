@@ -1,0 +1,53 @@
+# TDE Domain Guide 070 - Guía Metodología TxDig
+# Dominio: Plataformas / Metodología TxDig
+
+_manifest:
+  urn: "urn:knowledge:tde:plataformas:tde-070-guia-txdig-sts:1.0.0"
+  federation:
+    visibility: public
+    license: "CC-BY-4.0"
+  compatibility:
+    min_consumer_version: "1.0.0"
+    breaking_changes_from: null
+  resolution:
+    canonical_url: "file://knowledge/domains/plataformas/kb_tde_070_guia_txdig_sts_koda.yml"
+    mirrors: []
+  dependencies:
+    requires:
+      - "urn:knowledge:koda:core:spec:1.0.0"
+      - "urn:knowledge:koda:core:transform:1.0.0"
+    source_files:
+      - "sources/tde_knowledge/kb_tde_070_guia_txdig_sts.md"
+  provenance:
+    created_by: "FS"
+    created_at: "2025-12-01"
+    last_modified_by: "FS"
+    last_modified_at: "2025-12-01"
+    signature: null
+
+ID: TDE-PLAT-070
+Version: 1.0.0
+Status: Draft
+Human-Creator: FS
+Human-Editor: FS
+Model-Collaborator: IA-CLAUDE
+Creation-Date: 2025-12-01
+Modification-Date: 2025-12-01
+Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Guía Metodología TxDig."
+Ctx: "Guía metodológica para proyectos de transformación digital (TxDig)."
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-TDE-PLAT-070
+  Req: "Mandatory block following Metadata."
+  Prohib: "Tratar TxDig como marco genérico; respeta fases y artefactos definidos."
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA/Spec artifact for the TxDig methodology guide.
+    1. Respeta la secuencia de fases y entregables definida en la guía.
+    2. No mezcles TxDig con otras metodologías salvo que la fuente lo indique.
+    END_LLM_INSTRUCTIONS
+
+Section_1_Overview:
+  ID: TDE-PLAT-TXDIG-OVERVIEW-01
+  Purp: "Resumir propósito, principios y fases principales de la metodología TxDig."
+

@@ -1,0 +1,262 @@
+# TDE Core Guide 060 - Marco Regulatorio TDE (Ley 21.658, Ley 21.180, Ley 19.880, Decreto 4/2020)
+# Dominio: Regulación de la Transformación Digital del Estado
+
+_manifest:
+  urn: "urn:knowledge:tde:regulacion:tde-060-regulacion-sts:1.0.0"
+  federation:
+    visibility: public
+    license: "CC-BY-4.0"
+  compatibility:
+    min_consumer_version: "1.0.0"
+    breaking_changes_from: null
+  resolution:
+    canonical_url: "file://knowledge/domains/regulacion/kb_tde_060_regulacion_sts_koda.yml"
+    mirrors: []
+  dependencies:
+    requires:
+      - "urn:knowledge:koda:core:spec:1.0.0"
+      - "urn:knowledge:koda:core:transform:1.0.0"
+    source_files:
+      - "sources/tde_knowledge/kb_tde_060_regulacion_sts.md"  # Legacy STS source
+  provenance:
+    created_by: "FS"
+    created_at: "2025-12-01"
+    last_modified_by: "FS"
+    last_modified_at: "2025-12-01"
+    signature: null
+
+ID: TDE-CORE-REG-060
+Version: 1.0.0
+Status: Draft
+Human-Creator: FS
+Human-Editor: FS
+Model-Collaborator: IA-CLAUDE
+Creation-Date: 2025-12-01
+Modification-Date: 2025-12-01
+Version-Notes: "v1.0.0 - Primer artefacto KODA/Spec para regulación TDE, derivado de kb_tde_060_regulacion_sts.md."
+Ctx: "Marco regulatorio de la Transformación Digital del Estado en Chile: creación SGD (Ley 21.658), Ley 21.180, Ley 19.880 consolidada y Decreto 4/2020, migrado desde STS/markdown a formato KODA/Spec."
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-TDE-REG-060
+  Req: "Mandatory block following Metadata."
+  Prohib: "Usar este artifact para reescritura creativa; es una representación estructural normativa."
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA/Spec artifact for TDE regulation.
+    Your job is to parse structure and references with absolute fidelity to Chilean law.
+
+    1. Preserve the hierarchy as written (Law -> Article -> Sub-article -> Item).
+    2. Treat each ID as a stable anchor; do NOT invent new IDs.
+    3. When answering, always cite the most specific ID available (e.g., REG-L21180-ART1-MOD-ART5-01).
+    4. Do not paraphrase legal obligations loosely; keep normative verbs (Req, Prohib, Cond, Act, Res).
+    5. If a question excede el ámbito de estas normas, declare uncertainty.
+    END_LLM_INSTRUCTIONS
+
+# Sección 1 - Overview (resumen del marco regulatorio)
+
+Section_1_Overview:
+  ID: REG-TDE-OVERVIEW-01
+  Src: KB-GN-TDE-060-OVERVIEW-01
+  Purp: "Consolidar la visión global del marco regulatorio que habilita la Transformación Digital del Estado en Chile."
+  Def: |
+    El marco regulatorio TDE se construye sobre un conjunto de normas que, en conjunto,
+    crean la institucionalidad de Gobierno Digital, establecen la transformación digital
+    de los procedimientos administrativos, consolidan las bases generales del procedimiento
+    administrativo y detallan la implementación reglamentaria.
+  Components:
+    - Ref: REG-L21658-ROOT-01
+      Desc: "Ley 21.658 - Crea la Secretaría de Gobierno Digital en la Subsecretaría de Hacienda."
+    - Ref: REG-L21180-ROOT-01
+      Desc: "Ley 21.180 - Transformación Digital del Estado."
+    - Ref: REG-L19880-ROOT-01
+      Desc: "Ley 19.880 - Bases de Procedimientos Administrativos (versión consolidada)."
+    - Ref: REG-D4-2020-ROOT-01
+      Desc: "Decreto N° 4 de 2020 - Reglamento de la Ley 21.180."
+
+# Sección 2 - Ley 21.658: Secretaría de Gobierno Digital (SGD)
+
+Section_2_Ley_21658:
+  ID: REG-L21658-ROOT-01
+  Nat: Ley
+  Num: 21658
+  Purp: "Detallar la ley que crea la Secretaría de Gobierno Digital (SGD) y adecua cuerpos legales conexos."
+  Ctx:
+    Vers: "Versión única al 09-FEB-2024"
+    Materias:
+      - "Gobierno Digital"
+      - "Información Digital"
+  Subsections:
+    - Ref: REG-L21658-METADATA-01
+    - Ref: REG-L21658-ART1-01
+    - Ref: REG-L21658-ART2-01
+    - Ref: REG-L21658-ART3-01
+    - Ref: REG-L21658-ART4-01
+    - Ref: REG-L21658-TRANSITORIAS-01
+
+  REG-L21658-METADATA-01:
+    ID: REG-L21658-METADATA-01
+    Nat: Ley
+    Cpt:
+      Numero: 21658
+      Materias:
+        - "Gobierno Digital"
+        - "Información Digital"
+    Obj: "Crear la Secretaría de Gobierno Digital en la Subsecretaría de Hacienda y adecuar cuerpos legales asociados."
+    Dln:
+      Promulgacion: "2024-02-02"
+      Publicacion: "2024-02-09"
+
+  REG-L21658-ART1-01:
+    ID: REG-L21658-ART1-01
+    Titulo: "Creación y Funciones de la Secretaría de Gobierno Digital"
+    Dln:
+      Vigencia_Desde: "2024-03-01"
+    Cpt:
+      Entidad: "Secretaría de Gobierno Digital (SGD)"
+      Ubicacion: "Subsecretaría de Hacienda"
+    Funciones:
+      - Purp: "Proponer al Ministro de Hacienda la Estrategia de Gobierno Digital."
+      - Purp: "Coordinar la implementación de la Estrategia, con enfoque integrado."
+      - Purp: "Coordinar, asesorar y apoyar el uso estratégico de tecnologías digitales, datos e información pública para mejorar gestión y servicios."
+      - Purp: "Desarrollar y operar plataformas y servicios digitales compartidos."
+    Req:
+      Plataformas_Minimas:
+        - "Interoperabilidad"
+        - "Identidad Digital"
+    Direccion:
+      Resp: "Director/a SGD"
+      Nat: "Jefe/a de División de la Subsecretaría de Hacienda"
+      Proc_Seleccion: "Proceso ADP conforme art. 3 incisos 3 y 4 de la Ley 20.955."
+    Reglamento:
+      Resp: "Ministro de Hacienda"
+      Req:
+        - "Establecer mecanismos para implementar la Estrategia de Gobierno Digital."
+        - "Regular coordinación, asesoría y apoyo a órganos del Estado."
+        - "Regular monitoreo, seguimiento y evaluación."
+        - "Regular mecanismos de solicitud de información necesaria para fines de la SGD."
+        - "Regular otras materias necesarias para el ejercicio de competencias."
+
+  REG-L21658-ART2-01:
+    ID: REG-L21658-ART2-01
+    Titulo: "Traspaso de Personal"
+    Act:
+      - "Traspaso de funcionarios a contrata desde División de Gobierno Digital (SEGPRES) a Subsecretaría de Hacienda."
+    Cond_Principales:
+      - "Traspaso desde 01-MAR-2024 para funcionarios que al 29-FEB-2024 se desempeñen en la División de Gobierno Digital (SEGPRES)."
+      - "Misma calidad jurídica (contrata) y estamento, con asimilación de grados EUS."
+    Garantias_Laborales:
+      Prohib:
+        - "No puede significar pérdida de empleo ni término de servicios."
+        - "No puede disminuir remuneraciones ni derechos previsionales."
+        - "No puede implicar cambio de residencia habitual fuera de la región sin consentimiento."
+    Mecanismos:
+      Proc:
+        - "Formalización vía decretos exentos del Ministerio Secretaría General de la Presidencia y Ministerio de Hacienda."
+        - "Determinación de diferencias de remuneración mediante planilla suplementaria reajustable."
+
+  REG-L21658-ART3-01:
+    ID: REG-L21658-ART3-01
+    Titulo: "Modificaciones de Planta"
+    Act:
+      - "Agrega 1 cargo de Jefe de División, grado 3 EUS, en planta de Subsecretaría de Hacienda."
+      - "Suprime 1 cargo de Jefe de División, grado 2 EUS, en planta de SEGPRES."
+
+  REG-L21658-ART4-01:
+    ID: REG-L21658-ART4-01
+    Titulo: "Modificaciones Legales Complementarias"
+    Modificaciones:
+      - Fnd: "Ley 18.993 (SEGPRES)"
+        Act:
+          - "Elimina literal f) del art. 2."
+          - "Suprime referencias a División de Gobierno Digital en art. 3 inc. 1 lit. c) y art. 9 A."
+      - Fnd: "Ley 19.799 (Firma Electrónica)"
+        Act:
+          - "Sustituye referencia a Secretaría General de la Presidencia por Hacienda en art. 25 inc. 1."
+      - Fnd: "Ley 19.880 (Procedimiento Administrativo)"
+        Act:
+          - "Reemplaza referencias a SEGPRES por Hacienda en múltiples disposiciones (art. 18, 19, 19 bis, 46)."
+      - Fnd: "Ley 18.845 (Microcopia)"
+        Act:
+          - "Reemplaza mención conjunta a Hacienda y SEGPRES por solo Hacienda en art. 1 inc. 3."
+
+  REG-L21658-TRANSITORIAS-01:
+    ID: REG-L21658-TRANSITORIAS-01
+    Titulo: "Disposiciones Transitorias"
+    Disposiciones:
+      - ID: REG-L21658-TRANS-ART1
+        Cpt: "Sucesión Legal"
+        Dln: "Desde 01-MAR-2024"
+        Res:
+          - "Subsecretaría de Hacienda es sucesora y continuadora legal de la División de Gobierno Digital (SEGPRES)."
+        Cond:
+          - "Todas las referencias a la División de Gobierno Digital se entienden hechas a la SGD."
+          - "Referencias a jefatura DGD se entienden hechas al Director/a SGD."
+      - ID: REG-L21658-TRANS-ART2
+        Cpt: "Términos de uso de plataformas y servicios compartidos"
+        Dln: "Desde 01-MAR-2024"
+        Req:
+          - "Subsecretaría de Hacienda aprueba o modifica términos y condiciones de uso de plataformas y servicios compartidos."
+          - "Términos y condiciones previos siguen vigentes hasta modificación expresa."
+      - ID: REG-L21658-TRANS-ART3
+        Cpt: "Gasto Fiscal"
+        Proc:
+          - "Financiamiento primer año con cargo a presupuesto del Ministerio de Hacienda y Tesoro Público."
+          - "Años siguientes, con cargo a respectivas Leyes de Presupuestos."
+      - ID: REG-L21658-TRANS-ANEXO-TC
+        Cpt: "Control del Tribunal Constitucional"
+        Ctx:
+          - "Rol 15.139-24-CPR, sentencia 31-ENE-2024."
+        Res:
+          - "No se emite pronunciamiento por no versar sobre materias de Ley Orgánica Constitucional."
+
+# Sección 3 - Ley 21.180 (Transformación Digital del Estado)
+
+Section_3_Ley_21180:
+  ID: REG-L21180-ROOT-01
+  Nat: Ley
+  Num: 21180
+  Purp: "Detallar la Ley 21.180 sobre Transformación Digital del Estado y sus principales modificaciones."
+  Ctx:
+    Vers: "Versión única al 09-JUN-2022 (modificada por Ley 21.464)."
+    Materias:
+      - "Documentos Electrónicos"
+      - "Transformación Digital"
+      - "Procedimiento Administrativo Electrónico"
+      - "Gestión Documental Electrónica"
+      - "Sistema Documental Digital del Archivo Nacional"
+  Subsections:
+    - Ref: REG-L21180-METADATA-01
+    - Ref: REG-L21180-ART1-MOD-L19880-01
+    - Ref: REG-L21180-ART2-8-MISC-01
+    - Ref: REG-L21180-TRANSITORIAS-01
+
+  REG-L21180-METADATA-01:
+    ID: REG-L21180-METADATA-01
+    Dln:
+      Promulgacion: "2019-10-25"
+      Publicacion: "2019-11-11"
+    Res: "Establece la transformación digital del Estado mediante soporte y tramitación electrónica de procedimientos administrativos y gestión documental. Implementación gradual hasta 5 años, sujeta a reglamentos."
+
+  REG-L21180-ART1-MOD-L19880-01:
+    ID: REG-L21180-ART1-MOD-L19880-01
+    Purp: "Agrupar las principales modificaciones introducidas a la Ley 19.880."
+    Refs:
+      - REG-L21180-ART1-MOD-ART1-01
+      - REG-L21180-ART1-MOD-ART4-01
+      - REG-L21180-ART1-MOD-ART5-01
+      - REG-L21180-ART1-MOD-ART6-01
+      - REG-L21180-ART1-MOD-ART9-01
+      - REG-L21180-ART1-MOD-ART16BIS-01
+      - REG-L21180-ART1-MOD-ART17-01
+      - REG-L21180-ART1-MOD-ART18-01
+      - REG-L21180-ART1-MOD-ART19-01
+      - REG-L21180-ART1-MOD-ART19BIS-01
+      - REG-L21180-ART1-MOD-ART22-01
+      - REG-L21180-ART1-MOD-ART24BIS-01
+      - REG-L21180-ART1-MOD-ART25-01
+      - REG-L21180-ART1-MOD-ART30-01
+      - REG-L21180-ART1-MOD-ART46-01
+
+# (RELACION: Ley 19.880 y Decreto 4/2020 se detallan en artefactos complementarios
+#  o subsecciones adicionales si decides extender este archivo. Esta versión sirve
+#  como plantilla estructural derivada del STS original.)

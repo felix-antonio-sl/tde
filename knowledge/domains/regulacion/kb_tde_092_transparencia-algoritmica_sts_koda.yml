@@ -1,0 +1,54 @@
+# TDE Domain Law 092 - Transparencia Algorítmica
+# Dominio: Regulación / Transparencia Algorítmica
+
+_manifest:
+  urn: "urn:knowledge:tde:regulacion:tde-092-transparencia-algoritmica-sts:1.0.0"
+  federation:
+    visibility: public
+    license: "CC-BY-4.0"
+  compatibility:
+    min_consumer_version: "1.0.0"
+    breaking_changes_from: null
+  resolution:
+    canonical_url: "file://knowledge/domains/regulacion/kb_tde_092_transparencia-algoritmica_sts_koda.yml"
+    mirrors: []
+  dependencies:
+    requires:
+      - "urn:knowledge:koda:core:spec:1.0.0"
+      - "urn:knowledge:koda:core:transform:1.0.0"
+    source_files:
+      - "sources/tde_knowledge/kb_tde_092_transparencia-algoritmica_sts.md"
+  provenance:
+    created_by: "FS"
+    created_at: "2025-12-01"
+    last_modified_by: "FS"
+    last_modified_at: "2025-12-01"
+    signature: null
+
+ID: TDE-REG-092
+Version: 1.0.0
+Status: Draft
+Human-Creator: FS
+Human-Editor: FS
+Model-Collaborator: IA-CLAUDE
+Creation-Date: 2025-12-01
+Modification-Date: 2025-12-01
+Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para marco de Transparencia Algorítmica."
+Ctx: "Marco normativo chileno sobre transparencia y explicabilidad de sistemas algorítmicos y automatizados."
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-TDE-ALG-092
+  Req: "Mandatory block following Metadata."
+  Prohib: "Tratar transparencia algorítmica solo como buena práctica; muchas obligaciones son exigibles."
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA/Spec artifact for Chilean algorithmic transparency rules.
+    1. Distingue obligaciones de información, explicabilidad y registro.
+    2. Mantén explícito cuándo aplica a decisiones automatizadas que afecten derechos de las personas.
+    3. No generalices a IA en abstracto; usa lo que la guía y la norma definan como sistemas algorítmicos.
+    END_LLM_INSTRUCTIONS
+
+Section_1_Overview:
+  ID: TDE-REG-ALG-OVERVIEW-01
+  Purp: "Resumir objetivos, alcance y principales obligaciones del marco de transparencia algorítmica."
+

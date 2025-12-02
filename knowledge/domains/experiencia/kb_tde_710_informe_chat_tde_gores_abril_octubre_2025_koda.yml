@@ -1,0 +1,53 @@
+# TDE Domain Report 710 - Informe Chat TDE GOREs (Abril-Octubre 2025)
+# Dominio: Experiencia / Lecciones Aprendidas
+
+_manifest:
+  urn: "urn:knowledge:tde:experiencia:tde-710-informe-chat-gores-2025-sts:1.0.0"
+  federation:
+    visibility: public
+    license: "CC-BY-4.0"
+  compatibility:
+    min_consumer_version: "1.0.0"
+    breaking_changes_from: null
+  resolution:
+    canonical_url: "file://knowledge/domains/experiencia/kb_tde_710_informe_chat_tde_gores_abril_octubre_2025_koda.yml"
+    mirrors: []
+  dependencies:
+    requires:
+      - "urn:knowledge:koda:core:spec:1.0.0"
+      - "urn:knowledge:koda:core:transform:1.0.0"
+    source_files:
+      - "sources/tde_knowledge/kb_tde_710_informe_chat_tde_gores_abril_octubre_2025.md"
+  provenance:
+    created_by: "FS"
+    created_at: "2025-12-01"
+    last_modified_by: "FS"
+    last_modified_at: "2025-12-01"
+    signature: null
+
+ID: TDE-EXP-710
+Version: 1.0.0
+Status: Draft
+Human-Creator: FS
+Human-Editor: FS
+Model-Collaborator: IA-CLAUDE
+Creation-Date: 2025-12-01
+Modification-Date: 2025-12-01
+Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Informe Chat TDE GOREs 2025."
+Ctx: "Informe de conversaciones y lecciones aprendidas de chats TDE con GOREs entre abril y octubre 2025."
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-TDE-EXP-710
+  Req: "Mandatory block following Metadata."
+  Prohib: "Presentar las experiencias como normativa; son insumos prácticos y lecciones aprendidas."
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA/Spec artifact for the TDE GOREs chat report.
+    1. Trata el informe como fuente de ejemplos y aprendizajes, no como norma.
+    2. Extrae patrones y casos, dejando claro que provienen de experiencias específicas.
+    END_LLM_INSTRUCTIONS
+
+Section_1_Overview:
+  ID: TDE-EXP-710-OVERVIEW-01
+  Purp: "Resumir el propósito y alcance del informe de chats TDE GOREs 2025."
+

@@ -1,0 +1,54 @@
+# TDE Domain Law 090 - Ley de Inteligencia Artificial en Chile
+# Dominio: Regulación / IA
+
+_manifest:
+  urn: "urn:knowledge:tde:regulacion:tde-090-ley-ia-chile-sts:1.0.0"
+  federation:
+    visibility: public
+    license: "CC-BY-4.0"
+  compatibility:
+    min_consumer_version: "1.0.0"
+    breaking_changes_from: null
+  resolution:
+    canonical_url: "file://knowledge/domains/regulacion/kb_tde_090_ley-ia-chile_sts_koda.yml"
+    mirrors: []
+  dependencies:
+    requires:
+      - "urn:knowledge:koda:core:spec:1.0.0"
+      - "urn:knowledge:koda:core:transform:1.0.0"
+    source_files:
+      - "sources/tde_knowledge/kb_tde_090_ley-ia-chile_sts.md"
+  provenance:
+    created_by: "FS"
+    created_at: "2025-12-01"
+    last_modified_by: "FS"
+    last_modified_at: "2025-12-01"
+    signature: null
+
+ID: TDE-REG-090
+Version: 1.0.0
+Status: Draft
+Human-Creator: FS
+Human-Editor: FS
+Model-Collaborator: IA-CLAUDE
+Creation-Date: 2025-12-01
+Modification-Date: 2025-12-01
+Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Ley de IA en Chile."
+Ctx: "Síntesis operativa de la ley chilena sobre sistemas de inteligencia artificial, con foco en obligaciones para el Estado y OAEs."
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-TDE-IA-090
+  Req: "Mandatory block following Metadata."
+  Prohib: "Tratar la ley como simple guía ética; contiene obligaciones y prohibiciones específicas."
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA/Spec artifact for the Chilean AI Law.
+    1. Distingue con claridad: principios, obligaciones, prohibiciones, supervisión y sanciones.
+    2. Mantén foco en cómo aplica a OAEs y al uso de sistemas de IA en el Estado.
+    3. No inventes artículos ni numeraciones; si no están en la fuente, declara incertidumbre.
+    END_LLM_INSTRUCTIONS
+
+Section_1_Overview:
+  ID: TDE-REG-IA-OVERVIEW-01
+  Purp: "Resumir objetivos, ámbito de aplicación y principios generales de la ley de IA en Chile."
+
