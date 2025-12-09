@@ -51,4 +51,443 @@ LLM_Parsing_Instructions:
 Section_1_Overview:
   ID: TDE-CIBER-OVERVIEW-01
   Purp: "Dar visión general de la guía de ciberseguridad TDE y su relación con la Norma Técnica."
+  Def: |
+    Guía de apoyo a la Norma Técnica de Seguridad de la Información y Ciberseguridad.
+    Destinada a OAEs para implementar controles y funciones alineadas a NIST e ISO 27000.
+  Components:
+    - Ref: GUIA-CIBER-INTRO-01
+    - Ref: GUIA-CIBER-DEFINITIONS-01
+    - Ref: GUIA-CIBER-FN-IDENTIFY-01
+    - Ref: GUIA-CIBER-FN-PROTECT-01
+    - Ref: GUIA-CIBER-FN-DETECT-01
+    - Ref: GUIA-CIBER-FN-RESPOND-01
+    - Ref: GUIA-CIBER-FN-RECOVER-01
+
+Section_2_Introduccion:
+  ID: GUIA-CIBER-INTRO-01
+  Purp: "Marco de aplicación y propósito de la guía."
+  Dest: "Órganos de la Administración del Estado (OAE)."
+  Fnd:
+    - "Art. 12, Norma Técnica de Seguridad de la Información y Ciberseguridad."
+    - "Buenas prácticas internacionales: NCH-ISO 27000, NIST, D.S. N°83/2015."
+  Cpt:
+    Flexibilidad: "OAEs pueden usar estándares equivalentes si son consistentes."
+  Req:
+    - "Consistencia con Política Nacional de Ciberseguridad, Ley Marco Ciberseguridad y directrices SEGOBDI."
+
+Section_3_Definiciones:
+  ID: GUIA-CIBER-DEFINITIONS-01
+  Purp: "Complementar definiciones de la Norma Técnica."
+  Defs:
+    - Cpt: Apetito_de_Riesgo
+      Def: "Riesgo que la organización asume para alcanzar objetivos."
+    - Cpt: Ataque_de_Dia_Cero
+      Def: "Vulnerabilidad desconocida sin parche; alta probabilidad de éxito."
+    - Cpt: Custodio
+      Def: "Otorga y supervisa accesos a activos bajo su custodia."
+    - Cpt: Dueno_de_Activo
+      Def: "Gestiona inventario, clasificación y actualización de activos."
+    - Cpt: Evento_Precursor
+      Def: "Indicio de posible incidente futuro."
+    - Cpt: Plan_de_Continuidad
+      Def: "Lineamientos para mantener continuidad operativa ante fallas."
+    - Cpt: Planes_de_Recuperacion
+      Def: "Acciones para restaurar normalidad post-disrupción."
+    - Cpt: Planes_de_Respuesta
+      Def: "Procedimientos inmediatos ante incidente confirmado."
+    - Cpt: Redundancia
+      Def: "Duplicación de componentes para asegurar disponibilidad."
+    - Cpt: Tolerancia_al_Riesgo
+      Def: "Riesgo del entorno que la institución puede tolerar."
+
+Section_4_Politica_Seguridad:
+  ID: GUIA-CIBER-POLICY-01
+  Purp: "Directrices generales de seguridad/ciberseguridad en el OAE."
+  Req:
+    - "Elaborar Política de Seguridad y Ciberseguridad aprobada por Jefe(a) de Servicio."
+    - "Realizar diagnóstico de estado actual para línea base (función Identificar)."
+    - "Incluir procedimiento y frecuencia de actualización (recomendado anual)."
+  Obj:
+    - "Establecer directrices generales y visión estratégica."
+    - "Velar por seguridad de componentes y datos."
+    - "Definir lineamientos para alcanzar objetivos."
+  Mech: "Desarrollo seguro y privacidad desde el diseño."
+  Pilares:
+    - "Confidencialidad"
+    - "Integridad"
+    - "Disponibilidad"
+
+  Objetivos_Politica:
+    ID: GUIA-CIBER-POLICY-OBJECTIVES-01
+    Req: "Definir objetivos e indicadores de cumplimiento."
+    Items:
+      - "Asegurar confidencialidad, integridad y disponibilidad de activos."
+      - "Fomentar cultura de seguridad."
+      - "Gestionar tratamiento de incidentes."
+      - "Capacitar y sensibilizar funcionarios."
+
+  Alcance:
+    ID: GUIA-CIBER-POLICY-SCOPE-01
+    Def: "Activos de información; identificar, describir, clasificar."
+    Req:
+      - "Asignar dueño y custodio por activo."
+      - "Implementar acciones para alcanzar estándares adecuados."
+
+  Marco_Regulatorio:
+    ID: GUIA-CIBER-POLICY-LEGISLATION-01
+    Req: "Identificar contexto regulatorio aplicable (actual y previsto)."
+
+  Roles:
+    ID: GUIA-CIBER-POLICY-ROLES-01
+    Req:
+      - "Coordinar responsable institucional y responsable de activos."
+      - "Preferir dependencia de Jefatura de Servicio."
+      - "Funciones no externalizables."
+    Roles_Definidos:
+      - Cpt: Responsable_Institucional
+        Mssn: "Velar por seguridad y ciberseguridad."
+        Resp:
+          - "Asegurar desarrollo, cumplimiento y actualización de la Política."
+          - "Gestionar administración de la seguridad."
+        Ctx: "Equivalencias: Instrucción Presidencial N°8 (2018), D.S. N°7 (2023), Ley N°21.663."
+      - Cpt: Responsable_de_Activos
+        Mssn: "Identificar, clasificar y priorizar activos."
+        Resp:
+          - "Gestionar riesgo y niveles de seguridad por activo."
+          - "Asignar dueño y custodio por activo individual."
+
+  Clasificacion_Informacion:
+    ID: GUIA-CIBER-POLICY-INFO-CLASSIFICATION-01
+    Req:
+      - "Métodos para identificar criticidad por activo."
+      - "Vincular clasificación a sensibilidad y criticidad."
+    Ref: GUIA-CIBER-POLICY-ACCESS-CONTROL-01
+
+  Gestion_Riesgos:
+    ID: GUIA-CIBER-POLICY-RISK-MANAGEMENT-01
+    Req:
+      - "Lineamientos para evaluación y tratamiento de riesgos."
+      - "Indicar objetivos, rendición de cuentas y métricas."
+
+  Gestion_Vulnerabilidades:
+    ID: GUIA-CIBER-POLICY-VULN-MANAGEMENT-01
+    Req:
+      - "Medidas para identificar vulnerabilidades técnicas."
+      - "Definir funciones y responsabilidades de monitoreo/evaluación/tratamiento."
+
+  Control_Acceso:
+    ID: GUIA-CIBER-POLICY-ACCESS-CONTROL-01
+    Req:
+      - "Procedimientos de acceso y distribución de identidades (mínimo privilegio)."
+      - "Responsabilidades de usuarios sobre accesos."
+      - "Recuperación de credenciales comprometidas."
+
+  Respaldos:
+    ID: GUIA-CIBER-POLICY-BACKUPS-01
+    Req:
+      - "Mecanismos y requisitos para copias de seguridad."
+      - "Proceso de restauración y chequeo de consistencia."
+      - "Registros de respaldo y restauración."
+      - "Alineación con controles criptográficos y eliminación segura."
+
+  Continuidad:
+    ID: GUIA-CIBER-POLICY-CONTINUITY-01
+    Purp: "Lineamientos para plan de continuidad y contingencia."
+    Warn: "Operadores de importancia vital (Ley 21.663) deben implementar planes; incumplimiento sancionable."
+
+  Criptografia:
+    ID: GUIA-CIBER-POLICY-CRYPTOGRAPHY-01
+    Req:
+      - "Directrices para uso de mecanismos criptográficos en todo el ciclo de vida."
+      - "Definir nivel de protección por activo según riesgo."
+
+  Privacidad_Datos:
+    ID: GUIA-CIBER-POLICY-PRIVACY-01
+    Req:
+      - "Resguardos desde el diseño para datos personales."
+      - "Conformidad con normativa vigente de protección de datos."
+
+  Eliminacion_Segura:
+    ID: GUIA-CIBER-POLICY-ELIMINATION-01
+    Req:
+      - "Procesos formales para eliminación segura."
+      - "Cumplir retención legal y registrar eliminaciones."
+      - "Alinear con Norma Técnica de Documentos y Expedientes Electrónicos."
+
+Section_5_Framework:
+  ID: GUIA-CIBER-FRAMEWORK-01
+  Purp: "Estructurar implementación mediante funciones/categorías/subcategorías."
+  Obj: "Resguardar confidencialidad, integridad y disponibilidad."
+  Fnd:
+    - "Dominios NIST como base."
+    - "Complementos: CIS, COBIT 5, ISO 27001/27002."
+
+Section_6_Funcion_Identificar:
+  ID: GUIA-CIBER-FN-IDENTIFY-01
+  Def: "Acciones para entendimiento organizacional y gestión de riesgos."
+  Req: "Diagnóstico inicial para línea base; usar MITRE ATT&CK, NIST CSF, CIS, ISO/IEC 27001."
+
+  Contexto_Organizacional:
+    ID: GUIA-CIBER-FN-IDENTIFY-CONTEXT-01
+    Purp: "Comprender entorno interno/externo."
+    Act:
+      - "Analizar necesidades/misiones de actores."
+      - "Analizar aspectos legales/regulatorios, obligaciones, interdependencias."
+    Req: "Generar diagrama de entorno con actores relevantes."
+
+  Gobernanza:
+    ID: GUIA-CIBER-FN-IDENTIFY-GOVERNANCE-01
+    Purp: "Marco de gestión y relaciones entre actores."
+    Obj: "Monitorear requisitos y riesgos."
+
+  Gestion_Activos:
+    ID: GUIA-CIBER-FN-IDENTIFY-ASSETS-MANAGEMENT-01
+    Cpt: ["Inventario", "Dueños", "Custodios", "Clasificación", "Mapeo de comunicación"]
+    Inventario:
+      ID: GUIA-CIBER-FN-IDENTIFY-ASSETS-INVENTORY-01
+      Req:
+        - "Inventariar activos (físicos, SW, BBDD, etc.) con actualización periódica."
+        - "Etiquetar y documentar; se puede usar CMDB (ITIL v4)."
+    Dueno_Activos:
+      ID: GUIA-CIBER-FN-IDENTIFY-ASSETS-OWNERS-01
+      Req:
+        - "Asignar dueño por activo."
+        - "Clasificar según sensibilidad/criticidad."
+        - "Revisar restricciones de acceso y ciclo de vida."
+    Custodios:
+      ID: GUIA-CIBER-FN-IDENTIFY-ASSETS-CUSTODIANS-01
+      Def: "Custodian accesos asegurando integridad/disponibilidad/confidencialidad."
+    Clasificacion:
+      ID: GUIA-CIBER-FN-IDENTIFY-ASSETS-CLASSIFICATION-01
+      Req:
+        - "Esquema basado en criticidad/sensibilidad/valor/normativa."
+        - "Aplicación transversal y consistente."
+      Ejemplos:
+        - Esquema_NCH27002:
+            Nivel-1: "Revelación sin daño."
+            Nivel-2: "Revelación con perjuicio menor."
+            Nivel-3: "Impacto significativo corto plazo."
+            Nivel-4: "Impacto serio (sanciones)."
+        - Esquema_DS83:
+            Tipo-Publicos: "No reservados ni secretos."
+            Tipo-Reservados: "Conocimiento circunscrito a unidad específica."
+            Tipo-Secretos: "Carácter secreto por legislación (ej. Ley 20.285)."
+      Req_Transparencia: "Mantener índice actualizado de actos secretos/reservados."
+    Flujo_Datos:
+      ID: GUIA-CIBER-FN-IDENTIFY-ASSETS-DATAFLOW-01
+      Req:
+        - "Monitorear/controlar comunicación y flujo de datos."
+        - "Registrar emisores/receptores y privilegios."
+
+  Evaluacion_Riesgos:
+    ID: GUIA-CIBER-FN-IDENTIFY-RISK-ASSESSMENT-01
+    Purp: "Proceso formal de gestión de riesgos."
+    Req:
+      - "Contexto: evaluar ámbitos internos/externos."
+      - "Tolerancia: criterios de tolerancia/apetito al riesgo."
+      - "Identificacion: activos, amenazas, controles, vulnerabilidades, riesgos (incluye terceros)."
+      - "Analisis: impacto (probabilidad x consecuencias)."
+      - "Evaluacion: contrastar con tolerancia para decisiones."
+      - "Tratamiento: tolerar, mitigar, transferir o evitar; justificar y aprobar."
+      - "Comunicacion_Monitoreo: seguimiento y registro permanente."
+
+  Cadena_Suministro:
+    ID: GUIA-CIBER-FN-IDENTIFY-SUPPLY-CHAIN-01
+    Purp: "Gestionar riesgos de proveedores."
+    Req:
+      - "Contratos alineados a Política de Seguridad."
+      - "Inventario de contratos y contrapartes técnicas."
+      - "Gestión de riesgo y servicio (SLAs, auditorías)."
+      - "Para nube: roles/responsabilidades, medidas de seguridad, modelo de responsabilidades compartidas."
+
+Section_7_Funcion_Proteger:
+  ID: GUIA-CIBER-FN-PROTECT-01
+  Def: "Medidas para garantizar entrega de servicios."
+
+  Gestion_Infraestructura_Accesos:
+    ID: GUIA-CIBER-FN-PROTECT-INFRA-MGMT-01
+    Req: "Accesos solo para usuarios/procesos/dispositivos autorizados."
+    Servidores:
+      ID: GUIA-CIBER-FN-PROTECT-SERVER-MGMT-01
+      Req:
+        - "Administración por roles/dispositivos autorizados; registros 12 meses."
+        - "Separación de entornos (prod, test, preprod, dev)."
+        - "Acceso seguro (VPN), llaves criptográficas preferidas."
+        - "Configuración segura documentada; sincronización horaria (SHOA)."
+        - "Redundancia probada; parches/licencias vigentes; plan de rollback."
+    Redes:
+      ID: GUIA-CIBER-FN-PROTECT-NETWORK-MGMT-01
+      Req:
+        - "Segregación de entornos y monitoreo de eventos."
+        - "Accesos a redes internas monitoreados; 2FA para sistemas críticos."
+        - "VPN para conexiones; monitoreo de puertos/protocolos/servicios."
+        - "Cortafuegos actualizado con configuración no por defecto."
+    Credenciales_Autenticacion:
+      ID: GUIA-CIBER-FN-PROTECT-CREDENTIAL-MGMT-01
+      Req:
+        - "Procedimientos de otorgamiento/revocación/revisión continua."
+        - "Mecanismos de mantención de llaves/contraseñas; modelo de roles."
+        - "Protección contra ataques on/offline; políticas de contraseña robusta."
+        - "Almacenamiento cifrado; MFA según confidencialidad; no cambio periódico salvo sospecha."
+        - "Uso de estándares (OAuth2) para terceros; comunicación encriptada."
+
+  Conciencia_Formacion:
+    ID: GUIA-CIBER-FN-PROTECT-AWARENESS-TRAINING-01
+    Purp: "Capacitar personal según rol."
+    Req:
+      - "Plan anual de capacitación revisado y evaluado."
+      - "Activar ante ingresos o cambios de funciones."
+      - "Contenido: campañas, responsabilidades, impacto de fallas, refuerzo de procedimientos."
+
+  Seguridad_Datos:
+    ID: GUIA-CIBER-FN-PROTECT-DATA-SECURITY-01
+    Ctx: "Aplicable a todos los datos (personales o no)."
+    Criptografia:
+      ID: GUIA-CIBER-FN-PROTECT-DATASEC-CRYPTO-01
+      Obj:
+        - "Cifrado para confidencialidad."
+        - "Firmas para autenticidad/integridad."
+      Ex: ["AES", "RSA", "SHA-2/SHA-3"]
+      Rec: "No usar SHA-1."
+    Eliminacion_Datos:
+      ID: GUIA-CIBER-FN-PROTECT-DATASEC-DELETION-01
+      Req: ["Procedimientos formales de eliminación segura", "Considerar tiempos reglamentarios"]
+    Interoperabilidad_Datos:
+      ID: GUIA-CIBER-FN-PROTECT-DATASEC-INTEROP-01
+      Req:
+        - "Resguardar contra interceptación/modificación en transferencias."
+        - "Definir responsabilidades, niveles de acceso y protocolos."
+        - "Interoperar con cifrado punto a punto; evitar protocolos obsoletos."
+        - "Autenticar nodos/servicios; cumplir Norma Técnica de Interoperabilidad."
+
+  Politicas_Procesos_Proteccion:
+    ID: GUIA-CIBER-FN-PROTECT-PROCESSES-01
+    Desarrollo_Seguro:
+      ID: GUIA-CIBER-FN-PROTECT-PROCESS-SECDEV-01
+      Act:
+        - "Capacitar equipo de desarrollo; separar ambientes."
+        - "Seguridad en repositorios de código; pautas OWASP."
+        - "Definir requisitos de seguridad desde inicio; SAST/ethical hacking."
+    Control_Cambios:
+      ID: GUIA-CIBER-FN-PROTECT-PROCESS-CHANGE-CTRL-01
+      Req:
+        - "Registrar cambios con revisión, autorización, pruebas, rollback, hotfix y versionamiento."
+    Gestion_Respaldos:
+      ID: GUIA-CIBER-FN-PROTECT-PROCESS-BACKUPS-01
+      Act:
+        - "Frecuencia definida; pruebas de integridad; procedimiento de restauración."
+        - "Almacenaje en locación distinta; cifrado; protección física/lógica equivalente."
+    Gestion_Vulnerabilidades_Tecnicas:
+      ID: GUIA-CIBER-FN-PROTECT-PROCESS-VULN-MGMT-01
+      Req:
+        - "Resolver vulnerabilidades oportunamente; categorización por riesgo."
+        - "Definir roles/tiempos y aplicar medidas correctivas según urgencia."
+    Plan_Continuidad:
+      ID: GUIA-CIBER-FN-PROTECT-PROCESS-CONTINUITY-01
+      Act:
+        - "Identificar amenazas y riesgos; definir equipo de respuesta."
+        - "Conocer riesgos tolerables y RTO; planes de respuesta/recuperación y pruebas."
+        - "Si incidente, seguir GUIA-CIBER-FN-RECOVER-INCIDENT-MGMT-01."
+
+  Seguridad_RRHH:
+    ID: GUIA-CIBER-FN-PROTECT-HR-SECURITY-01
+    Req:
+      - "Cláusulas de seguridad en contratos/nombramientos."
+      - "Compromiso de confidencialidad y responsabilidades legales (vigencia puede extenderse post-contrato)."
+
+  Registro_Monitoreo:
+    ID: GUIA-CIBER-FN-PROTECT-LOGGING-01
+    Purp: "Registrar actividad relevante."
+    Req:
+      - "Registrar actividad de admins, excepciones, fallas, eventos de seguridad."
+      - "Campos mínimos: usuario, IP, timestamp, intentos de acceso, acciones, info accedida."
+
+Section_8_Funcion_Detectar:
+  ID: GUIA-CIBER-FN-DETECT-01
+  Def: "Detección oportuna de eventos."
+
+  Analisis_Eventos:
+    ID: GUIA-CIBER-FN-DETECT-ANALYSIS-01
+    Purp: "Identificar anomalías/incident precursores."
+    Req:
+      - "Analizar causa, motivo, correlación, impacto."
+      - "Herramientas de correlación y alertas tempranas."
+      - "Separar eventos sin riesgo de los que requieren análisis."
+
+  Monitoreo_Continuo:
+    ID: GUIA-CIBER-FN-DETECT-CONTINUOUS-MONITORING-01
+    Malware:
+      ID: GUIA-CIBER-FN-DETECT-MONITOR-MALWARE-01
+      Act:
+        - "Instalar/actualizar antimalware; revisiones rutinarias."
+        - "Recuperación post-malware en plan de continuidad."
+        - "Analizar características de malware y comandos no autorizados."
+    Red:
+      ID: GUIA-CIBER-FN-DETECT-MONITOR-NETWORK-01
+      Req:
+        - "Acceso solo a personal/plataformas autorizadas."
+        - "Cortafuegos configurado; registrar/monitorear tráfico."
+        - "Puertos cerrados por defecto; segregación definida."
+
+  Proceso_Deteccion:
+    ID: GUIA-CIBER-FN-DETECT-PROCESS-01
+    Req:
+      - "Definir roles y responsabilidades."
+      - "Cumplir requisitos de la Política."
+      - "Comunicar eventos detectados."
+      - "Medir efectividad para mejora continua."
+
+Section_9_Funcion_Responder:
+  ID: GUIA-CIBER-FN-RESPOND-01
+  Def: "Acciones ante incidente detectado."
+
+  Planes_Respuesta:
+    ID: GUIA-CIBER-FN-RESPOND-PLANNING-01
+    Cond: "Se activa tras confirmar incidente."
+    Elementos:
+      - "Notificación (ANCi y regulador si aplica)."
+      - "Identificación/Evaluación: activos, controles, roles, impacto, compromiso de red/datos/servidores."
+      - "Mitigación: contención/aislamiento."
+      - "Restablecimiento: erradicar riesgo, parches, credenciales, limpieza malware, restaurar servicio, verificar exfiltración."
+      - "Comunicación: canales y declaraciones internas/públicas."
+      - "Evidencia: obtención y cadena de custodia."
+      - "Seguimiento: registro e informe."
+      - "Mejora continua basada en lecciones."
+      - "Contingencia de personal si es necesario."
+
+  Analisis_Forense:
+    ID: GUIA-CIBER-FN-RESPOND-FORENSICS-01
+    Purp: "Investigación post-incidente."
+    Obj:
+      - "Recopilar evidencia con cadena de custodia."
+      - "Resolver debilidad causal."
+      - "Actualizar procedimientos de respuesta."
+
+Section_10_Funcion_Recuperar:
+  ID: GUIA-CIBER-FN-RECOVER-01
+  Def: "Mantener planes y restablecer capacidades tras incidente."
+
+  Gestion_Incidentes:
+    ID: GUIA-CIBER-FN-RECOVER-INCIDENT-MGMT-01
+    Req:
+      - "Usar escala de Guía de Notificación de Incidentes ANCi."
+      - "Determinar activos e impacto."
+      - "Describir inicio de planes de respuesta/continuidad."
+      - "Notificar al CSIRT de Gobierno."
+
+Section_11_Gobernanza:
+  ID: GUIA-CIBER-GOVERNANCE-01
+  Purp: "Ciclo de vida y control de versiones de la guía."
+  Actualizacion:
+    ID: GUIA-CIBER-GOVERNANCE-UPDATE-01
+    Req:
+      - "Revisar la guía al menos cada año."
+      - "Registrar versiones y adecuaciones."
+      - "Basar actualización en aprendizajes y buenas prácticas."
+  Control_Versiones:
+    ID: GUIA-CIBER-GOVERNANCE-VERSIONS-01
+    Tabla:
+      - Version: "1.0"
+        Fecha: "2025-03-24"
+        Desc: "Versión inicial."
 

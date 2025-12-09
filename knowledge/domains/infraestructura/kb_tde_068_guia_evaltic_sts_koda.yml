@@ -50,4 +50,345 @@ LLM_Parsing_Instructions:
 Section_1_Overview:
   ID: TDE-EVALTIC-OVERVIEW-01
   Purp: "Resumir propósito y alcance de EvalTIC como proceso de evaluación de proyectos TI."
+  Def: |
+    EvalTIC es el proceso estatal para evaluar iniciativas de inversión y gasto TIC,
+    alineado a Ley de Presupuestos. Requiere autorización DIPRES previa a la ejecución,
+    asegurando valor público, alineación estratégica y control de recursos.
+  Components:
+    - Ref: EVALTIC-CTX-OBJ-01
+    - Ref: EVALTIC-GUIA-OBJ-01
+
+Section_2_Contexto_Objetivo:
+  ID: EVALTIC-CTX-OBJ-01
+  Cpt:
+    Marco: "Proceso EVALTIC regulado por Ley de Presupuestos; autorización DIPRES es obligatoria antes de invertir o gastar en TIC."
+    Alcance: "Órganos de la Administración del Estado, integral y extremo a extremo."
+    Referencia_Internacional: "OECD Digital Government Investment Framework (adaptado a Chile)."
+  Obj:
+    - Req: "Asegurar logro de resultados planificados."
+    - Req: "Garantizar buen uso de recursos públicos."
+    - Req: "Implementar y mantener buenas prácticas de gestión de proyectos."
+    - Req: "Alinear inversión TIC con estrategias, leyes, normas e instructivos estatales."
+    - Req: "Incrementar calidad de proyectos TIC institucionales."
+    - Req: "Mejorar mecanismos de control e información para toma de decisiones."
+    - Req: "Monitorear inversiones para asegurar beneficios previstos."
+
+Section_2_1_Objetivo_Especifico_Guia:
+  ID: EVALTIC-GUIA-OBJ-01
+  Obj: "Fijar estándares y lineamientos para iniciativas de inversión y gasto TIC en OAEs."
+  Alc: "Roles, responsabilidades, procesos para formulación, evaluación ex ante, aprobación y seguimiento de iniciativas TIC."
+  Ctx: "Art. 12 Ley 21.722 de Presupuestos 2025 define alcance a OAEs."
+
+Section_3_Marco_General:
+  ID: EVALTIC-MARCO-GRAL-01
+  Fnd:
+    - Cpt: Pilar-1
+      Def: "Principios del Marco de Inversión en Gobierno Digital de la OCDE."
+    - Cpt: Pilar-2
+      Def: "Acuerdos del Programa de Apoyo a la Agenda de Gobierno Digital de Chile (BID)."
+    - Cpt: Pilar-3
+      Def: "Mejores prácticas del sector público chileno."
+
+  Pilares:
+    ID: EVALTIC-PILARES-01
+    Items:
+      - Cpt: Pilar-1-Planificacion-Estrategica
+        Def: "Piedra angular para enfoque eficiente y coherente."
+        Aspectos:
+          - Def: "Estrategia, alineación y coordinación de actores clave."
+          - Def: "Mecanismos para gestión basada en riesgos."
+          - Def: "Métodos para estimación y mantención de valor público."
+      - Cpt: Pilar-2-Implementacion-Coherente
+        Req: "Administrar complejidad y equilibrar procesos vs. agilidad."
+      - Cpt: Pilar-3-Monitoreo-Supervision
+        Req: "Garantizar ejecución oportuna, cumplimiento de resultados y eficiencia."
+
+  Enfoque_Integral:
+    ID: EVALTIC-ENFOQUE-INTEGRAL-01
+    Alc: "Ciclo de vida completo de iniciativas y proyectos TIC."
+    Fases: ["Formulación", "Presentación", "Evaluación ex ante (técnica/presupuestaria)", "Aprobación", "Ejecución", "Monitoreo", "Control"]
+
+  Etapas_Proceso:
+    ID: EVALTIC-PROCESO-ETAPAS-01
+    Proc:
+      - "Planificación del proceso."
+      - "Apertura de proceso a los OAE."
+      - "Formulación y presentación de proyectos."
+      - "Evaluación ex-ante de proyectos."
+      - "Cierre de evaluación ex-ante de proyectos."
+      - "Asignación presupuestaria."
+      - "Ejecución y monitoreo de proyectos."
+      - "Evaluación final del proyecto."
+
+  Principios_Inversion:
+    ID: EVALTIC-PRINCIPIOS-INVERSION-01
+    Req: "Guían decisiones de inversión/gasto TIC."
+    Items:
+      - Cpt: Principio-1-Valor-Usuario
+        Def: "Impacto positivo (financiero o no) en usuarios, instituciones, beneficiarios."
+        Ex: "Reducción de costos, incremento de calidad de servicio."
+      - Cpt: Principio-2-Valor-Institucion
+        Def: "Impactos financieros directos en la institución."
+        Ex: "Ahorro en gasto corriente/capital en todo el ciclo de vida."
+      - Cpt: Principio-3-Valor-Transversal-Estado
+        Def: "Beneficios financieros o no financieros que mejoran la administración del Estado."
+        Ex: "Economías de escala/red, disminución de costos de transacción."
+
+Section_4_Roles_Responsabilidades:
+  ID: EVALTIC-ROLES-RESP-01
+  Roles:
+    - ID: EVALTIC-ROLES-COORD-MODERN-01
+      Actor: "Coordinación de Modernización (Min. Hacienda)"
+      Purp: "Supervisar implementación política de modernización del Estado."
+      Resp:
+        - "Liderar política de modernización."
+        - "Supervisar Agenda de Modernización 2022-2026 y Estrategia de Gobierno Digital."
+        - "Integrar Comité de Modernización."
+        - "Asegurar coherencia entre inversión TIC y objetivos de modernización."
+    - ID: EVALTIC-ROLES-SGD-01
+      Actor: "Secretaría de Gobierno Digital (SGD)"
+      Purp: "Coordinar, asesorar y apoyar uso estratégico de tecnologías digitales, datos e información pública."
+      Resp:
+        - "Desarrollar y promover lineamientos y estándares para transformación digital."
+        - "Coordinar y asesorar a OAEs en formulación e implementación de proyectos TIC."
+        - "Desarrollar y operar plataformas y servicios compartidos."
+        - "Velar por alineación de inversiones con Ley 21.180."
+    - ID: EVALTIC-ROLES-SEC-MODERN-01
+      Actor: "Secretaría de Modernización (Min. Hacienda)"
+      Purp: "Articular transformación integral de servicios e instituciones públicas."
+      Resp:
+        - "Colaborar técnica/financieramente en proyectos prioritarios y transversales de modernización."
+        - "Promover integración de esfuerzos digitales en agenda de reforma del sector público."
+        - "Colaborar con gestión del sistema de propuesta de valor EVALTIC."
+    - ID: EVALTIC-ROLES-DIPRES-01
+      Actor: "Dirección de Presupuestos (DIPRES)"
+      Purp: "Preparación, administración y seguimiento del presupuesto nacional."
+      Resp:
+        - "Establecer lineamientos presupuestarios para inversión/gasto TIC."
+        - "Gestionar evaluación ex ante de requerimientos de financiamiento TIC."
+        - "Realizar seguimiento financiero de inversión en gobierno digital."
+        - "Usar resultados EVALTIC para decisiones presupuestarias."
+    - ID: EVALTIC-ROLES-CHILECOMPRA-01
+      Actor: "ChileCompra (Dirección de Compras y Contratación Pública)"
+      Purp: "Organismo central de compras; genera eficiencia en contratación pública."
+      Resp:
+        - "Administrar MercadoPúblico y promover acuerdos marco para TIC."
+        - "Establecer políticas y procedimientos para contratación TIC."
+        - "Promover eficiencia y transparencia en adquisiciones TIC."
+    - ID: EVALTIC-ROLES-DIRECTIVOS-OAE-01
+      Actor: "Directivas/os de los OAE"
+      Purp: "Autorizar y priorizar iniciativas TIC de sus instituciones para envío a DIPRES."
+      Resp:
+        - "Asegurar alineación con objetivos estratégicos institucionales."
+        - "Priorizar iniciativas por impacto y viabilidad."
+        - "Autorizar formalmente presentación presupuestaria a DIPRES."
+    - ID: EVALTIC-ROLES-FORMULADORES-OAE-01
+      Actor: "Formuladoras/es de Proyectos de los OAE"
+      Purp: "Definir y elaborar propuestas de proyectos TIC."
+      Resp:
+        - "Identificar necesidades y oportunidades TIC."
+        - "Elaborar documentación técnica y económica siguiendo lineamientos."
+        - "Usar plataforma DIPRES."
+        - "Interactuar con evaluadores y sectorialistas para ajustes."
+        - "Colaborar con Coordinador de Transformación Digital institucional."
+    - ID: EVALTIC-ROLES-COORD-DIGITAL-OAE-01
+      Actor: "Coordinador/a de Transformación Digital (OAE)"
+      Purp: "Revisar técnicamente proyectos TIC y emitir recomendaciones a sectorialistas DIPRES."
+      Resp:
+        - "Evaluar proyectos según criterios establecidos."
+        - "Emitir recomendaciones fundadas sobre viabilidad y pertinencia."
+    - ID: EVALTIC-ROLES-EVALUADORES-01
+      Actor: "Evaluadoras/es de proyectos"
+      Purp: "Revisar técnicamente proyectos TIC y emitir recomendaciones a sectorialistas DIPRES."
+      Resp:
+        - "Evaluar proyectos según criterios establecidos."
+        - "Emitir recomendaciones técnicas fundadas."
+    - ID: EVALTIC-ROLES-SUPERVISORES-01
+      Actor: "Supervisoras/es del proceso EVALTIC (DIPRES y SGD)"
+      Purp: "Velar por correcta operación, coordinación y cumplimiento de plazos."
+      Resp:
+        - "Coordinar etapas del proceso."
+        - "Monitorear plazos y brindar apoyo."
+        - "Mantener operatividad de la plataforma."
+        - "Realizar seguimiento posterior."
+    - ID: EVALTIC-ROLES-SECTORIALISTAS-DIPRES-01
+      Actor: "Sectorialistas DIPRES"
+      Purp: "Usar resultados de evaluación EVALTIC como insumo para asignación presupuestaria."
+      Resp:
+        - "Analizar recomendaciones técnicas de evaluadores."
+        - "Integrar evaluación EVALTIC con otros datos relevantes."
+        - "Fundamentar propuesta de presupuesto sectorial."
+
+Section_5_Marco_Normativo:
+  ID: EVALTIC-MARCO-NORMATIVO-01
+  Purp: "Asegurar eficiencia, eficacia y alineación estratégica de la inversión."
+  Fnd:
+    - "Ley 21.180 - Transformación Digital del Estado."
+    - "Ley 21.658 - Crea la Secretaría de Gobierno Digital."
+    - "Ley de Presupuestos (ej. Art. 12 Ley 21.722) obliga autorización DIPRES para gastos TIC no aprobados."
+    - "EVALTIC: Proceso obligatorio de evaluación integrado en Ley de Presupuestos."
+    - "Leyes 19.886 y 21.634 - Contratación Pública TIC."
+    - "Agenda de Modernización 2022-2026."
+    - "Estrategia de Gobierno Digital 2030."
+
+Section_6_Proceso_EVALTIC:
+  ID: EVALTIC-PROCESO-DETALLE-01
+  Def: "Marco de propuesta de valor para proyectos de inversión TIC del gobierno."
+  Src: "Iniciado 2017 por Min. Hacienda, DGD (hoy SGD) y DIPRES."
+  Resp: "Liderazgo actual de DIPRES, con apoyo de SGD y Secretaría de Modernización."
+  Mech: "Plataforma de acceso privado en sitio web de DIPRES."
+
+  Objetivos:
+    ID: EVALTIC-PROCESO-OBJETIVOS-01
+    Obj:
+      - "Optimizar el gasto en tecnologías del Estado."
+      - "Alinear gasto con Estrategia de Transformación Digital."
+      - "Fomentar iniciativas eficientes y escalables."
+      - "Lograr adherencia a normas y estándares técnicos."
+      - "Generar información para toma de decisiones basada en evidencia."
+      - "Acelerar servicios digitales centrados en usuarios."
+      - "Maximizar soluciones de interoperabilidad."
+      - "Fomentar políticas de infraestructura (cloud first/smart)."
+
+  Calendario_Anual:
+    ID: EVALTIC-PROCESO-CALENDARIO-01
+    Hitos:
+      - Cpt: Planificacion
+        Dln: "Continua"
+        Resp: ["DIPRES", "SGD", "Secretaría de Modernización"]
+      - Cpt: Apertura
+        Dln: "Mayo"
+        Act: "Comunicación oficial, jornada de inducción."
+      - Cpt: Formulacion
+        Dln: "Junio"
+        Act: "OAEs registran propuestas en plataforma."
+      - Cpt: Evaluacion-Ex-Ante
+        Dln: "Junio-Julio"
+        Act: "Evaluación por pares y comisión de expertos."
+        Cond: "Máximo 2 iteraciones por proyecto rechazado."
+      - Cpt: Cierre-Evaluacion
+        Dln: "Agosto"
+        Act: "Cierre de plataforma."
+      - Cpt: Asignacion-Presupuestaria
+        Dln: "Septiembre"
+        Act: "DIPRES usa resultados para formular Ley de Presupuestos."
+      - Cpt: Ejecucion-Monitoreo
+        Dln: "Enero-Diciembre año siguiente"
+        Act: "OAEs ejecutan proyectos aprobados."
+      - Cpt: Evaluacion-Final
+        Dln: "Post-ejecución"
+        Act: "SGD selecciona proyectos de alto valor para medir cumplimiento de objetivos."
+
+  Orientaciones_Formulacion:
+    ID: EVALTIC-FORMULACION-ORIENTACIONES-01
+    Req:
+      - "Vincular iniciativa a objetivos estratégicos institucionales (Formulario A1)."
+      - "Contar con plan estratégico de TIC alineado a planificación institucional."
+    Contenido_Minimo_Plan_TIC:
+      - Cpt: Objetivos-Estrategicos-TIC
+        Def: "Alineación con objetivos institucionales."
+      - Cpt: Modelo-Arquitectura-Institucional
+        Def: "Resumen de arquitectura de referencia (incl. CMDB)."
+      - Cpt: Modelo-Planificacion-TIC
+        Def: "Identificación, priorización y gestión (incl. comité TIC)."
+      - Cpt: Evaluacion-Servicios-TIC
+        Def: "KPIs y mejora continua."
+    Clasificacion_Iniciativas:
+      Tabla:
+        - Clasificacion: "Operacion/Mantencion"
+          Foco: "Gasto TIC para operación diaria."
+          Mandato: "Operar y mantener capacidades actuales."
+          Nivel_Riesgo: "Bajo"
+          Formulario_Tipico: "Continuidad Operacional."
+        - Clasificacion: "Crecimiento/Expansion"
+          Foco: "Mejorar sistemas."
+          Mandato: "Mejorar y ampliar capacidades existentes."
+          Nivel_Riesgo: "Medio"
+          Formulario_Tipico: "Proyecto TIC."
+        - Clasificacion: "Transformacion"
+          Foco: "Crear nuevas soluciones."
+          Mandato: "Innovar e impulsar nuevas capacidades."
+          Nivel_Riesgo: "Alto"
+          Formulario_Tipico: "Proyecto TIC."
+    Tipos_Proyectos_Plataforma:
+      - "Proyectos-TIC"
+      - "Continuidad-Operacional"
+    Informacion_Requerida:
+      Proyectos-TIC:
+        Req:
+          - "Justificación."
+          - "Análisis de alternativas."
+          - "Viabilidad."
+          - "Sostenibilidad."
+          - "Estado de avance (si aplica)."
+          - "Objetivos."
+          - "Cronograma."
+          - "Bienes y servicios necesarios."
+          - "Presupuesto requerido."
+          - "Evaluación de riesgos."
+      Continuidad-Operacional:
+        Req:
+          - "Descripción del bien o servicio."
+          - "Variaciones de precio vs. año anterior."
+          - "Listado de licencias, equipamiento, nube, etc."
+          - "Precio unitario y cantidad requerida."
+    Anexos:
+      Req: "Completar info técnica/económica y adjuntar formularios (Anexos 1 y 2) en plataforma."
+
+  Requerimientos_Estandares:
+    ID: EVALTIC-FORMULACION-REQS-01
+    Generales:
+      ID: EVALTIC-FORMULACION-REQ-GRALES-01
+      Req:
+        - "Cargar caracterización y plan estratégico de TI (si existe)."
+        - "Formular iniciativa como proyecto con formato correcto y completo."
+    Adhesion_Estandares_Tecnicos:
+      ID: EVALTIC-FORMULACION-ADHESION-ESTANDARES-01
+      Req: "Comprometerse o indicar 'No Aplica' a estándares."
+      Estandares:
+        - Cpt: Accesibilidad
+          Cond: "Soluciones de cara a usuarios."
+          Ref: "DS 1/2015 SEGPRES."
+        - Cpt: Autenticacion
+          Cond: "Si requiere mecanismo de autenticación."
+          Ref: "Norma Técnica de Autenticación."
+        - Cpt: Firma-Electronica
+          Cond: "Si requiere uso de FEA de funcionarios."
+          Ref: "Ley 19.799."
+        - Cpt: Interoperabilidad
+          Cond: "Si contempla interoperabilidad."
+          Ref: "Norma Técnica de Interoperabilidad."
+        - Cpt: Seguridad
+          Cond: "Diagnóstico y política de ciberseguridad."
+          Ref: "Norma Técnica de Seguridad."
+        - Cpt: Datos-Abiertos
+          Req: "Publicar conjuntos de datos en datos.gob.cl."
+        - Cpt: Cloud
+          Cond: "Si se usan servicios en la nube."
+          Ref: "Manual de recomendaciones SGD."
+        - Cpt: Gestor-Documental
+          Cond: "Si se desarrolla/compra gestor."
+          Ref: "Norma Técnica Documentos Electrónicos; Pauta Evaluación SGD."
+        - Cpt: Obsolescencia
+          Cond: "Establecer línea base para renovación/reposición."
+          Ref: "Norma Técnica Calidad Plataformas."
+    Principios_Diseno_Servicios:
+      ID: EVALTIC-FORMULACION-PRINCIPIOS-DISENO-01
+      Src: "Consejo Servicios Digitales."
+      Ref: "wikiguias.digital.gob.cl/Manuales/Diseño_de_Servicios."
+      Grupos:
+        - Cpt: Grupo-I-Diseñar-desde-necesidades-usuarias
+          Principios:
+            - "Comprender a usuarios y sus necesidades."
+            - "Resolver problema completo colaborando."
+            - "Brindar experiencia integrada en todos los canales."
+            - "Construir servicio claro, fácil y simple."
+            - "Asegurar accesibilidad para todas las personas."
+        - Cpt: Grupo-II-Cultura-de-servicios
+          Principios:
+            - "Instalar cultura de servicios con mejora continua."
+
+  Adhesion_Estandares_Resumen:
+    ID: EVALTIC-FORMULACION-REQS-RESUMEN
+    Req: "Cada proyecto debe registrar cumplimiento o 'No Aplica' para estándares (Accesibilidad, Autenticación, Firma Electrónica, Interoperabilidad, Seguridad, Datos Abiertos, Cloud, Gestor Documental, Obsolescencia)."
 
