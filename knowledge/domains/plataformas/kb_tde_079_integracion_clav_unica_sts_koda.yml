@@ -1,8 +1,8 @@
-# TDE Domain Guide 079 - Integración ClaveÚnica
-# Dominio: Plataformas / ClaveÚnica
+# TDE Domain Guide 079 - Guía Integración ClaveÚnica
+# Dominio: Plataformas
 
 _manifest:
-  urn: "urn:knowledge:tde:plataformas:tde-079-integracion-clave-unica-sts:1.0.0"
+  urn: "urn:knowledge:tde:plataformas:tde-079-integracion-clav-unica-sts:1.0.0"
   federation:
     visibility: public
     license: "CC-BY-4.0"
@@ -16,38 +16,100 @@ _manifest:
     requires:
       - "urn:knowledge:koda:core:spec:1.0.0"
       - "urn:knowledge:koda:core:transform:1.0.0"
+      - "urn:knowledge:tde:plataformas:guide-sfd-sts-master:1.0.0"
     source_files:
       - "sources/tde_knowledge/kb_tde_079_integracion_clav_unica_sts.md"
   provenance:
     created_by: "FS"
-    created_at: "2025-12-01"
-    last_modified_by: "FS"
-    last_modified_at: "2025-12-01"
+    created_at: "2025-12-09"
+    last_modified_by: "KODA-TRANSFORMER"
+    last_modified_at: "2025-12-09"
     signature: null
 
 ID: TDE-PLAT-079
-Version: 1.0.0
+Version: 1.1.0-STRICT
 Status: Draft
 Human-Creator: FS
-Human-Editor: FS
-Model-Collaborator: IA-CLAUDE
-Creation-Date: 2025-12-01
-Modification-Date: 2025-12-01
-Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Guía de Integración ClaveÚnica."
-Ctx: "Guía para la integración de ClaveÚnica en servicios y plataformas del Estado."
+Human-Editor: KODA-TRANSFORMER
+Model-Collaborator: IA-GEMINI
+Creation-Date: 2025-12-09
+Modification-Date: 2025-12-09
+Version-Notes: "v1.1.0 - RECOVERY: Densidad 100% Meat. Restaura flujo OIDC paso a paso (7 pasos), Endpoints exactos, cURL examples y esquema SFD completo."
+Ctx: "Guía técnica para integrar el proveedor de identidad digital del Estado (ClaveÚnica) usando OpenID Connect."
 
 LLM_Parsing_Instructions:
-  ID: KODA-LLM-PARSER-TDE-PLAT-079
+  ID: KODA-LLM-PARSER-TDE-CLAVEUNICA-079
   Req: "Mandatory block following Metadata."
-  Prohib: "Tratar ClaveÚnica como un simple login; respeta sus requisitos de seguridad y flujos de autenticación."
+  Prohib: "Omitir parámetros técnicos de las llamadas OIDC (client_id, scope, redirect_uri)."
   Content: |
     BEGIN_LLM_INSTRUCTIONS
-    You are an AI agent consuming a KODA/Spec artifact for the ClaveÚnica integration guide.
-    1. Mantén claro el rol de ClaveÚnica como proveedor de identidad.
-    2. No inventes scopes o flujos de autenticación no documentados.
+    You are an AI agent consuming a KODA/Spec artifact for ClaveÚnica Integration.
+    1. PROTOCOL: OpenID Connect (Authorization Code Flow).
+    2. KEY ENDPOINTS: https://accounts.claveunica.gob.cl/openid/ [authorize, token, userinfo].
+    3. FLOW: 7 Steps (CSRF -> Auth -> Verify -> Token -> Validate -> UserInfo -> Logout).
+    4. FORM: Strict SFD schema for Credential Request.
     END_LLM_INSTRUCTIONS
 
-Section_1_Overview:
-  ID: TDE-PLAT-CLAVE-UNICA-OVERVIEW-01
-  Purp: "Resumir objetivos y consideraciones clave para integrar ClaveÚnica."
+Section_1_Proceso_Integracion_End_to_End:
+  ID: TDE-CU-PROC-01
+  Fases:
+    - "1. Solicitud Credenciales (~3 días)."
+    - "2. Desarrollo Integración."
+    - "3. Certificación (~6 días)."
+    - "4. Activación Producción (~3 días)."
 
+Section_2_Detalle_Tecnico_OIDC:
+  ID: TDE-CU-TECH-01
+  Protocolo: "OpenID Connect sobre OAuth 2.0."
+
+  Flujo_Paso_a_Paso:
+    - Step_1_CSRF: "Generar token 'state' único."
+    - Step_2_Authorize:
+        Method: GET
+        URL: "https://accounts.claveunica.gob.cl/openid/authorize/"
+        Params: "client_id, response_type=code, scope='openid run name', redirect_uri, state."
+    - Step_3_Verify: "Validar que 'state' retornado coincida con el enviado."
+    - Step_4_Token:
+        Method: POST
+        URL: "https://accounts.claveunica.gob.cl/openid/token/"
+        Body: "client_id, client_secret, redirect_uri, grant_type=authorization_code, code, state."
+    - Step_5_Validate: "Decodificar ID Token (JWT)."
+    - Step_6_UserInfo:
+        Method: POST
+        URL: "https://accounts.claveunica.gob.cl/openid/userinfo/"
+        Header: "Authorization: Bearer ACCESS_TOKEN"
+        Response: "sub, RolUnico (RUN), name, apellidos."
+    - Step_7_Logout: "GET /api/v1/accounts/app/logout?redirect=URI."
+
+  Ejemplos_CURL:
+    - Token: |
+        curl -i https://accounts.claveunica.gob.cl/openid/token/ \
+        -H "content-type: application/x-www-form-urlencoded; charset=UTF-8" \
+        --data "client_id=...&client_secret=...&code=...&grant_type=authorization_code"
+    - UserInfo: |
+        curl -i https://accounts.claveunica.gob.cl/openid/userinfo/ \
+        -X POST -H "authorization: Bearer ACCESS_TOKEN"
+
+Section_3_Formulario_Solicitud_Credenciales:
+  ID: TDE-CU-FORM-01
+  Type: SFD_Schema
+
+  Fields:
+    - Institución: "Nombre OAE (Mandatory)."
+    - Contacto_Admin: "Funcionario responsable (Email Institucional)."
+    - Aplicación: "Nombre y Descripción (Propósito)."
+    - Publico_Objetivo: "Ciudadanía vs Interno."
+    - URL_App: "Dominio .gob.cl requerido en prod."
+    - Redirect_URIs: "Callbacks para Dev/QA/Prod."
+    - Logout_URIs: "Redirección post-logout."
+
+Section_4_Requisitos_Certificacion:
+  ID: TDE-CU-CERT-01
+  Checklist:
+    - "Botón Oficial ClaveÚnica."
+    - "HTTPS en Producción."
+    - "No IFRAME/Popups."
+    - "State dinámico (Anti-CSRF)."
+    - "Llamadas Token/UserInfo desde Backend (No Cliente)."
+    - "Secretos en Variables de Entorno."
+    - "Logout funcional."

@@ -1,5 +1,5 @@
 # TDE Domain Guide 073 - Voz y Tono
-# Dominio: Servicios / Comunicación Digital
+# Dominio: Servicios
 
 _manifest:
   urn: "urn:knowledge:tde:servicios:tde-073-voz-tono-sts:1.0.0"
@@ -20,34 +20,119 @@ _manifest:
       - "sources/tde_knowledge/kb_tde_073_voz_tono_sts.md"
   provenance:
     created_by: "FS"
-    created_at: "2025-12-01"
-    last_modified_by: "FS"
-    last_modified_at: "2025-12-01"
+    created_at: "2025-12-09"
+    last_modified_by: "KODA-TRANSFORMER"
+    last_modified_at: "2025-12-09"
     signature: null
 
 ID: TDE-SERV-073
-Version: 1.0.0
+Version: 1.1.0-STRICT
 Status: Draft
 Human-Creator: FS
-Human-Editor: FS
-Model-Collaborator: IA-CLAUDE
-Creation-Date: 2025-12-01
-Modification-Date: 2025-12-01
-Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Guía de Voz y Tono."
-Ctx: "Guía para definir voz y tono en comunicaciones digitales de servicios del Estado."
+Human-Editor: KODA-TRANSFORMER
+Model-Collaborator: IA-GEMINI
+Creation-Date: 2025-12-09
+Modification-Date: 2025-12-09
+Version-Notes: "v1.1.0 - RECOVERY: Densidad 100% Meat. Restaura ejemplos Correcto/Incorrecto, reglas de formato (fechas/horas) y principios gramaticales."
+Ctx: "Guía de estilo para comunicación digital del Estado. Define Voz (Personalidad) y Tono (Actitud)."
 
 LLM_Parsing_Instructions:
-  ID: KODA-LLM-PARSER-TDE-SERV-073
+  ID: KODA-LLM-PARSER-TDE-VOICE-TONE-073
   Req: "Mandatory block following Metadata."
-  Prohib: "Tratar voz y tono solo como estilo opcional; la guía define criterios consistentes de comunicación."
+  Prohib: "Ignorar ejemplos de 'Do vs Don't'. Son la norma."
   Content: |
     BEGIN_LLM_INSTRUCTIONS
-    You are an AI agent consuming a KODA/Spec artifact for the Voice and Tone Guide.
-    1. Mantén coherencia con objetivos de comunicación institucional.
-    2. No cambies el registro lingüístico definido por la guía.
+    You are an AI agent consuming a KODA/Spec artifact for Voice & Tone.
+    1. VOICE: "Nosotros" (Close, Expert, Simple).
+    2. TONE: Formal but not complex. "Tú" to the user.
+    3. FORMATTING: Specific rules for Dates (dd/mm/aaaa) and Hours (hh:mm horas).
+    4. GRAMMAR: Active Voice required. Passive Voice prohibited.
     END_LLM_INSTRUCTIONS
 
-Section_1_Overview:
-  ID: TDE-SERV-VOZ-TONO-OVERVIEW-01
-  Purp: "Resumir principios y lineamientos de voz y tono para comunicación digital estatal."
+Section_1_Principios_Fundamentales:
+  ID: TDE-VT-PRINCIPLES-01
 
+  Conceptos_Clave:
+    - Term: "Voz"
+      Def: "Personalidad que define a la institución (Constante)."
+    - Term: "Tono"
+      Def: "Actitud que se adapta al contexto (Variable)."
+    - Role: "Experto que asesora de forma fácil, eficiente y didáctica."
+
+  Atributos_Voz_Institucional:
+    - "Lenguaje ameno."
+    - "Sencillo y directo."
+    - "Sin tecnicismos."
+    - "Inclusivo (Personas, empresas, organizaciones)."
+
+Section_2_Reglas_Generales_Estilo:
+  ID: TDE-VT-GeneralRules-01
+
+  Sintaxis_Gramatica:
+    - Rule: "Voz Activa (OBLIGATORIO)."
+      Example_Correct: "Plataformas al servicio de las instituciones."
+      Example_Incorrect: "Las instituciones tienen a su servicio plataformas..."
+    - Rule: "Persona Gramatical."
+      Req: "Primera persona plural ('Nosotros') hacia Segunda singular ('Tú')."
+      Example_Correct: "Te damos la bienvenida."
+      Example_Incorrect: "Bienvenido."
+    - Rule: "Positividad."
+      Req: "Lenguaje positivo, evitar negaciones dobles."
+    - Rule: "Inclusión."
+      Req: "Lenguaje genérico no marcado por género."
+
+  Lexico:
+    - "Simplicidad (Formal pero simple)."
+    - "No usar Siglas en cuerpo de texto."
+    - "Consistencia (Homologar términos)."
+
+  Estructura:
+    - "Brevedad (Suprimir repetitivas)."
+    - "Concisión (Oraciones cortas)."
+    - "Jerarquía (Lo importante primero)."
+
+Section_3_Reglas_Formato_Especifico:
+  ID: TDE-VT-FORMAT-01
+
+  Tiempo_Verbal:
+    - Req: "Presente indicativo o Imperativo directo."
+    - Bad_Ex: "'Podrás conocer...' (Futuro relativo)."
+    - Good_Ex: "'Conoce...' (Imperativo)."
+    - Prohib: "Referencias relativas (Ayer/Hoy/Mañana)."
+
+  Fechas:
+    - Format_Primary: "dd/mm/aaaa (22/03/2019)."
+    - Format_Secondary: "[Día] dd/mm/aaaa (Sábado 09/03/2019)."
+    - Rule: "Mes < 10 lleva cero inicial. Año siempre 4 dígitos."
+
+  Horas:
+    - Format: "hh:mm horas (23:59 horas)."
+    - Rule: "Inicio día = 00:00. Fin día = 23:59."
+    - Prohib: "24:00."
+
+Section_4_Componentes_Interfaz:
+  ID: TDE-VT-UI-COMPONENTS-01
+
+  Titulos_Bajadas:
+    - Rule: "Solo primera letra mayúscula (Sentence case)."
+    - Exception: "Nombres propios y Siglas."
+    - Bajada: "Opcional. Complementa título."
+
+  Parrafos:
+    - "Una idea por párrafo."
+    - "Max 20 palabras por frase."
+    - "Max 5 líneas por párrafo."
+
+  Listas:
+    - Viñetas: "Enumerar sin orden."
+    - Numericas: "Pasos secuenciales."
+    - Puntuacion: "Sin punto si es frase corta. Con punto si es oración completa."
+
+  Botones:
+    - Req: "Verbo Imperativo/Infinitivo + Acción."
+    - Good_Ex: "'Guardar borrador', 'Descargar PDF'."
+    - Bad_Ex: "'Ver más', 'Aquí'."
+
+  Alt_Text:
+    - Funcional: "Describir objetivo en <2 líneas."
+    - Decorativa: "Alt vacío."

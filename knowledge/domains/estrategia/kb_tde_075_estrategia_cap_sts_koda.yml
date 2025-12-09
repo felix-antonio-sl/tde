@@ -1,5 +1,5 @@
 # TDE Domain Guide 075 - Estrategia de Capacitación en Transformación Digital
-# Dominio: Estrategia / Capacitación
+# Dominio: Estrategia
 
 _manifest:
   urn: "urn:knowledge:tde:estrategia:tde-075-estrategia-cap-sts:1.0.0"
@@ -20,34 +20,156 @@ _manifest:
       - "sources/tde_knowledge/kb_tde_075_estrategia_cap_sts.md"
   provenance:
     created_by: "FS"
-    created_at: "2025-12-01"
-    last_modified_by: "FS"
-    last_modified_at: "2025-12-01"
+    created_at: "2025-12-09"
+    last_modified_by: "KODA-TRANSFORMER"
+    last_modified_at: "2025-12-09"
     signature: null
 
 ID: TDE-ESTRAT-075
 Version: 1.0.0
 Status: Draft
 Human-Creator: FS
-Human-Editor: FS
-Model-Collaborator: IA-CLAUDE
-Creation-Date: 2025-12-01
-Modification-Date: 2025-12-01
-Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Estrategia de Capacitación TDE."
-Ctx: "Estrategia de fortalecimiento de capacidades para Transformación Digital en el Estado."
+Human-Editor: KODA-TRANSFORMER
+Model-Collaborator: IA-GEMINI
+Creation-Date: 2025-12-09
+Modification-Date: 2025-12-09
+Version-Notes: "v1.0.0 - Transformación completa KODA/Spec. Telegrafización y alineación con Eje Personas EGD2030."
 
 LLM_Parsing_Instructions:
   ID: KODA-LLM-PARSER-TDE-CAP-075
   Req: "Mandatory block following Metadata."
-  Prohib: "Reducir capacitación a cursos aislados; la guía trabaja sobre capacidades organizacionales."
+  Prohib: "Confundir capacitación con soporte técnico básico."
   Content: |
     BEGIN_LLM_INSTRUCTIONS
-    You are an AI agent consuming a KODA/Spec artifact for the TDE capacity-building strategy.
-    1. Distingue niveles (individual, equipo, institucional) y tipos de capacidades.
-    2. Mantén claro el vínculo con la Estrategia de Gobierno Digital 2030.
+    You are an AI agent consuming a KODA/Spec artifact for the TDE Training Strategy.
+    1. Distingue perfiles de capacitación (Directivos, Coordinadores, Especialistas).
+    2. Identifica el modelo multicanal y la gestión del cambio.
+    3. Interpreta 'Telegrafización' como contenido denso y optimizado.
     END_LLM_INSTRUCTIONS
 
-Section_1_Overview:
-  ID: TDE-ESTRATEGIA-CAP-OVERVIEW-01
-  Purp: "Resumir objetivos y líneas de acción para capacitación en TDE."
+Section_1_Contexto:
+  ID: STS-CAP-CTX-01
+  Purp: "Contexto y justificación estrategia capacitación."
 
+  Desafios:
+    ID: STS-CAP-CTX-CHALLENGE-01
+    Def: "Creciente necesidad competencias digitales Estatales."
+    Cause: "Transformación digital requiere cambio cultural y nuevas aptitudes."
+    Req: "Liderazgo del proceso por servidores públicos."
+
+  Diagnostico_Brecha:
+    ID: STS-CAP-CTX-GAP-01
+    Src: "Encuesta Empleo Público 2020 (Servicio Civil/BID)."
+    Findings:
+      - "Solo 25% recibió capacitación TIC en último año."
+      - "<50% con formación necesaria ante cambios."
+      - "Chile sin marco competencias digitales oficial (2021)."
+    Res: "Oferta inicial post-Ley 21.180 insuficiente."
+
+  Justificacion:
+    ID: STS-CAP-CTX-JUST-01
+    Obj:
+      - "Responder demanda normativa."
+      - "Suplir falta lineamientos teórico-metodológicos."
+    Horizonte: "2027."
+
+Section_2_Concepto_Capacitacion:
+  ID: STS-CAP-CONCEPT-01
+  Def_Legal: "Actividades permanentes, organizadas para desarrollo de destrezas (Estatuto Admin, Art 26)."
+  Def_BID: "Desarrollo competencias para desempeño y calidad vida + compromiso."
+
+  Tipologia_Integrada:
+    ID: STS-CAP-CONCEPT-TYPE-01
+    Dimensions:
+      - Type: "Inicial/Onboarding"
+        Purp: "Adaptación y compromiso nuevo profesional."
+      - Type: "Continua/Perfeccionamiento"
+        Purp: "Mejora desempeño, alineación estratégica."
+      - Type: "Específica/Promoción"
+        Purp: "Alto potencial, liderazgo, ascenso."
+
+  Factores_Exito:
+    ID: STS-CAP-CONCEPT-SUCCESS-01
+    Items:
+      - "Detección oportuna necesidades."
+      - "Apoyo/Compromiso jefaturas."
+      - "Aplicación práctica aprendizajes."
+      - "Seguimiento/Evaluación."
+
+Section_3_Experiencia_Internacional:
+  ID: STS-CAP-BENCHMARK-01
+  Hallazgos:
+    - "Plataformas Virtuales (Arg, Col, Cor, UK): Masividad, asíncrono."
+    - "Modelo Competencias (Dinamarca): Referencia validada."
+    - "Plan Nacional Integral (España): Incluye ciudadanía."
+    - "Asesoría Experta (Estonia): Academia e-Governance."
+  Conclusiones:
+    - "Categorización perfiles es fundamental."
+    - "Capacitación directivos es clave."
+    - "Multicanalidad (Virtual + Presencial) necesaria."
+
+Section_4_Estrategia_Central:
+  ID: STS-CAP-STRATEGY-01
+
+  Vision:
+    ID: STS-CAP-VISION-01
+    Def: "Impulsar TD generando valor público mediante desarrollo talento digital accesible, equitativo y gratuito."
+
+  Ejes_Estrategicos:
+    ID: STS-CAP-AXIS-01
+
+    Eje_Lineamientos:
+      Def: "Marco conceptual/metodológico alineado Ley TD."
+
+    Eje_Perfiles_Trayectorias:
+      Def: "Rutas aprendizaje diferenciadas."
+      Perfiles_Prioritarios:
+        - "P1: Directivos/Jefaturas."
+        - "P2: Coordinador TD."
+        - "P3: Encargado Ciberseguridad."
+        - "P4: Encargado Tecnologías."
+        - "P5: Oficina Partes."
+        - "P6: Asuntos Legales."
+        - "P7: Gestión Documental."
+
+    Eje_Cultura_Cambio:
+      Def: "Aprendizaje continuo, reduccion resistencia cambio."
+
+    Eje_Canales:
+      Def: "Estrategia multicanal (Virtual/Presencial/Híbrido)."
+
+Section_5_Plan_Accion:
+  ID: STS-CAP-ACTION-01
+
+  Lineamientos_Metodologicos:
+    ID: STS-CAP-ACT-METHOD-01
+    Actions:
+      - "Analizar brechas y necesidades (2025-T4)."
+      - "Definir metodología plan formativo (2025-T4)."
+
+  Trayectorias_Formativas:
+    ID: STS-CAP-ACT-TRAJECTORY-01
+    Actions:
+      - "Desarrollar malla formación y hoja ruta (2025-T4)."
+      - "Validar plan con expertos (2026-T2)."
+      - "Implementar/evaluar piloto (2026-T4)."
+
+  Gestion_Cambio:
+    ID: STS-CAP-ACT-CHANGE-01
+    Actions:
+      - "Estrategia integración/incentivos (2026-T2)."
+      - "Campañas sensibilización (2026-T2)."
+      - "Talleres gestión cambio Directivos (2027-T2)."
+
+  Canales:
+    ID: STS-CAP-ACT-CHANNELS-01
+    Actions:
+      - "Alianzas Universidades (Asíncrono) (2027-T2)."
+      - "Alianzas Instituciones Públicas (2027-T4)."
+      - "Estrategia multicanal (2026-T4)."
+      - "Monitoreo mejora continua (2028-T4)."
+
+Section_6_Anexo_Comparado:
+  ID: STS-CAP-ANNEX-01
+  Ref: "Tabla comparativa modelos Arg, Col, Cor, Din, Esp, Est, UK."
+  Detail: "Ver documento fuente para matriz completa."

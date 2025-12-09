@@ -1,8 +1,8 @@
-# TDE Domain Guide 078 - Guía SIMPLE SaaS
-# Dominio: Plataformas / SIMPLE SaaS
+# TDE Domain Guide 078 - Guía SIMPLE (SaaS)
+# Dominio: Plataformas
 
 _manifest:
-  urn: "urn:knowledge:tde:plataformas:tde-078-guia-simple-saas-sts:1.0.0"
+  urn: "urn:knowledge:tde:plataformas:tde-078-simple-saas-sts:1.0.0"
   federation:
     visibility: public
     license: "CC-BY-4.0"
@@ -20,34 +20,103 @@ _manifest:
       - "sources/tde_knowledge/kb_tde_078_guia_simple_saas_sts.md"
   provenance:
     created_by: "FS"
-    created_at: "2025-12-01"
-    last_modified_by: "FS"
-    last_modified_at: "2025-12-01"
+    created_at: "2025-12-09"
+    last_modified_by: "KODA-TRANSFORMER"
+    last_modified_at: "2025-12-09"
     signature: null
 
 ID: TDE-PLAT-078
-Version: 1.0.0
+Version: 1.1.0-STRICT
 Status: Draft
 Human-Creator: FS
-Human-Editor: FS
-Model-Collaborator: IA-CLAUDE
-Creation-Date: 2025-12-01
-Modification-Date: 2025-12-01
-Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Guía SIMPLE SaaS."
-Ctx: "Guía para uso e implementación de la plataforma SIMPLE SaaS."
+Human-Editor: KODA-TRANSFORMER
+Model-Collaborator: IA-GEMINI
+Creation-Date: 2025-12-09
+Modification-Date: 2025-12-09
+Version-Notes: "v1.1.0 - RECOVERY: Densidad 100% Meat. Restaura protocolos operativos (limpieza, APIs), sanciones y reglas de gobernanza."
+Ctx: "Guía operativa y de gobernanza para el uso de la plataforma SIMPLE en modalidad SaaS por OAEs."
 
 LLM_Parsing_Instructions:
-  ID: KODA-LLM-PARSER-TDE-PLAT-078
+  ID: KODA-LLM-PARSER-TDE-SIMPLE-SAAS-078
   Req: "Mandatory block following Metadata."
-  Prohib: "Tratar SIMPLE como plataforma genérica; respeta sus componentes y restricciones."
+  Prohib: "Omitir tiempos de borrado (30 días) o ventanas de mantenimiento (Enero)."
   Content: |
     BEGIN_LLM_INSTRUCTIONS
-    You are an AI agent consuming a KODA/Spec artifact for the SIMPLE SaaS guide.
-    1. Mantén claro el alcance de SIMPLE (tipos de trámites/procesos que cubre).
-    2. No extrapoles funcionalidades que la guía no describa.
+    You are an AI agent consuming a KODA/Spec artifact for SIMPLE SaaS.
+    1. GOVERNANCE: "Dev" environment cleaning = Last business day of January. "File Transfer" retention = 30 days.
+    2. API RULES: No "rest" calls to own API from processes. Bulk reports max 6 months window.
+    3. SANCTIONS: SGD can block credentials for misuse (Development in Production).
+    4. SUPPORT: Providers cannot open tickets directly. Only Institution can.
     END_LLM_INSTRUCTIONS
 
-Section_1_Overview:
-  ID: TDE-PLAT-SIMPLE-OVERVIEW-01
-  Purp: "Resumir propósito y alcance de la plataforma SIMPLE SaaS."
+Section_1_Definiciones_Generales:
+  ID: TDE-SIMPLE-DEFS-01
+  Concepto:
+    - "SIMPLE: Sistema de Implementación de Procesos Ligeramente Estandarizados (BPMS)."
+    - "Scope: Procesos de baja complejidad."
+  Integraciones_Nativas:
+    - "FirmaGob (Desatendida)."
+    - "ClaveÚnica (Auth)."
+    - "APIs Externas."
 
+Section_2_Gobernanza_Ambientes:
+  ID: TDE-SIMPLE-ENV-GOV-01
+
+  Ambiente_Desarrollo:
+    - "Uso: Creación, Pruebas, Modificaciones."
+    - "Limpieza: Anual. Último día hábil de Enero (Borrado)."
+    - "Backup: Responsabilidad Institución."
+
+  Ambiente_Produccion:
+    - "Prohibido: Desarrollar o testear aquí."
+    - "Sanción: Bloqueo de credenciales si se detecta mal uso."
+
+  Almacenamiento_Archivos:
+    - "Tool: File Transfer backend."
+    - "Retention: 30 días corridos. Irrecuperable después."
+
+Section_3_Funcionalidades_Criticas:
+  ID: TDE-SIMPLE-FEATURES-01
+
+  API_SIMPLE:
+    - "Prohibido: Loopback (Llamar a API propia desde proceso interno)."
+    - "Monitoreo: SGD vigila sobreconsumo."
+
+  Procesos_Masivos:
+    - "Horario Recomendado: 00:00 - 05:00 hrs."
+    - "Sanción: Bloqueo si afecta estabilidad."
+
+  Reporteria:
+    - "Ventana: Max 6 meses de consulta."
+    - "Prohibido: Dump histórico completo (Usar API + BD propia para eso)."
+
+  Correo:
+    - "Remitente: no-reply@digital.gob.cl."
+    - "Responsabilidad: Configurar Whitelist interna para evitar SPAM."
+
+Section_4_Procedimientos_Operativos:
+  ID: TDE-SIMPLE-OPS-01
+
+  Lanzamiento_Nuevos_Procesos:
+    - "Aviso: 2 semanas antes a SGD."
+    - "Formulario: Informar volumen estimado, contacto técnico, fecha."
+
+  Integracion_Servicios_Externos:
+    - "Registro: Obligatorio (Formulario Integración)."
+    - "Sanción: Si servicio no registrado causa falla -> Acción de seguridad (Bloqueo)."
+
+  Soporte_Tecnico:
+    - "Canal: Mesa Ayuda Digital (Formulario web)."
+    - "Regla Proveedores: NO pueden abrir tickets. Solo personal institucional (correo .gob.cl)."
+    - "Visado: Procesos deben ser visados por Equipo Digitalización antes de salir a Prod."
+
+Section_5_Responsabilidades:
+  ID: TDE-SIMPLE-RESP-01
+  Institucion:
+    - "Administrar usuarios."
+    - "Respaldar desarrollos."
+    - "Soporte N1 a sus usuarios finales."
+    - "Validar calidad de proveedores."
+  Gobierno_Digital:
+    - "Infraestructura y disponibilidad (SaaS)."
+    - "Soporte N2/N3 (Plataforma base)."

@@ -1,5 +1,5 @@
 # TDE Domain Guide 076 - Estrategia de Datos del Estado
-# Dominio: Estrategia / Datos
+# Dominio: Estrategia
 
 _manifest:
   urn: "urn:knowledge:tde:estrategia:tde-076-estrategia-datos-sts:1.0.0"
@@ -20,34 +20,116 @@ _manifest:
       - "sources/tde_knowledge/kb_tde_076_estrategia_datos_sts.md"
   provenance:
     created_by: "FS"
-    created_at: "2025-12-01"
-    last_modified_by: "FS"
-    last_modified_at: "2025-12-01"
+    created_at: "2025-12-09"
+    last_modified_by: "KODA-TRANSFORMER"
+    last_modified_at: "2025-12-09"
     signature: null
 
 ID: TDE-ESTRAT-076
 Version: 1.0.0
 Status: Draft
 Human-Creator: FS
-Human-Editor: FS
-Model-Collaborator: IA-CLAUDE
-Creation-Date: 2025-12-01
-Modification-Date: 2025-12-01
-Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Estrategia de Datos del Estado."
-Ctx: "Estrategia nacional de datos para el sector público."
+Human-Editor: KODA-TRANSFORMER
+Model-Collaborator: IA-GEMINI
+Creation-Date: 2025-12-09
+Modification-Date: 2025-12-09
+Version-Notes: "v1.0.0 - Transformación completa KODA/Spec. Telegrafización y estructura de 3 Ejes Habilitantes."
 
 LLM_Parsing_Instructions:
-  ID: KODA-LLM-PARSER-TDE-DATOS-076
+  ID: KODA-LLM-PARSER-TDE-DATA-076
   Req: "Mandatory block following Metadata."
-  Prohib: "Tratar la estrategia solo como lineamientos de TI; está centrada en valor público de los datos."
+  Prohib: "Confundir iniciativa de datos con infraestructura física."
   Content: |
     BEGIN_LLM_INSTRUCTIONS
-    You are an AI agent consuming a KODA/Spec artifact for the State Data Strategy.
-    1. Distingue principios, ejes y mecanismos de gobernanza de datos. 
-    2. Vincula cuando corresponda con MGDE y datos abiertos.
+    You are an AI agent consuming a KODA/Spec artifact for the TDE Data Strategy.
+    1. Distingue los 3 ejes habilitantes: Ecosistema, Personas, Tecnología.
+    2. Identifica el rol de la SGD y los consejos estratégicos.
+    3. Interpreta 'Telegrafización' como contenido denso y optimizado.
     END_LLM_INSTRUCTIONS
 
-Section_1_Overview:
-  ID: TDE-ESTRATEGIA-DATOS-OVERVIEW-01
-  Purp: "Resumir ejes y principios de la Estrategia de Datos del Estado."
+Section_1_Contexto:
+  ID: TDE-DATA-CTX-01
+  Purp: "Contexto y desafíos estrategia datos."
 
+  Posicionamiento:
+    ID: TDE-DATA-CTX-POS-01
+    Facts:
+      - "Chile 2º en Latam transformación digital."
+      - "Brecha: Sector público no es 'data-driven' por defecto."
+      - "Desafío: Uso estratégico datos incipiente."
+
+  Brechas_Estructurales:
+    ID: TDE-DATA-CTX-GAPS-01
+    Items:
+      - "Fragmentación/Silos: Redundancia, costos gestión."
+      - "Talento: Escasez perfiles especializados (Datos, IA)."
+      - "Tecnología: Sistemas obsoletos, baja interoperabilidad (1% municipios integrados)."
+
+Section_2_Vision_Objetivos:
+  ID: TDE-DATA-VISION-01
+  Vision_2030:
+    Def: "Administración Estado impulsada por datos, información y conocimiento."
+    Target: "Líder OCDE uso estratégico datos."
+    Res: "Servicios proactivos, eficientes, seguros."
+
+  Objetivo_Estrategico:
+    Mssn: "Transformar Estado mediante uso estratégico datos para generar valor público."
+
+Section_3_Ejes_Estrategicos:
+  ID: TDE-DATA-AXIS-01
+  Type: "3 Ejes Habilitantes Transversales."
+
+  Eje_1_Ecosistema:
+    ID: TDE-DATA-AXIS-ECO-01
+    Def: "Gestión y Gobernanza de Datos."
+    Lineamientos:
+      - "Foco Ciudadano: Necesidades y derechos."
+      - "Coordinación Multinivel: Local + Central."
+      - "Coordinación Intersectorial: Interoperabilidad."
+    Medidas:
+      - Act: "Crear Consejo Estratégico Datos."
+      - Act: "Establecer incentivos gobernanza."
+      - Act: "Inventario Datos Estado / Normas Técnicas."
+      - Act: "Impulsar Interoperabilidad."
+
+  Eje_2_Personas:
+    ID: TDE-DATA-AXIS-PEOPLE-01
+    Def: "Habilidades y Capacidades."
+    Lineamientos:
+      - "Desarrollo Talento Digital: Capacitación continua."
+      - "Gestión Cambio: Adaptación cultura datos."
+      - "Autonomía: Alfabetización digital funcionaria."
+    Medidas:
+      - Act: "Certificaciones gobierno/gestión datos."
+      - Act: "Reclutamiento perfiles especializados."
+      - Act: "Formación IA / Datos Abiertos."
+
+  Eje_3_Tecnologia:
+    ID: TDE-DATA-AXIS-TECH-01
+    Def: "Infraestructura Pública Digital (IPD)."
+    Lineamientos:
+      - "Red Interoperabilidad: Principio 'Una sola vez'."
+      - "Datos Abiertos: APIs, Open Source."
+      - "Integración Datos: Servicios compartidos analisis."
+      - "Innovación IA: Sandboxes."
+    Medidas:
+      - Act: "Portal visualización avance / Web gobierno datos."
+      - Act: "Plataforma Interoperabilidad nueva generación."
+      - Act: "Centro Excelencia IA / Guías éticas."
+
+Section_4_Glosario:
+  ID: TDE-DATA-GLOSSARY-01
+  Items:
+    - Term: "Datos Maestros"
+      Def: "Información fundamental entidades clave (contexto)."
+    - Term: "Datos Referencia"
+      Def: "Códigos categorización."
+    - Term: "Interoperabilidad"
+      Def: "Comunicación datos mínima intervención humana."
+    - Term: "Servicios Compartidos"
+      Def: "Herramientas usadas por 2+ órganos."
+
+Section_5_Plan_Accion_Anexo:
+  ID: TDE-DATA-ANNEX-01
+  Ref: "Documento independiente actualizado semestralmente."
+  Colaboradores: "Ministerios, Academia, Sociedad Civil, Internacional (BID, OCDE)."

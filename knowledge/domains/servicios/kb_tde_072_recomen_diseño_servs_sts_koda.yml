@@ -1,8 +1,8 @@
-# TDE Domain Guide 072 - Recomendaciones de Diseño de Servicios
-# Dominio: Servicios / Diseño
+# TDE Domain Guide 072 - Recomendaciones Diseño de Servicios
+# Dominio: Servicios
 
 _manifest:
-  urn: "urn:knowledge:tde:servicios:tde-072-recomen-diseno-servs-sts:1.0.0"
+  urn: "urn:knowledge:tde:servicios:tde-072-diseno-servicios-sts:1.0.0"
   federation:
     visibility: public
     license: "CC-BY-4.0"
@@ -20,34 +20,108 @@ _manifest:
       - "sources/tde_knowledge/kb_tde_072_recomen_diseño_servs_sts.md"
   provenance:
     created_by: "FS"
-    created_at: "2025-12-01"
-    last_modified_by: "FS"
-    last_modified_at: "2025-12-01"
+    created_at: "2025-12-09"
+    last_modified_by: "KODA-TRANSFORMER"
+    last_modified_at: "2025-12-09"
     signature: null
 
 ID: TDE-SERV-072
-Version: 1.0.0
+Version: 1.1.0-STRICT
 Status: Draft
 Human-Creator: FS
-Human-Editor: FS
-Model-Collaborator: IA-CLAUDE
-Creation-Date: 2025-12-01
-Modification-Date: 2025-12-01
-Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Recomendaciones de Diseño de Servicios."
-Ctx: "Recomendaciones para diseño y mejora de servicios públicos desde la perspectiva de experiencia usuaria."
+Human-Editor: KODA-TRANSFORMER
+Model-Collaborator: IA-GEMINI
+Creation-Date: 2025-12-09
+Modification-Date: 2025-12-09
+Version-Notes: "v1.1.0 - RECOVERY: Densidad 100% Meat. Restaura las 14 Recomendaciones completas con Acciones, Justificación y Definiciones."
+Ctx: "14 Recomendaciones clave para diseño de servicios públicos centrados en las personas. Modelo de 3 Dimensiones (Usuario, Cultura, Tecnología)."
 
 LLM_Parsing_Instructions:
-  ID: KODA-LLM-PARSER-TDE-SERV-072
+  ID: KODA-LLM-PARSER-TDE-SERVICE-DESIGN-072
   Req: "Mandatory block following Metadata."
-  Prohib: "Reducir diseño de servicios a cambios cosméticos; la guía aborda diseño integral del servicio."
+  Prohib: "Resumir recomendaciones. Mantener estructura Rec-01 a Rec-14."
   Content: |
     BEGIN_LLM_INSTRUCTIONS
-    You are an AI agent consuming a KODA/Spec artifact for the Service Design Recommendations.
-    1. Mantén foco en servicios públicos y su ciclo completo.
-    2. No generalices a UX genérico fuera del contexto estatal. 
+    You are an AI agent consuming a KODA/Spec artifact for Service Design Recommendations.
+    1. STRUCTURE: 3 Dimensions -> 14 Recommendations.
+    2. CONTENT: For each Rec, keep Definition (Def), Action (Act), and Justification (Just).
+    3. KEY CONCEPTS: Omnicanalidad, Privacy by Design, Once-Only, Open Standards.
     END_LLM_INSTRUCTIONS
 
-Section_1_Overview:
-  ID: TDE-SERV-DISENO-OVERVIEW-01
-  Purp: "Resumir objetivos y principios de diseño de servicios públicos definidos por la guía."
+Section_1_Dim_I_Foco_Usuario_y_Diseno:
+  ID: TDE-SD-DIM1-USER-01
+  Purp: Comprensión y principios de diseño (Rec 01-06).
 
+  Rec_01_Comprension_Usuarios:
+    Def: "Entender necesidades profundas (Insight)."
+    Act: "Investigación continua (Cuali/Cuanti), Prototipado rápido."
+    Just: "Soluciones responden mejor al contexto real."
+
+  Rec_02_Resolucion_Completa:
+    Def: "Cumplir objetivo completo (End-to-End). Colaboración inter-institucional."
+    Act: "Integrar servicios. Solicitar info una sola vez (Once-Only). Trazabilidad de solicitudes."
+    Just: "Ciudadano ve al Estado como uno solo, no silos."
+
+  Rec_03_Diseno_Simple_Intuitivo:
+    Def: "Éxito al primer intento. Menor carga cognitiva."
+    Act: "Foco en una tarea a la vez. Validar usabilidad. Consistencia UX."
+    Just: "Ahorra tiempo y fomenta confianza pública."
+
+  Rec_04_Accesibilidad_Universal:
+    Def: "Utilizable por todos (Discapacidad, conexión, cultura)."
+    Act: "Estándar WCAG AA. Lenguaje claro. Soporte asistido."
+    Just: "Inclusión es indispensable para algunos, útil para todos."
+
+  Rec_05_Experiencia_Omnicanal:
+    Def: "Coherencia entre web, teléfono, presencial."
+    Act: "Alinear objetivos canales. Estandarizar contenidos. Recursos para cada canal."
+    Just: "Evita confusión y fragmentación."
+
+  Rec_06_Evaluacion_Sistematica:
+    Def: "Métricas de éxito desde perspectiva usuaria."
+    Act: "Monitorear resolución de necesidad (no solo output). Publicar indicadores."
+    Just: "Decisiones informadas basadas en datos."
+
+Section_2_Dim_II_Cultura_Organizacional:
+  ID: TDE-SD-DIM2-CULTURE-01
+  Purp: Entorno, liderazgo y gobernanza (Rec 07-09).
+
+  Rec_07_Entorno_Cultural:
+    Def: "Ambiente que fomenta innovación y aprendizaje."
+    Act: "Liderazgo activo. Transferencia conocimiento. Capacitación transversal."
+
+  Rec_08_Gobernanza_Integral:
+    Def: "Equipos multidisciplinarios y multinivel."
+    Act: "Mesa: Negocio + Tecnica + UX + Legal + OIRS. Acceso a expertos."
+    Just: "Diversidad de perspectivas asegura calidad."
+
+  Rec_09_Iteracion_Mejora:
+    Def: "Ciclos cortos. Feedback -> Adaptación."
+    Act: "Agilidad (Inspeccionar/Adaptar). Evaluar en todos los canales. Priorizar por valor."
+
+Section_3_Dim_III_Procesos_y_Tecnologia:
+  ID: TDE-SD-DIM3-TECH-01
+  Purp: Soporte, datos y seguridad (Rec 10-14).
+
+  Rec_10_Privacidad:
+    Def: "Privacy by Design. Recolección mínima."
+    Act: "Informar política clara. Controles seguridad (MFA, Cifrado)."
+    Just: "Falta de seguridad destruye confianza."
+
+  Rec_11_Continuidad_Seguridad:
+    Def: "Disponibilidad continua y resiliencia."
+    Act: "Plan restauración. Backups. Pruebas vulnerabilidad. Cumplir Ley Ciberseguridad."
+
+  Rec_12_Estandares_Abiertos:
+    Def: "Evitar Lock-in. Componentes comunes."
+    Act: "Usar servicios compartidos (ClaveÚnica, Etc). Reusar código."
+    Just: "Escalabilidad y eficiencia de costos."
+
+  Rec_13_Tecnologias_Adaptables:
+    Def: "Nube + Código Abierto + Escalabilidad."
+    Act: "Infraelástica para peaks. Planes contingencia."
+
+  Rec_14_Eficiencia_Datos_Interop:
+    Def: "Datos como activo estratégico. Interoperabilidad."
+    Act: "Usar PISEE. No pedir datos que Estado ya tiene. DatosGob (Open Data)."
+    Just: "Transparencia y eficiencia (Once-Only)."

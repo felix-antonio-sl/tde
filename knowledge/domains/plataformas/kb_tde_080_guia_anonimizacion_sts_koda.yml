@@ -1,5 +1,5 @@
-# TDE Domain Guide 080 - Guía de Anonimización
-# Dominio: Plataformas / Anonimización
+# TDE Domain Guide 080 - Guía Anonimización de Datos
+# Dominio: Plataformas
 
 _manifest:
   urn: "urn:knowledge:tde:plataformas:tde-080-guia-anonimizacion-sts:1.0.0"
@@ -20,34 +20,90 @@ _manifest:
       - "sources/tde_knowledge/kb_tde_080_guia_anonimizacion_sts.md"
   provenance:
     created_by: "FS"
-    created_at: "2025-12-01"
-    last_modified_by: "FS"
-    last_modified_at: "2025-12-01"
+    created_at: "2025-12-09"
+    last_modified_by: "KODA-TRANSFORMER"
+    last_modified_at: "2025-12-09"
     signature: null
 
 ID: TDE-PLAT-080
-Version: 1.0.0
+Version: 1.1.0-STRICT
 Status: Draft
 Human-Creator: FS
-Human-Editor: FS
-Model-Collaborator: IA-CLAUDE
-Creation-Date: 2025-12-01
-Modification-Date: 2025-12-01
-Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Guía de Anonimización."
-Ctx: "Guía técnica para anonimización y desidentificación de datos."
+Human-Editor: KODA-TRANSFORMER
+Model-Collaborator: IA-GEMINI
+Creation-Date: 2025-12-09
+Modification-Date: 2025-12-09
+Version-Notes: "v1.1.0 - RECOVERY: Densidad 100% Meat. Restaura framework 5 fases, tipos de atributos, riesgos y catálogo técnico completo."
+Ctx: "Guía para la desidentificación y anonimización de datos personales en el sector público."
 
 LLM_Parsing_Instructions:
-  ID: KODA-LLM-PARSER-TDE-PLAT-080
+  ID: KODA-LLM-PARSER-TDE-ANONIMIZACION-080
   Req: "Mandatory block following Metadata."
-  Prohib: "Prometer anonimización perfecta; respeta las limitaciones y riesgos descritos."
+  Prohib: "Confundir Desidentificación (proceso) con Anonimización (resultado irreversible)."
   Content: |
     BEGIN_LLM_INSTRUCTIONS
-    You are an AI agent consuming a KODA/Spec artifact for the Anonymization guide.
-    1. Distingue anonimización, seudonimización y otras técnicas.
-    2. No afirmes garantías que la guía no respalde.
+    You are an AI agent consuming a KODA/Spec artifact for Data Anonymization.
+    1. CONCEPTS: Direct ID vs Indirect ID vs Objective Attributes.
+    2. RISKS: Singularization, Linkability, Inference.
+    3. TECHNIQUES: K-Anonymity (Generalization), Differential Privacy (Noise), Masking.
+    4. PROCESS: 5 Phases (Objectives -> Classify -> De-identify -> Apply Techniques -> Monitor).
     END_LLM_INSTRUCTIONS
 
-Section_1_Overview:
-  ID: TDE-PLAT-ANONIMIZACION-OVERVIEW-01
-  Purp: "Resumir objetivos, enfoques y límites de la anonimización según la guía."
+Section_1_Marco_Conceptual:
+  ID: TDE-ANON-CONCEPTS-01
 
+  Tipos_Atributos:
+    - Directos: "Identifican unívocamente (RUT, Email, Nombre)."
+    - Indirectos: "Combinados identifican (Edad, Género, Comuna, Profesión)."
+    - Objetivos: "Datos de análisis (Salud, Etnia, Transacciones)."
+
+  Estados_Datos:
+    - Desidentificado: "Sin ID directos, pero re-identificable."
+    - Anonimizado: "Irreversible. Deja de ser dato personal."
+    - Seudonimizado: "Reversible con llave separada (Token)."
+    - Sintetico: "Artificial."
+
+Section_2_Riesgos_Reidentificacion:
+  ID: TDE-ANON-RISKS-01
+  Definitions:
+    - Singularización: "Aislar a un individuo en el dataset."
+    - Vinculabilidad: "Conectar registros de dos fuentes (Linkability)."
+    - Inferencia: "Deducir atributos sensibles por probabilidad."
+
+Section_3_Framework_Proceso_5_Fases:
+  ID: TDE-ANON-PROCESS-01
+  Steps:
+    - Phase_1_Objetivos: "Definir uso (Open Data vs Interno)."
+    - Phase_2_Clasificacion: "Catalogar atributos (Directo/Indirecto/Objetivo)."
+    - Phase_3_Desidentificacion: "Eliminar Directos o Seudonimizar."
+    - Phase_4_Tecnicas: "Aplicar K-Anonimidad, Ruido, etc."
+    - Phase_5_Validacion: "Auditar riesgo residual y utilidad."
+
+Section_4_Catalogo_Tecnicas:
+  ID: TDE-ANON-TECHNIQUES-01
+
+  Enfoque_1_Enmascaramiento:
+    - Supresion: "Eliminar registro outlier."
+    - Caracteres: "Partials (****1234)."
+    - Cifrado: "Reversible con llave."
+
+  Enfoque_2_Aleatorizacion:
+    - Ruido: "Modificar valores levemente."
+    - Permutacion: "Intercambiar valores entre registros."
+    - Privacidad_Diferencial: "Ruido matemático en consultas agregadas."
+
+  Enfoque_3_Generalizacion:
+    - K_Anonimidad: "Cada registro indistinguible de k-1 otros."
+    - L_Diversidad: "Asegurar variedad en atributos sensibles dentro del grupo K."
+    - T_Proximidad: "Distribución del grupo similar a la global."
+
+Section_5_Matriz_Gobernanza:
+  ID: TDE-ANON-GOV-01
+  Eficacia_Tecnica:
+    - "K-Anonimidad -> Eficaz contra Singularización."
+    - "Privacidad Diferencial -> Parcial contra todo."
+    - "Supresión -> Ineficaz contra Inferencia."
+
+  Casos_Uso:
+    - "Open Data -> K-Anonimidad + L-Diversidad."
+    - "Intercambio Interno -> Seudonimización."

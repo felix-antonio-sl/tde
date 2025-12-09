@@ -1,8 +1,8 @@
-# TDE Domain Report 710 - Informe Chat TDE GOREs (Abril-Octubre 2025)
-# Dominio: Experiencia / Lecciones Aprendidas
+# TDE Domain Report 710 - Informe Chat GOREs (Experiencia)
+# Dominio: Experiencia
 
 _manifest:
-  urn: "urn:knowledge:tde:experiencia:tde-710-informe-chat-gores-2025-sts:1.0.0"
+  urn: "urn:knowledge:tde:experiencia:tde-710-informe-chat-gores-sts:1.0.0"
   federation:
     visibility: public
     license: "CC-BY-4.0"
@@ -20,34 +20,107 @@ _manifest:
       - "sources/tde_knowledge/kb_tde_710_informe_chat_tde_gores_abril_octubre_2025.md"
   provenance:
     created_by: "FS"
-    created_at: "2025-12-01"
-    last_modified_by: "FS"
-    last_modified_at: "2025-12-01"
+    created_at: "2025-12-09"
+    last_modified_by: "KODA-TRANSFORMER"
+    last_modified_at: "2025-12-09"
     signature: null
 
 ID: TDE-EXP-710
-Version: 1.0.0
+Version: 1.1.0-STRICT
 Status: Draft
-Human-Creator: FS
-Human-Editor: FS
-Model-Collaborator: IA-CLAUDE
-Creation-Date: 2025-12-01
-Modification-Date: 2025-12-01
-Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Informe Chat TDE GOREs 2025."
-Ctx: "Informe de conversaciones y lecciones aprendidas de chats TDE con GOREs entre abril y octubre 2025."
+Human-Creator: FS (GORE Ñuble)
+Human-Editor: KODA-TRANSFORMER
+Model-Collaborator: IA-GEMINI
+Creation-Date: 2025-12-09
+Modification-Date: 2025-12-09
+Version-Notes: "v1.1.0 - RECOVERY: Densidad 100% Meat. Incluye Specs (PISEE), Costos (BUK), Fechas exactas y Nombres de Proveedores."
+Ctx: "Informe técnico de campo (Chat CTDs GOREs). Período: 23-Abr a 06-Oct 2025."
 
 LLM_Parsing_Instructions:
-  ID: KODA-LLM-PARSER-TDE-EXP-710
+  ID: KODA-LLM-PARSER-TDE-CHAT-REPORT-710
   Req: "Mandatory block following Metadata."
-  Prohib: "Presentar las experiencias como normativa; son insumos prácticos y lecciones aprendidas."
+  Prohib: "Omitir datos de precios, especificaciones de hardware o nombres de vendors."
   Content: |
     BEGIN_LLM_INSTRUCTIONS
-    You are an AI agent consuming a KODA/Spec artifact for the TDE GOREs chat report.
-    1. Trata el informe como fuente de ejemplos y aprendizajes, no como norma.
-    2. Extrae patrones y casos, dejando claro que provienen de experiencias específicas.
+    You are an AI agent consuming a KODA/Spec artifact for GOREs Field Intelligence.
+    1. CONTEXT: Operational reality of 16 Regional Governments (GOREs).
+    2. KEY INCIDENT: Ransomware Araucanía (11/06/25). Lesson: Legacy Antivirus is dead.
+    3. MARKET INTEL: Specific vendors (Zecovery, Febos, BUK) and prices ($990k/mo).
+    4. TECH SPECS: PISEE Node HW (Debian/Ubuntu configurations).
     END_LLM_INSTRUCTIONS
 
-Section_1_Overview:
-  ID: TDE-EXP-710-OVERVIEW-01
-  Purp: "Resumir el propósito y alcance del informe de chats TDE GOREs 2025."
+Section_1_Eje_1_Gobernanza_Cumplimiento:
+  ID: TDE-EXP-GOVERNANCE-01
 
+  Instrumentos_Diagnostico_Dolores:
+    - CPAT:
+        - "Problema: Nuevos PA no reciben código hasta actualización anual. Registros paralelos."
+        - "Bloqueo: Dependencia de consultora externa para limpieza (28/05/25)."
+    - Calidad_Web:
+        - "Problema: Instrumento extenso. Google Sheets con permisos 'Solo Lectura' (Ticket mesa ayuda)."
+    - MGDE_Datos:
+        - "Realidad: Autoevaluación baja ('He contestado todo NO'). Diagnóstico honesto de inmadurez."
+
+  Gobernanza_Interna:
+    - "Resoluciones Comités TD."
+    - "Encargado Ciberseguridad: Preocupación por alta responsabilidad sin recursos."
+
+Section_2_Eje_2_Ecosistema_Tecnologico:
+  ID: TDE-EXP-ECOSYSTEM-01
+
+  Gap_Gestor_Documental:
+    - "Situación: Solución transversal SGD prometida para Semestre 2 2026 (Muy tarde)."
+    - "Reacción: Contratación atomizada de mercado."
+    - Vendors_Mentioned:
+        - "Zecovery (Ceropapel): Integrado con DocDigital. (Magallanes, Antofagasta)."
+        - "Febos (Escritorio Digital): Caso éxito Valparaíso. Plan B E-Sign si cae FirmaGob."
+        - "Ingsoft: Ecosistema legado."
+        - "Methasys: Solución antigua a reemplazar."
+
+  Plataformas_Transversales:
+    - DocDigital:
+        - "Hack: Crear 'Entidades Dependientes' para divisiones internas (evita cuello botella Oficina Partes)."
+    - FirmaGob:
+        - "Falla: Caídas críticas (01/10/25). Necesidad de contingencia privada."
+    - Fondos_Gob_CL:
+        - "Uso: FNDR 8%. Gratum. Limitación: No cubre ciclo completo (Rendición)."
+
+  Specs_Nodo_PISEE:
+    - "GORE Araucanía: Debian 12, 2 CPU, 2GB RAM, 20 GB disco."
+    - "GORE Aysén: Ubuntu 24, 4 CPU, 4GB RAM, 100 GB disco."
+
+  Sistemas_RRHH_BUK_vs_Ingsoft:
+    - "BUK: SaaS moderno. Costo ref: ~$990,000/mensual (150 funcionarios). Contra: Config inicial compleja."
+    - "Ingsoft: Base instalada amplia (Bodega, Garantías)."
+
+Section_3_Eje_3_Infra_Ciberseguridad:
+  ID: TDE-EXP-INFRA-SEC-01
+
+  Infraestructura_Legacy:
+    - "Obsolescencia: Servidores de 2014 en producción (Arica, O'Higgins)."
+    - "Presupuesto: EVALTIC percibido ineficaz. Estrategia: Imputar a Subtítulo 22 (Servicios) vs 29 (Inversión)."
+
+  Incidente_Ransomware_Araucania:
+    - Date: "11/06/2025"
+    - Type: "Ransomware (family Safepay likely)."
+    - Impact: "Cifrado servidores internos. Desactivó ESET y Windows Defender."
+    - Recovery: "Desde respaldos offline en Google Drive."
+    - Lecciones:
+        - "Antivirus tradicional insuficiente."
+        - "Necesidad EDR, Segmentación, Backup Inmutable."
+    - Ley_Ciberseguridad: "Debate sobre si GOREs son OIV (Operadores Importancia Vital)."
+
+Section_4_Eje_4_Capital_Humano_Red:
+  ID: TDE-EXP-HUMAN-CAPITAL-01
+  Red_CTDs_Valor:
+    - "Mesa de Ayuda de facto (Config DocDigital, Bugs FirmaGob)."
+    - "Base Conocimiento (TDRs, ISO 27001, specs PISEE)."
+    - "Inteligencia Mercado (Precios BUK, proveedores Zecovery/Febos)."
+
+Section_5_Recomendaciones_Tacticas:
+  ID: TDE-EXP-RECOMMENDATIONS-01
+
+  Infra: "Migrar a IaaS (Nube) vía Convenio Marco (OPEX)."
+  Sec: "Modelo Capas (EDR + 3-2-1 Backups)."
+  Ecosistema: "Presionar por DMS transversal SGD. Exigir APIs en privados."
+  Colab: "Formalizar Red CTDs (Wiki/Repo)."

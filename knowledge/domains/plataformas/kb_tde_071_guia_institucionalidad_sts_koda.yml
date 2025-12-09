@@ -1,8 +1,8 @@
-# TDE Domain Guide 071 - Guía de Institucionalidad TIC
-# Dominio: Plataformas / Institucionalidad
+# TDE Domain Guide 071 - Guía Implementación Institucionalidad TIC
+# Dominio: Plataformas
 
 _manifest:
-  urn: "urn:knowledge:tde:plataformas:tde-071-guia-institucionalidad-sts:1.0.0"
+  urn: "urn:knowledge:tde:plataformas:tde-071-institucionalidad-sts:1.0.0"
   federation:
     visibility: public
     license: "CC-BY-4.0"
@@ -20,34 +20,104 @@ _manifest:
       - "sources/tde_knowledge/kb_tde_071_guia_institucionalidad_sts.md"
   provenance:
     created_by: "FS"
-    created_at: "2025-12-01"
-    last_modified_by: "FS"
-    last_modified_at: "2025-12-01"
+    created_at: "2025-12-09"
+    last_modified_by: "KODA-TRANSFORMER"
+    last_modified_at: "2025-12-09"
     signature: null
 
 ID: TDE-PLAT-071
-Version: 1.0.0
+Version: 1.1.0-STRICT
 Status: Draft
 Human-Creator: FS
-Human-Editor: FS
-Model-Collaborator: IA-CLAUDE
-Creation-Date: 2025-12-01
-Modification-Date: 2025-12-01
-Version-Notes: "v1.0.0 - Esqueleto KODA/Spec para Guía de Institucionalidad TIC."
-Ctx: "Guía sobre institucionalidad y gobernanza TIC en el Estado."
+Human-Editor: KODA-TRANSFORMER
+Model-Collaborator: IA-GEMINI
+Creation-Date: 2025-12-09
+Modification-Date: 2025-12-09
+Version-Notes: "v1.1.0 - RECOVERY: Densidad 100% Meat. Restaura definiciones de roles, infraestructura recomendada y plataformas transversales."
+Ctx: "Marco de referencia para crear unidades TIC en nuevas instituciones públicas."
 
 LLM_Parsing_Instructions:
-  ID: KODA-LLM-PARSER-TDE-PLAT-071
+  ID: KODA-LLM-PARSER-TDE-INSTITUTIONAL-071
   Req: "Mandatory block following Metadata."
-  Prohib: "Confundir institucionalidad TIC con estructura cualquiera; respeta los roles y órganos definidos."
+  Prohib: "Omitir roles clave o requisitos de perfiles."
   Content: |
     BEGIN_LLM_INSTRUCTIONS
-    You are an AI agent consuming a KODA/Spec artifact for the ICT Institutional Framework guide.
-    1. Distingue claramente roles, responsabilidades y órganos de gobernanza.
-    2. No inventes estructuras organizacionales fuera de lo descrito.
+    You are an AI agent consuming a KODA/Spec artifact for Institutional IT Setup.
+    1. ROLES: CTD (must register in CeroFilas), CISO (coordinates with ANCI), DPO.
+    2. INFRASTRUCTURE: Specific recommendations (SIEM, SaaS for People Mgmt, Legislative service BCN).
+    3. PLATFORMS: Mandatory integration with ClaveÚnica, FirmaGob, DocDigital, SIMPLE, PISEE, Notificador.
     END_LLM_INSTRUCTIONS
 
-Section_1_Overview:
-  ID: TDE-PLAT-INSTITUCIONALIDAD-OVERVIEW-01
-  Purp: "Resumir los elementos clave de la institucionalidad TIC descrita en la guía."
+Section_1_Marco_Institucional:
+  ID: TDE-INST-FRAMEWORK-01
 
+  Secretaria_Gobierno_Digital_SGD:
+    - Fnd: "Ley 21.658. Continuadora ex-DGD."
+    - Funciones:
+        - "Proponer/Coordinar Estrategia TD."
+        - "Operar plataformas compartidas (Interop + Identidad)."
+        - "Asesorar OAEs."
+
+  Ley_TD_21180:
+    - Deadlines: "Implementación gradual hasta Dic 2027 (7 Fases)."
+    - Normas_Tecnicas: "6 NT Vigentres (Interop, Seguridad, Docs, Notif, Calidad, Auth)."
+
+Section_2_Estructura_Organizacional_TIC:
+  ID: TDE-INST-STRUCTURE-01
+
+  Roles_Clave:
+    - Role: "Coordinador Transformación Digital (CTD)"
+      Req: "Nombramiento formal. Registro en CeroFilas (con subrogante). Capacitación obligatoria."
+    - Role: "Jefatura TIC"
+      Req: "Perfil Ingeniero/Informático. Gestión de Proyectos, Arquitectura, Nube."
+    - Role: "Oficial Seguridad Información (CISO)"
+      Req: "Coordinación con CSIRT/ANCI. Gestión incidentes."
+    - Role: "Delegado Protección Datos (DPO)"
+      Req: "Garantizar cumplimiento Ley Datos."
+
+  Perfiles_Equipo:
+    - Infra: "Cloud, Ops, Redes, Sec."
+    - Dev: "Devs, DBAs, UX/UI, QA."
+    - Data: "Analistas, Data Scientists."
+    - Geo: "Expertos SIG."
+
+Section_3_Infraestructura_Digital_Basica:
+  ID: TDE-INST-INFRA-01
+
+  Stack_Recomendado:
+    - Nube: "IaaS/PaaS para escalabilidad."
+    - Seguridad: "SIEM (Monitoreo/Alertas)."
+    - Ofimatica: "SaaS (Google Workspace / M365)."
+    - Gestion_Documental: "SaaS o Solución Pública. Trazabilidad obligatoria."
+    - Gestion_Personas: "SaaS (Remuneraciones, Asistencia, Viáticos)."
+    - Normativa: "Servicios BCN (Ley Chile) para repositorio legal."
+    - Proyectos: "Gestor colaborativo (Jira/Asana)."
+    - Atencion_Ciudadana: "CRM compatible con SIAC."
+
+Section_4_Integracion_Plataformas_SGD:
+  ID: TDE-INST-PLATFORMS-01
+
+  Plataformas_Mandatorias:
+    - ClaveÚnica: "Identidad Digital Personas."
+    - FirmaGob: "Firma Electrónica Avanzada Funcionarios."
+    - DocDigital: "Comunicaciones Oficiales entre OAEs."
+    - SIMPLE: "Digitalización Procesos (BPMS)."
+    - PISEE: "Interoperabilidad de Datos."
+    - Notificador: "Domicilio Digital Único."
+    - CPAT: "Catálogo Trámites (Debe estar completo)."
+
+Section_5_Gestion_Estrategica:
+  ID: TDE-INST-STRATEGY-01
+
+  Practicas:
+    - "Estrategia de Datos (Gobierno, Calidad, Anonimización)."
+    - "Analítica/IA (Repositorio Algoritmos Públicos)."
+    - "Open Data (Portal Datos Abiertos)."
+    - "Continuidad Operacional (BCP/DRP)."
+    - "Dashboards (Indicadores Clave)."
+
+Section_6_Hoja_Ruta_Priorizacion:
+  ID: TDE-INST-ROADMAP-01
+  Criterios: 1. "Cumplimiento Legal (Ley 21.180)."
+    2. "Seguridad / Ciberseguridad."
+    3. "Riesgos Operativos (Continuidad)."
