@@ -1,0 +1,354 @@
+# KODA TDE Lineamiento Técnico: Recomendaciones Técnicas para la adquisición de servicios de Cloud Pública
+---
+_manifest:
+  urn: "urn:knowledge:tde:lineamientos:recomendaciones_cloud_publica:1.0.0"
+  federation: { visibility: public, license: "CC-BY-4.0" }
+  domain: "tde_lineamientos"
+  type: "Recomendaciones_Tecnicas_Cloud_Publica"
+  provenance:
+    created_by: "Transformación Digital del Estado - Secretaría de Gobierno Digital"
+    created_at: "2025-12-11"
+    source_corpus: "wikiguias_corpus"
+    source_file: "Lineamientos_TécnicosGuías/Recomendaciones_Técnicas_para_la_adquisición_de_servicios_de_Cloud_Pública_en_los_Órganos_de_la_Administración_del_Estado.md"
+    source_url: "https://wikiguias.digital.gob.cl/guias/guias/recomendaciones_cloud"
+    source_updated_at: "2025-10-07T22:54:40.625Z"
+  status: draft
+
+ID: "TDE-LIN-CLOUD-PUBLICA-01"
+Version: 1.0.0
+Status: Draft
+Human-Creator: "Transformación Digital del Estado - Secretaría de Gobierno Digital"
+Human-Editor: "Transformación Digital del Estado - Secretaría de Gobierno Digital"
+Model-Collaborator: "IA-CASCADE"
+Creation-Date: 2025-12-11
+Modification-Date: 2025-12-11
+Ctx: "Recomendaciones técnicas para la adquisición de servicios de Cloud Pública por parte de los OAEs, derivadas de WikiGuías SGD"
+
+LLM_Parsing_Instructions:
+  ID: KODA-LLM-PARSER-01
+  Req: Mandatory block following Metadata.
+  Prohib: Using for artifact creation or translation.
+  Content: |
+    BEGIN_LLM_INSTRUCTIONS
+    You are an AI agent consuming a KODA artifact. Parse with absolute fidelity.
+
+    FIDELITY: Preserve meat (essential information) and skeleton (structure: headers, IDs, lists, tables) with zero loss. Ignore fat (filler words, rhetoric, stylistic prose).
+
+    LEXICON (expand before processing): Act->Action, Cond->Condition, Ctx->Context, Ctx_Required->Required External Reference, Ctx_Optional->Optional External Reference, Def->Definition, Ex->Example, Mssn->Mission, Obj->Objective, Proc->Process, Purp->Purpose, Ref->Reference, XRef->Cross-Artifact Reference, XRef_Required->Mandatory Cross-Artifact Reference, Req->Requirement, Res->Result, Src->Source, Prohib->Prohibition, Warn->Warning, Just->Justification, Rec->Recommendation
+
+    REFERENCE POLICY: Ref: is internal only—must point to existing ID within THIS document. XRef/XRef_Required: are external only—must point to a URN (optionally with #ID fragment) in another artifact. External documents without specific ID use Ctx:, Ctx_Required:, or Ctx_Optional:.
+
+    LANGUAGE POLICY: Keywords in English, content in original language. Never translate content.
+    END_LLM_INSTRUCTIONS
+
+LLM_Instructions:
+  role: "Guía técnica de recomendaciones para la adquisición y uso de servicios de Cloud Pública"
+  objective: >-
+    Entregar recomendaciones técnicas para que los OAEs tomen decisiones informadas sobre
+    adopción, compra y gestión de servicios de Cloud Pública, con foco en etapas de
+    precompra, selección de proveedor y definición de SLAs.
+  usage_guidance:
+    - "Usar este artefacto como referencia consultiva para diseñar requerimientos técnicos de servicios de Cloud Pública."
+    - "Complementar con lineamientos de seguridad y ciberseguridad y con normas técnicas asociadas (interoperabilidad, documentos y expedientes electrónicos)."
+    - "Para conceptos de datos, metadatos, servicios digitales y plataformas, complementar con el Lexicon TDE."
+  style:
+    - "Responder en es-CL, en tono técnico claro y práctico."
+    - "Resaltar explícitamente recomendaciones (Rec) y advertencias (Warn) críticas para decisiones de compra."
+
+Metadata_Original:
+  title: "Recomendaciones Técnicas para la adquisición de servicios de Cloud Pública en los Órganos de la Administración del Estado. "
+  url: "https://wikiguias.digital.gob.cl/guias/guias/recomendaciones_cloud"
+  category: "Lineamientos Técnicos/Guías"
+  tags:
+    - "guía técnica"
+    - "cloud"
+  description: >-
+    Documento con recomendaciones técnicas para la adquisición de servicios de Cloud Pública
+    por parte de los órganos de la Administración del Estado de Chile.
+  updated_at: "2025-10-07T22:54:40.625Z"
+
+Contexto_Objetivo_y_Alcance:
+  ID: "TDE_LIN_CLOUD_CTX_001"
+  Obj: >-
+    Entregar un conjunto de recomendaciones técnicas para la adquisición de servicios de
+    Cloud Pública por parte de los OAEs, especialmente para profesionales TI involucrados en
+    la etapa de precompra, incluyendo consideraciones para elección de proveedor y
+    definición de SLAs.
+  Purp: >-
+    Orientar la toma de decisiones en la definición del requerimiento técnico de servicios
+    de Nube Pública y apoyar la formulación de proyectos en el marco del proceso EvalTI,
+    sin sustituir lineamientos específicos de preservación digital, seguridad de la
+    información u otros mecanismos de compra.
+  Ctx: >-
+    El documento es de carácter consultivo y se encuentra en permanente revisión, incorporando
+    nuevos temas, sugerencias, comentarios y reformas normativas, mediante mecanismos de
+    consulta a OAEs, expertos, sociedad civil e industria tecnológica nacional.
+
+Agradecimientos_y_Colaboracion:
+  ID: "TDE_LIN_CLOUD_AGR_001"
+  Ctx: >-
+    La Secretaría de Gobierno Digital agradece los aportes del Consejo de Política de
+    Suministro TI y de la industria tecnológica nacional, a través de asociaciones gremiales
+    como ChileTec y ACTI A.G., en la elaboración y mejora de estas recomendaciones.
+
+Conceptos_Cloud_Publica:
+  Description: >-
+    Conceptos clave utilizados en la guía para comprender el modelo de Cloud Pública y su
+    adopción en el sector público.
+  Items:
+    - ID: "TDE_LIN_CLOUD_CONCEPT_CLOUD_COMPUTING"
+      Term: "Cloud Computing"
+      Def: >-
+        Modelo que permite acceso bajo demanda, a través de la red, a recursos compartidos y
+        configurables (redes, servidores, almacenamiento, aplicaciones y servicios), que se
+        asignan y liberan con mínima gestión del proveedor.
+      Ctx_Required:
+        - "NIST (2011) - Definition of Cloud Computing."
+    - ID: "TDE_LIN_CLOUD_CONCEPT_CLOUD_FIRST"
+      Term: "Nube Primero (Cloud First)"
+      Def: >-
+        Principio según el cual los órganos públicos deben evaluar preferentemente el uso de
+        servicios en la nube al diseñar e implementar sus arquitecturas tecnológicas, por
+        sobre infraestructuras propias, respetando eficiencia, legalidad, neutralidad
+        tecnológica y seguridad.
+    - ID: "TDE_LIN_CLOUD_CONCEPT_CLOUD_SMART"
+      Term: "Nube Inteligente (Cloud Smart)"
+      Def: >-
+        Principio según el cual la adopción de nube debe considerar objetivos estratégicos,
+        modelos de operación, criterios financieros y protección de datos, armonizándose con
+        Cloud First en una estrategia gradual e integral.
+    - ID: "TDE_LIN_CLOUD_CONCEPT_TERRITORIALIDAD"
+      Term: "Territorialidad de los datos"
+      Def: >-
+        En el modelo de Cloud Pública, la conexión vía internet implica que la ubicación física
+        de los datos puede ser extraterritorial. La normativa chilena, por regla general, no
+        exige que los datos estén dentro del territorio nacional, salvo disposiciones
+        sectoriales o internas específicas.
+
+Criterios_Generales_Cloud_Publica:
+  ID: "TDE_LIN_CLOUD_CRIT_001"
+  Ctx: >-
+    La decisión de mover cargas tecnológicas hacia el Cloud Público implica más que contratar
+    infraestructura externa: requiere diseño estratégico mínimo, evaluación de necesidades,
+    definición de expectativas, capacidades profesionales, planificación y diseño de un nuevo
+    modelo de operación.
+  Caracteristicas_Modelo:
+    - "Autoservicio bajo demanda."
+    - "Amplio acceso a la red."
+    - "Agrupación de recursos."
+    - "Elasticidad rápida."
+    - "Servicio medido."
+  Oportunidades:
+    - "Actualización tecnológica permanente."
+    - "Disminución de personal dedicado a la operación de infraestructura propia."
+    - "Respaldo y gestión permanente de seguridad."
+    - "Flexibilidad y escalabilidad."
+    - "Continuidad operacional."
+    - "Menores montos de inversión inicial (paso de CAPEX a OPEX)."
+  Propiedad_Datos:
+    Warn: >-
+      En servicios de Nube Pública, especialmente en modalidad SaaS, los términos de servicio
+      deben indicar explícitamente que los datos son propiedad del OAE y que nunca se transfiere
+      su propiedad ni derechos de uso al proveedor.
+    Rec:
+      - "Exigir que los datos y metadatos puedan ser solicitados en cualquier momento, en formatos estándar y con documentación adecuada para su interpretación."
+      - "Definir explícitamente condiciones al término del contrato respecto de devolución y borrado seguro de datos."
+
+Preguntas_Clave_Adopcion_Cloud:
+  Description: >-
+    Árbol de decisiones compuesto por preguntas de respuesta Sí/No para evaluar preparación y
+    madurez institucional previa a la adopción de Cloud Pública.
+  Preguntas:
+    - ID: "TDE_LIN_CLOUD_Q1_EQUIPO"
+      Q: "¿Cuenta con un equipo de al menos dos profesionales (internos o externos) con experiencia en control y gestión de Cloud (Administradores de Sistemas, DevOps, SREs)?"
+      Rec_Si: "Continuar con la pregunta 2."
+      Rec_No: >-
+        Diseñar un mecanismo para contar con al menos dos profesionales idóneos, internos o
+        externos, antes de avanzar con la adopción de Cloud Pública.
+    - ID: "TDE_LIN_CLOUD_Q2_LEGACY"
+      Q: "¿Tiene sistemas productivos legacy críticos que aún no puede migrar a tecnologías más modernas?"
+      Rec_Si: >-
+        Si requiere migrar con urgencia por obsolescencia o riesgos, evaluar procesos de
+        "lift and shift" hacia la Nube como medida temporal y parcial, mientras se actualizan
+        las aplicaciones.
+      Rec_No: "Continuar con la pregunta 3."
+    - ID: "TDE_LIN_CLOUD_Q3_ESCALABILIDAD"
+      Q: "¿Sus sistemas deben escalar de manera repentina o impredecible?"
+      Rec_Si: "Continuar con la pregunta 4, considerando capacidades de escalabilidad de Cloud."
+      Rec_No: >-
+        Evaluar Cloud Pública sólo para capacidades actualmente utilizadas o crecimiento
+        vegetativo, considerando también opciones de housing/hosting con crecimiento moderado.
+    - ID: "TDE_LIN_CLOUD_Q4_DOCUMENTACION"
+      Q: "¿Tiene documentadas sus aplicaciones, infraestructura y sistemas (diagramas, CMDB, demanda de transacciones, RTO/RPO, mapa de procesos)?"
+      Rec_Si: "Continuar con la pregunta 5."
+      Rec_No: >-
+        Establecer un proyecto de migración que incluya estrategia y plan de actividades para
+        documentar estos elementos antes de la adopción de Cloud.
+    - ID: "TDE_LIN_CLOUD_Q5_PLAN_MIGRACION"
+      Q: "¿Tiene planificada (por ejemplo, en un Gantt) la migración al Cloud con actividades, tiempos y recursos definidos?"
+      Rec_Si: "Continuar con la pregunta 6."
+      Rec_No: >-
+        Definir y documentar un plan de migración con recursos, tiempos y gestión del cambio
+        necesarios, apoyándose en proveedores especializados si corresponde.
+    - ID: "TDE_LIN_CLOUD_Q6_CIBERSEGURIDAD"
+      Q: "¿Posee un área de ciberseguridad y un CISO, con recursos propios o externalizados?"
+      Rec_Si: "Continuar con el diseño detallado de la adopción y contratación de Cloud Pública."
+      Rec_No: >-
+        Definir cómo se resolverán funciones de ciberseguridad y rol CISO durante la adopción
+        y operación del Cloud Público, asegurando un CISO institucional interno.
+
+Modelos_de_Servicio_y_Que_Comprar:
+  ID: "TDE_LIN_CLOUD_MODELOS_001"
+  Ctx: >-
+    La elección del modelo de servicio (SaaS, IaaS, PaaS, BaaS, CaaS, entre otros) depende de
+    las capacidades técnicas de la institución, la naturaleza de las aplicaciones y el tipo de
+    gestión que se requiere sobre la infraestructura y plataformas.
+  SaaS:
+    Def: >-
+      Cuando la institución requiere un software específico ofrecido por un proveedor y que
+      sólo requiere configuración (por ejemplo ERP, CRM, KMS, CMS, ofimática en la nube), se
+      recomienda preferir soluciones en modalidad SaaS.
+    Rec:
+      - "Utilizar servicios listos para su uso, evitando instalar aplicaciones desde cero en infraestructura propia."
+      - "Evaluar plataformas de ofimática Cloud como ejemplo (Google Workspace, Office 365, Zimbra, entre otros)."
+  IaaS_y_PaaS:
+    Def: >-
+      Cuando la institución quiere gestionar aplicaciones propias o de terceros que requieren
+      escalar y que puede administrar, modificar o desarrollar, se recomienda adquirir
+      capacidades básicas de infraestructura (IaaS) y plataformas (PaaS) en Cloud Pública.
+    Servicios_Tipicos:
+      - "Capacidad de cómputo (máquinas y servidores virtuales)."
+      - "Plataformas para contenedores."
+      - "Redes virtuales."
+      - "Bases de datos y big data."
+      - "Almacenamiento."
+      - "Herramientas de seguridad (firewalls virtuales, detección de amenazas, etc.)."
+      - "Entornos de desarrollo."
+      - "Sistemas de gestión de identidad y acceso."
+  Modelo_Compra:
+    Ctx: >-
+      Los proveedores suelen ofrecer montos de créditos equivalentes a dinero para la
+      adquisición de servicios Cloud, que pueden incluir soporte. Es necesario explicitar en la
+      compra los distintos servicios en que se utilizarán dichos créditos.
+
+Caracteristicas_y_Seleccion_de_Proveedores_Cloud:
+  ID: "TDE_LIN_CLOUD_PROVEEDORES_001"
+  Ctx: >-
+    Existen distintos tipos de proveedores de Cloud (hyperscalers, regionales, locales), sin
+    que exista a priori un tipo "mejor" para todas las instituciones. La selección depende de
+    los servicios requeridos, niveles de servicio, capacidades internas y recursos
+    financieros.
+  Caracteristicas_Clave:
+    - ID: "TDE_LIN_CLOUD_PROV_FIABILIDAD"
+      Name: "Fiabilidad y disponibilidad"
+      Def: >-
+        El proveedor debe ofrecer niveles de uptime acordes a las necesidades de servicio,
+        con infraestructura redundante y procedimientos de continuidad operacional.
+    - ID: "TDE_LIN_CLOUD_PROV_SEGURIDAD"
+      Name: "Seguridad"
+      Def: >-
+        Debe demostrar cumplimiento normativo, proveer servicios robustos de gestión de
+        identidad y acceso y definir claramente responsabilidades de seguridad entre proveedor
+        e institución.
+    - ID: "TDE_LIN_CLOUD_PROV_ESCALABILIDAD"
+      Name: "Escalabilidad y flexibilidad"
+      Def: >-
+        Debe permitir escalamiento de recursos hacia arriba y abajo, ofreciendo variedad de
+        servicios desde almacenamiento básico hasta capacidades avanzadas como IA."
+    - ID: "TDE_LIN_CLOUD_PROV_RENDIMIENTO"
+      Name: "Rendimiento"
+      Def: >-
+        Debe considerar uso de CDN, localización de centros de datos y otros mecanismos que
+        mejoren tiempos de respuesta según ubicación de usuarios.
+    - ID: "TDE_LIN_CLOUD_PROV_SOPORTE"
+      Name: "Soporte y servicio al cliente"
+      Def: >-
+        Debe ofrecer niveles de soporte claros, recursos de ayuda, documentación y comunidad
+        activa que faciliten la operación y resolución de incidentes.
+
+Rol_de_Partners_y_Socios_Comerciales:
+  ID: "TDE_LIN_CLOUD_PARTNERS_001"
+  Ctx: >-
+    En muchos casos, la relación de provisión de servicios de Cloud Pública se realiza a través
+    de resellers, partners o socios comerciales que mantienen el vínculo técnico-comercial con
+    la institución, especialmente en el caso de hyperscalers o proveedores regionales.
+  Rec:
+    - "Considerar las condiciones técnicas y comerciales que los proveedores base exigen a sus partners, además de los requisitos de Mercado Público."
+    - "Analizar cómo el modelo comercial (márgenes, impuestos, conversión de monedas) impacta en presupuesto, facturación y pago."
+    - "Definir claramente en el requerimiento técnico las responsabilidades y funciones de la institución, del socio comercial y del proveedor de Nube."
+
+SLA_y_Consideraciones_de_Servicio:
+  ID: "TDE_LIN_CLOUD_SLA_001"
+  SLA_Definicion:
+    Def: >-
+      El Acuerdo de Nivel de Servicio (SLA) forma parte de la relación contractual entre el
+      proveedor de servicios Cloud y la institución, definiendo métricas de calidad,
+      disponibilidad, rendimiento y tiempos de respuesta, así como compensaciones por
+      incumplimientos.
+  Elementos_SLA:
+    - "Disponibilidad o tiempo de actividad (uptime)."
+    - "Rendimiento (capacidad de procesamiento, almacenamiento, I/O, etc.)."
+    - "Tiempos de respuesta."
+    - "Mantenimiento programado."
+    - "Compensaciones por incumplimiento."
+    - "Seguridad y cumplimiento normativo."
+    - "Escalación y resolución de problemas."
+    - "Backup y recuperación de datos."
+  Establecimiento_e_Implementacion:
+    Rec:
+      - "Definir objetivos institucionales y servicios críticos antes de negociar SLAs."
+      - "Personalizar SLAs según necesidades específicas y no aceptar términos genéricos que no se ajusten al contexto del OAE."
+      - "Negociar proactivamente métricas y penalidades, basadas en datos de uso proyectado y riesgos."
+      - "Incluir cláusulas de revisión periódica de SLAs y considerar necesidades futuras de escalabilidad."
+  Seguimiento_y_Cumplimiento:
+    Rec:
+      - "Designar un equipo de gestión para supervisar el cumplimiento de SLAs (áreas técnica, legal y de gestión)."
+      - "Definir métricas de monitoreo y usar herramientas de seguimiento en tiempo real."
+      - "Programar revisiones periódicas con el proveedor y automatizar informes de cumplimiento."
+      - "Realizar auditorías periódicas y gestionar problemas de manera proactiva."
+      - "Implementar un sistema de seguimiento de incidentes que permita análisis posterior y mejora continua."
+
+Glosario_Local_Resumen:
+  Description: >-
+    La guía introduce conceptos específicos de adopción de Cloud Pública en el sector público,
+    incluyendo principios, modelos de servicio y nociones de contratación y SLAs, que pueden
+    ser candidatos a consolidarse en el Lexicon TDE.
+  Terms:
+    - Term: "Cloud Pública"
+      Ctx: >-
+        Modelo de prestación de servicios de computación en la nube mediante infraestructura
+        operada por un proveedor externo, accesible vía internet y compartida entre múltiples
+        clientes, con pago por uso.
+    - Term: "Nube Primero (Cloud First)"
+      Ref: "TDE_LIN_CLOUD_CONCEPT_CLOUD_FIRST"
+    - Term: "Nube Inteligente (Cloud Smart)"
+      Ref: "TDE_LIN_CLOUD_CONCEPT_CLOUD_SMART"
+    - Term: "SLA (Acuerdo de Nivel de Servicio)"
+      Ctx: >-
+        Acuerdo contractual entre proveedor de servicios Cloud y la institución que define
+        métricas, niveles de calidad y compensaciones asociadas al servicio.
+
+Glosario_Ref_Lexicon:
+  Description: >-
+    Algunos conceptos utilizados en la guía se apoyan en definiciones ya consolidadas en el
+    Lexicon TDE, en particular aquellos relacionados con datos, plataformas, servicios
+    digitales e interoperabilidad.
+  Terms:
+    - Term: "API (Application Programming Interface)"
+      Ref_ID: "TDE_DEF_API"
+      XRef: "urn:knowledge:tde:core:lexicon_wikiguias:1.0.0#TDE_DEF_API"
+    - Term: "Servicios digitales"
+      Ref_ID: "TDE_DEF_SERVICIOS_DIGITALES"
+      XRef: "urn:knowledge:tde:core:lexicon_wikiguias:1.0.0#TDE_DEF_SERVICIOS_DIGITALES"
+    - Term: "Plataforma"
+      Ref_ID: "TDE_DEF_PLATAFORMA"
+      XRef: "urn:knowledge:tde:core:lexicon_wikiguias:1.0.0#TDE_DEF_PLATAFORMA"
+
+Referencias_Resumen:
+  Description: >-
+    Referencias técnicas utilizadas en la definición de conceptos y recomendaciones sobre
+    Cloud Pública.
+  Sources:
+    - "NIST (2011). Definition of Cloud Computing."
+    - "Héctor Nigro (2022). Cloud computing: retos y oportunidades (revista Ingeniería, Matemáticas y Ciencias de la Información)."
+    - "Normativa chilena sobre compras públicas y contratación (Ley N° 19.886 y artículo 35 bis)."

@@ -29,13 +29,168 @@ Catalog:
   Schemas: []
     # Add your schemas here
 
-  Domains: []
-    # Add domain-specific knowledge here
+  Domains:
+    - urn: "urn:knowledge:tde:lineamientos:guia_anonimizacion_datos:1.0.0"
+      title: "Guía introductoria a la anonimización de datos"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_001_guia_anonimizacion_datos_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:guia_seguridad_informacion_ciberseguridad:1.0.0"
+      title: "Guía Técnica de Seguridad de la Información y Ciberseguridad (versión inicial)"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_002_guia_seguridad_informacion_ciberseguridad_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:recomendaciones_cloud_publica:1.0.0"
+      title: "Recomendaciones Técnicas para la adquisición de servicios de Cloud Pública"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_003_recomendaciones_cloud_publica_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:guia_metadatos_documentos_expedientes:1.0.0"
+      title: "Guía Técnica de Metadatos para Documentos y Expedientes Electrónicos"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_004_guia_metadatos_documentos_expedientes_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:guia_evaltic_marco_inversiones_gobierno_digital:1.0.0"
+      title: "Guía Técnica EVALTIC (Marco para las inversiones y el gasto en gobierno digital)"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_005_guia_evaltic_marco_inversiones_gobierno_digital_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:metodologia_gestion_proyectos:1.0.0"
+      title: "Metodología para la gestión de proyectos TIC"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_006_metodologia_gestion_proyectos_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:orientaciones_basicas_gestion_tic:1.0.0"
+      title: "Orientaciones básicas para la gestión de las TIC"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_007_orientaciones_basicas_gestion_tic_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:marco_gestion_datos_mgde:1.0.0"
+      title: "Marco de Referencia de Gestión de Datos del Estado (MGDE)"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_008_marco_gestion_datos_mgde_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:guia_calidad_web:1.0.0"
+      title: "Guía Calidad WEB"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_009_guia_calidad_web_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:sistema_transformacion_digital_2025:1.0.0"
+      title: "Guía Metodológica del Sistema de Transformación Digital 2025"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_010_sistema_transformacion_digital_2025_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:guia_rapida_cpat:1.0.0"
+      title: "Guía rápida CPAT"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_011_guia_rapida_cpat_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:norma_documentos_expedientes_electronicos:1.0.0"
+      title: "Norma Técnica de Documentos y Expedientes Electrónicos (Decreto 10)"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_012_norma_documentos_expedientes_electronicos_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:norma_interoperabilidad:1.0.0"
+      title: "Norma Técnica de Interoperabilidad (Decreto 12)"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_013_norma_interoperabilidad_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:norma_notificaciones:1.0.0"
+      title: "Norma Técnica de Notificaciones (Decreto 8)"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_014_norma_notificaciones_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:plataforma_claveunica_integracion:1.0.0"
+      title: "Plataforma ClaveÚnica - Integración"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_015_plataforma_claveunica_integracion_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:plataforma_notificaciones_estado:1.0.0"
+      title: "Plataforma de Notificaciones del Estado"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_016_plataforma_notificaciones_estado_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:plataforma_simple_saas:1.0.0"
+      title: "Plataforma SIMPLE en modalidad SaaS"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_017_plataforma_simple_saas_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:norma_seguridad_info_ciberseguridad:1.0.0"
+      title: "Norma Técnica de Seguridad de la Información y Ciberseguridad (Decreto 7)"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_018_norma_seguridad_info_ciberseguridad_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:guia_seguridad_info_ciberseguridad:1.0.0"
+      title: "Guía Técnica de Seguridad de la Información y Ciberseguridad (GU-CIBER-001)"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_019_guia_seguridad_info_ciberseguridad_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:norma_autenticacion:1.0.0"
+      title: "Norma Técnica de Autenticación (Decreto 9)"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_020_norma_autenticacion_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:registro_actividades_tratamiento_datos_personales:1.0.0"
+      title: "Registro de Actividades de Tratamiento de Datos Personales (RAT)"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_021_registro_actividades_tratamiento_datos_personales_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:estrategia_datos_administracion_estado:1.0.0"
+      title: "Estrategia de Datos de la Administración del Estado"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_022_estrategia_datos_administracion_estado_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:reglamento_transformacion_digital_ds4:1.0.0"
+      title: "Reglamento de Transformación Digital del Estado (Decreto 4)"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_023_reglamento_transformacion_digital_ds4_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:estrategia_gobierno_digital_2030:1.0.0"
+      title: "Estrategia de Gobierno Digital 2030"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_024_estrategia_gobierno_digital_2030_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:diseno_servicios_estado:1.0.0"
+      title: "Recomendaciones para el Diseño de Servicios en el Estado"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_025_diseno_servicios_estado_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:plataforma_docdigital:1.0.0"
+      title: "Plataforma DocDigital"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_026_plataforma_docdigital_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:plataforma_pisee_interoperabilidad:1.0.0"
+      title: "Red de Interoperabilidad PISEE"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_027_plataforma_pisee_interoperabilidad_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:plataforma_datosgob_datos_abiertos:1.0.0"
+      title: "Portal de Datos Abiertos del Estado (Datos.gob.cl)"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_028_plataforma_datosgob_datos_abiertos_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:workflow_transformacion_wikiguias:1.0.0"
+      title: "Workflow de Transformación del corpus wikiguias a KODA/Spec"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_029_workflow_transformacion_wikiguias_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:arquitectura_hub_agentes_tde:1.0.0"
+      title: "Arquitectura de Hub y Agentes sobre la KB tde"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_030_architectura_hub_agentes_tde_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:test_strategy_wikiguias:1.0.0"
+      title: "Estrategia de Pruebas KODA/Test para la KB wikiguias (tde)"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_031_test_strategy_wikiguias_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:ley_transformacion_digital_estado:1.0.0"
+      title: "Ley N° 21.180 de Transformación Digital del Estado"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_032_ley_transformacion_digital_estado_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:estrategias:estrategia_datos_administracion_estado:1.0.0"
+      title: "Estrategia de Datos de la Administración del Estado"
+      file: "knowledge/domains/tde/estrategias/kb_tde_estrategias_001_estrategia_datos_administracion_estado_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:norma_calidad_funcionamiento_plataformas:1.0.0"
+      title: "Norma Técnica de Calidad y Funcionamiento de Plataformas Electrónicas (Decreto 11)"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_033_norma_calidad_funcionamiento_plataformas_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:estrategias:estrategia_identidad_digital:1.0.0"
+      title: "Estrategia de Identidad Digital"
+      file: "knowledge/domains/tde/estrategias/kb_tde_estrategias_002_estrategia_identidad_digital_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:estrategias:estrategia_capacitaciones_transformacion_digital_estado:1.0.0"
+      title: "Estrategia de Capacitaciones para la Transformación Digital del Estado"
+      file: "knowledge/domains/tde/estrategias/kb_tde_estrategias_004_estrategia_capacitaciones_transformacion_digital_estado_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:ley_procedimientos_administrativos_19880:1.0.0"
+      title: "Ley N° 19.880 sobre Bases de los Procedimientos Administrativos"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_034_ley_procedimientos_administrativos_19880_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:ley_secretaria_gobierno_digital_21658:1.0.0"
+      title: "Ley N° 21.658 que crea la Secretaría de Gobierno Digital"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_035_ley_secretaria_gobierno_digital_21658_koda.yml"
+      status: draft
+    - urn: "urn:knowledge:tde:lineamientos:terminos_condiciones_claveunica:1.0.0"
+      title: "Términos y Condiciones del Sistema de ClaveÚnica"
+      file: "knowledge/domains/tde/lineamientos/kb_tde_lineamientos_036_terminos_condiciones_claveunica_koda.yml"
+      status: draft
 
 Statistics:
-  total_artifacts: 1
+  total_artifacts: 40
   core_guides: 0
   agents: 1
   schemas: 0
-  domains: 0
-  last_updated: "2025-12-01"
+  domains: 39
+  last_updated: "2025-12-11"
