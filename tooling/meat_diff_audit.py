@@ -65,9 +65,21 @@ def remove_fat_boilerplate(md: str) -> str:
 
     out: list[str] = []
     for line in md.splitlines():
+        if re.match(r"^\s*\d+\.\s*Que,", line, flags=re.IGNORECASE):
+            continue
+        if re.match(r"^\s*\[\d+\]\s+", line):
+            continue
+        if re.search(r"\bver\s+figura\b", line, flags=re.IGNORECASE):
+            continue
+        if re.search(r"\b(figura|tabla|imagen)\s+\d+\b", line, flags=re.IGNORECASE):
+            continue
+        if re.match(r"^\s*Santiago,\s+.*\bSecretario\.?\s*$", line, flags=re.IGNORECASE):
+            continue
         if any(re.search(p, line, flags=re.IGNORECASE) for p in fat_patterns):
             continue
         if re.search(r"Presidente\s+de\s+la\s+Rep[uú]blica", line, flags=re.IGNORECASE):
+            continue
+        if re.search(r"\byoutube\b", line, flags=re.IGNORECASE):
             continue
         out.append(line)
 
@@ -106,7 +118,28 @@ def extract_markdown_section_by_anchor(md: str, anchor: str) -> str:
             break
 
     if start is None:
-        return md
+        id_pat = re.compile(rf"^\s*ID:\s*{re.escape(anchor)}\s*$", flags=re.IGNORECASE)
+        id_line = None
+        for i, line in enumerate(lines):
+            if id_pat.match(line):
+                id_line = i
+                break
+        if id_line is None:
+            return md
+
+        start = id_line
+        for j in range(id_line - 1, -1, -1):
+            if re.match(r"^\s*##\s+", lines[j]) or re.match(r"^\s*#\s+", lines[j]):
+                start = j
+                break
+
+        end = len(lines)
+        for k in range(start + 1, len(lines)):
+            if re.match(r"^\s*##\s+", lines[k]) or re.match(r"^\s*#\s+", lines[k]):
+                end = k
+                break
+
+        return "\n".join(lines[start:end]).strip()
 
     end = len(lines)
     for j in range(start + 1, len(lines)):
@@ -120,10 +153,14 @@ def extract_markdown_section_by_anchor(md: str, anchor: str) -> str:
     return "\n".join(lines[start:end]).strip()
 
 
-def parse_sources_from_koda(yaml_text: str) -> list[str]:
-    if not re.search(r"source_corpus:\s*['\"]?wikiguias_corpus['\"]?", yaml_text, flags=re.IGNORECASE):
-        return []
+def parse_source_corpus(yaml_text: str) -> str | None:
+    m = re.search(r"source_corpus:\s*['\"]?([^'\"\s]+)['\"]?", yaml_text, flags=re.IGNORECASE)
+    if not m:
+        return None
+    return m.group(1).strip().lower()
 
+
+def parse_sources_from_koda(yaml_text: str) -> list[str]:
     m = re.search(r"source_file:\s*['\"]([^'\"]+)['\"]", yaml_text)
     if m:
         return [m.group(1).strip()]
@@ -285,8 +322,15 @@ def segment_markdown(md: str) -> list[str]:
             segments.append(text)
         buf = []
 
+    in_code_fence = False
     for raw in md.splitlines():
         line = raw.rstrip()
+        if line.strip().startswith("```"):
+            flush()
+            in_code_fence = not in_code_fence
+            continue
+        if in_code_fence:
+            continue
         if not line.strip():
             flush()
             continue
@@ -295,6 +339,11 @@ def segment_markdown(md: str) -> list[str]:
             continue
         if re.match(r"^\s*!\[.*\]\(.*\)\s*$", line):
             flush()
+            continue
+
+        if re.match(r"^\s*[-*]\s+\S", line):
+            flush()
+            segments.append(line.strip())
             continue
 
         if line.lstrip().startswith("|"):
@@ -333,8 +382,24 @@ def coverage(segment_tokens: set[str], koda_tokens: set[str]) -> float:
     return len(segment_tokens & koda_tokens) / len(segment_tokens)
 
 
-def audit_one(koda_path: Path, sources_root: Path, min_tokens: int, coverage_threshold: float, max_examples: int) -> AuditResult | None:
+def audit_one(
+    koda_path: Path,
+    sources_root_wikiguias: Path,
+    sources_root_koda: Path,
+    min_tokens: int,
+    coverage_threshold: float,
+    max_examples: int,
+) -> AuditResult | None:
     text = koda_path.read_text(encoding="utf-8")
+
+    corpus = parse_source_corpus(text)
+    if corpus == "wikiguias_corpus":
+        sources_root = sources_root_wikiguias
+    elif corpus == "koda_sources":
+        sources_root = sources_root_koda
+    else:
+        return None
+
     sources = parse_sources_from_koda(text)
     if not sources:
         return None
@@ -406,7 +471,8 @@ def main() -> int:
 
     repo_root = Path(args.repo_root).resolve()
     koda_dirs = [repo_root / p for p in args.koda_dir]
-    sources_root = (repo_root / args.sources_root).resolve()
+    sources_root_wikiguias = (repo_root / args.sources_root).resolve()
+    sources_root_koda = repo_root
 
     include_re = re.compile(args.include) if args.include else None
     exclude_re = re.compile(args.exclude) if args.exclude else None
@@ -418,7 +484,7 @@ def main() -> int:
             continue
         if exclude_re and exclude_re.search(p_str):
             continue
-        r = audit_one(p, sources_root, args.min_tokens, args.coverage_threshold, max_examples=5)
+        r = audit_one(p, sources_root_wikiguias, sources_root_koda, args.min_tokens, args.coverage_threshold, max_examples=5)
         if r is not None:
             results.append(r)
 
