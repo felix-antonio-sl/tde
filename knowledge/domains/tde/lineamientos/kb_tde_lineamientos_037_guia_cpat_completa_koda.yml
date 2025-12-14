@@ -10,7 +10,7 @@ _manifest:
     created_at: "2025-12-12"
     source_corpus: "koda_sources"
     source_files:
-      - "koda/sources/kb_tde_066_guia_cpat_sts.md"
+      - "tde/kb_tde_066_guia_cpat_sts.md"
     source_urls: []
     source_updated_at: []
   status: draft
@@ -33,7 +33,7 @@ LLM_Parsing_Instructions:
     BEGIN_LLM_INSTRUCTIONS
     You are an AI agent consuming a KODA artifact. Parse with absolute fidelity.
 
-    FIDELITY: Preserve meat (essential information) and skeleton (structure: headers, IDs, lists, tables, fields, and conditional logic) with zero loss. Ignore fat (filler words, rhetoric, purely visual references).
+    FIDELITY: Preserve meat (essential information) and skeleton (structure: headers, IDs, lists, tables) with zero loss. Ignore fat (filler words, rhetoric, stylistic prose).
 
     LEXICON (expand before processing): Act->Action, Cond->Condition, Ctx->Context, Ctx_Required->Required External Reference, Ctx_Optional->Optional External Reference, Def->Definition, Ex->Example, Mssn->Mission, Obj->Objective, Proc->Process, Purp->Purpose, Ref->Reference, XRef->Cross-Artifact Reference, XRef_Required->Mandatory Cross-Artifact Reference, Req->Requirement, Res->Result, Src->Source, Prohib->Prohibition, Warn->Warning, Just->Justification, Rec->Recommendation
 
@@ -68,6 +68,7 @@ Metadata_Original_STS:
 
 Proposito_de_la_Guia:
   ID: "KB-066-PROPOSITO-01"
+  Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-PROPOSITO-01"
   Purp: "Apoyar a instituciones en uso de plataforma Catálogo de Procedimientos Administrativos y Tramitaciones (CPAT)."
   Ctx:
     - "Fase de preparación de la Ley de Transformación Digital del Estado (Ley N° 21.180)."
@@ -76,7 +77,9 @@ Proposito_de_la_Guia:
 
 Contexto_Transformacion_Digital_del_Estado_TDE:
   ID: "KB-066-CONTEXTO-TDE-01"
-  Src: "Ley N° 21.180 sobre Transformación Digital del Estado."
+  Src:
+    - "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CONTEXTO-TDE-01"
+    - "Ley N° 21.180 sobre Transformación Digital del Estado."
   Mssn: "Repensar cumplimiento de mandato y entrega de servicios."
   Obj: "Poner foco en necesidades de las personas por sobre necesidades burocráticas."
   Proc: "Rediseño de procesos usando tecnología, datos e innovación para simplificar acceso."
@@ -104,7 +107,9 @@ Contexto_Transformacion_Digital_del_Estado_TDE:
 
 Tabla_Resumen_de_Implementacion_TDE:
   ID: "KB-066-CONTEXTO-TDE-TABLA-01"
-  Src: "Cuadro resumen DFL Nº1 MinSegPres y Ley N°21.464."
+  Src:
+    - "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CONTEXTO-TDE-TABLA-01"
+    - "Cuadro resumen DFL Nº1 MinSegPres y Ley N°21.464."
   Table: |
     | Año | 2022 | 2023 | 2024 | 2025 | 2026 | 2027 |
     |---|---|---|---|---|---|---|
@@ -113,11 +118,15 @@ Tabla_Resumen_de_Implementacion_TDE:
 
 Conceptos_Clave:
   ID: "KB-066-CONCEPTOS-CLAVE-01"
-  Src: "Ley N° 19.880, Bases de los Procedimientos Administrativos."
+  Src:
+    - "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CONCEPTOS-CLAVE-01"
+    - "Ley N° 19.880, Bases de los Procedimientos Administrativos."
   Ctx: "Ley 21.180 modifica Ley 19.880 para establecer que procedimientos deben expresarse por medios electrónicos."
   Acto_Administrativo:
     ID: "KB-066-CONCEPTO-ACTO-ADM-01"
-    Src: "Art. 3°, Ley N°19.880."
+    Src:
+      - "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CONCEPTO-ACTO-ADM-01"
+      - "Art. 3°, Ley N°19.880."
     Def:
       - "\"Decisiones escritas que adopte la Administración\"."
       - "\"Decisiones formales que emitan los órganos de la Administración del Estado en las cuales se contienen declaraciones de voluntad, realizadas en el ejercicio de una potestad pública\"."
@@ -131,7 +140,9 @@ Conceptos_Clave:
     Ctx: "Jurisprudencia Corte Suprema (5 de agosto de 2020, rol N° 8857-2019) indica que oficios ordinarios e incluso correos electrónicos pueden ser considerados actos administrativos."
   Procedimiento_Administrativo:
     ID: "KB-066-CONCEPTO-PROC-ADM-01"
-    Src: "Art. 18, Ley N°19.880."
+    Src:
+      - "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CONCEPTO-PROC-ADM-01"
+      - "Art. 18, Ley N°19.880."
     Def: "\"Sucesión de actos trámite vinculados entre sí, emanados de la Administración y, en su caso, de particulares interesados, que tiene por finalidad producir un acto administrativo terminal\"."
     Req:
       - "Todo procedimiento debe constar en un expediente electrónico."
@@ -145,11 +156,15 @@ Conceptos_Clave:
         - "Documentos electrónicos o formatos/medios electrónicos a través de plataformas institucionales."
   Etapas_del_Procedimiento_Administrativo:
     ID: "KB-066-ETAPAS-PROC-ADM-01"
-    Src: "Art. 18 y ss., Ley N°19.880."
+    Src:
+      - "tde/kb_tde_066_guia_cpat_sts.md#KB-066-ETAPAS-PROC-ADM-01"
+      - "Art. 18 y ss., Ley N°19.880."
     Ctx: "Modelo: Inicio, Instrucción, Finalización."
     Inicio:
       ID: "KB-066-ETAPA-INICIO-01"
-      Src: "Art. 28 y ss., Ley N°19.880."
+      Src:
+        - "tde/kb_tde_066_guia_cpat_sts.md#KB-066-ETAPA-INICIO-01"
+        - "Art. 28 y ss., Ley N°19.880."
       Modalidades:
         - Item: "De oficio."
           Def: "Por iniciativa del propio órgano."
@@ -169,12 +184,16 @@ Conceptos_Clave:
         - Req: "Autorización para remitir datos sensibles en poder de otros órganos."
     Instruccion:
       ID: "KB-066-ETAPA-INSTRUCCION-01"
-      Src: "Art. 34 y ss., Ley N°19.880."
+      Src:
+        - "tde/kb_tde_066_guia_cpat_sts.md#KB-066-ETAPA-INSTRUCCION-01"
+        - "Art. 34 y ss., Ley N°19.880."
       Def: "Actos necesarios para la determinación, conocimiento y comprobación de los datos para pronunciar el acto final."
       Ctx: "Se realizan de oficio, pero interesados pueden proponer actuaciones."
     Finalizacion:
       ID: "KB-066-ETAPA-FINALIZACION-01"
-      Src: "Art. 40 y ss., Ley N°19.880."
+      Src:
+        - "tde/kb_tde_066_guia_cpat_sts.md#KB-066-ETAPA-FINALIZACION-01"
+        - "Art. 40 y ss., Ley N°19.880."
       Def: "Conclusión del procedimiento mediante un acto terminal."
       Finalizacion_Normal:
         Def: "Resolución final que decide sobre las cuestiones planteadas."
@@ -184,6 +203,7 @@ Conceptos_Clave:
 
 Procedimiento_Administrativo_Electronico_y_Normas_Tecnicas:
   ID: "KB-066-PROC-ADM-ELEC-01"
+  Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-PROC-ADM-ELEC-01"
   Req: "Cumplir con 6 Normas Técnicas para dar cumplimiento a la Ley TDE."
   Definiciones_de_Normas_Tecnicas_NT:
     ID: "KB-066-NORMAS-TECNICAS-01"
@@ -210,6 +230,7 @@ Procedimiento_Administrativo_Electronico_y_Normas_Tecnicas:
 
 Plataforma_CPAT:
   ID: "KB-066-PLATAFORMA-CPAT-01"
+  Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-PLATAFORMA-CPAT-01"
   Ctx_Required:
     - "https://cpat.gob.cl/"
   Rol_de_CPAT:
@@ -235,6 +256,7 @@ Plataforma_CPAT:
         Cond: "Sin límite."
   Modulos_de_la_Plataforma:
     ID: "KB-066-CPAT-MODULOS-01"
+    Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CPAT-MODULOS-01"
     Lista_de_Modulos:
       - Modulo: "Módulo-Inicio"
         Ctx: "Instrucciones de uso y cifras relevantes."
@@ -252,10 +274,13 @@ Plataforma_CPAT:
         Ctx: "Preguntas frecuentes."
   Contenido_y_Estructura_de_Registros:
     ID: "KB-066-CPAT-CONTENIDO-01"
+    Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CPAT-CONTENIDO-01"
     Purp: "Individualizar y caracterizar registros."
     Tipos_de_Registro:
       ID: "KB-066-CPAT-TIPOS-REGISTRO-01"
-      Src: "Distinción basada en concepto de procedimiento administrativo de Ley N°19.880."
+      Src:
+        - "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CPAT-TIPOS-REGISTRO-01"
+        - "Distinción basada en concepto de procedimiento administrativo de Ley N°19.880."
       Tipos:
         - Tipo: "Tipo A - Proc. Adm. Función Común"
           Ex: "Compras públicas, gestión de personas, presupuesto, auditorías."
@@ -265,10 +290,12 @@ Plataforma_CPAT:
           Ex: "No clasifican como procedimiento administrativo."
     Caracterizacion_de_Registros_Formulario_SFD:
       ID: "KB-066-CPAT-CARACTERIZACION-01"
+      Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CPAT-CARACTERIZACION-01"
       Purp: "Describir cada registro a través de un formulario con múltiples secciones."
       Formulario_de_Caracterizacion_de_Registros_CPAT:
         Title: "Formulario de Caracterización de Registros CPAT"
         ID: "FORM-CPAT-REGISTRO-01"
+        Src: "tde/kb_tde_066_guia_cpat_sts.md#FORM-CPAT-REGISTRO-01"
         Version: "1.0.0"
         Status: "Published"
         Ref-SFD-Guide: "GUIDE-SFD-STS-MASTER-01"
@@ -490,6 +517,7 @@ Plataforma_CPAT:
 
     Transacciones:
       ID: "KB-066-CPAT-TRANSACCIONES-01"
+      Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CPAT-TRANSACCIONES-01"
       Purp: "Recopilar información de demanda."
       Def: "Procedimiento administrativo o tramitación finalizado en un mes y canal determinados."
       Logica_Contable:
@@ -510,15 +538,19 @@ Plataforma_CPAT:
 
 Guia_de_Implementacion_CPAT:
   ID: "KB-066-IMPLEMENTACION-CPAT-01"
+  Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-IMPLEMENTACION-CPAT-01"
   Calculo_del_Nivel_de_Soporte_Electronico:
     ID: "KB-066-IMPL-CALCULO-SOPORTE-01"
+    Src:
+      - "tde/kb_tde_066_guia_cpat_sts.md#KB-066-IMPL-CALCULO-SOPORTE-01"
+      - "Ley 19.880 y las seis Normas Técnicas."
     Obj: "Visualizar y monitorear el grado de avance hacia el soporte electrónico."
-    Src: "Ley 19.880 y las seis Normas Técnicas."
     Ref: "KB-066-NORMAS-TECNICAS-01"
     Warn: "Implementación integral de la Ley TDE considera aspectos adicionales no consultados en CPAT."
     Criterios:
       Criterio_1_Autenticacion:
         ID: "KB-066-CALCULO-CRITERIO-AUTENTICACION-01"
+        Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CALCULO-CRITERIO-AUTENTICACION-01"
         Ref: "KB-066-NORMA-AUTENTICACION-01"
         Req: "Utilizar mecanismos oficiales de autenticación para acceso de interesados."
         Mecanismos_Oficiales:
@@ -531,6 +563,7 @@ Guia_de_Implementacion_CPAT:
           Cond: "Cumplimiento si la selección es \"Utiliza ClaveÚnica\" o \"Utiliza Clave Tributaria\"."
       Criterio_2_Interoperabilidad:
         ID: "KB-066-CALCULO-CRITERIO-INTEROP-01"
+        Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CALCULO-CRITERIO-INTEROP-01"
         Ref: "KB-066-NORMA-INTEROP-01"
         Ctx:
           - "Medios electrónicos deben ser capaces de interactuar y operar entre sí (Principio de Interoperabilidad)."
@@ -545,6 +578,7 @@ Guia_de_Implementacion_CPAT:
             - Cond: "(Ref: FORM-CPAT-S7-MEDIO-INTEROP-01) es \"Utiliza la Red de Interoperabilidad del Estado o utiliza su estándar\"."
       Criterio_3_Notificaciones:
         ID: "KB-066-CALCULO-CRITERIO-NOTIFICACIONES-01"
+        Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CALCULO-CRITERIO-NOTIFICACIONES-01"
         Ref: "KB-066-NORMA-NOTIFICACIONES-01"
         Req: "Notificaciones se practicarán por medios electrónicos usando la Plataforma de Notificaciones (Art. 46, Ley 19.880)."
         Mapeo_a_CPAT:
@@ -556,6 +590,7 @@ Guia_de_Implementacion_CPAT:
 
       Criterio_4_Plataformas:
         ID: "KB-066-CALCULO-CRITERIO-PLATAFORMAS-01"
+        Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CALCULO-CRITERIO-PLATAFORMAS-01"
         Ref: "KB-066-NORMA-CALIDAD-PLATAFORMAS-01"
         Req: "Órganos obligados a disponer y usar plataformas electrónicas para llevar expedientes (Art. 19, Ley 19.880)."
         Def: "Software, datos e infraestructura que sustenta procesos o procedimientos."
@@ -569,6 +604,7 @@ Guia_de_Implementacion_CPAT:
 
       Criterio_5_Expediente_Electronico:
         ID: "KB-066-CALCULO-CRITERIO-EXPEDIENTE-01"
+        Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CALCULO-CRITERIO-EXPEDIENTE-01"
         Ref: "KB-066-NORMA-DOCS-EXPEDIENTES-01"
         Req: "Todo procedimiento debe constar en expediente electrónico (Art. 18, Ley 19.880)."
         Def: "Unidad documental con ID único, estructurada (índices, docs, metadatos), generada en plataforma electrónica."
@@ -581,6 +617,7 @@ Guia_de_Implementacion_CPAT:
 
       Criterio_6_Comunicaciones_Oficiales:
         ID: "KB-066-CALCULO-CRITERIO-COM-OFICIALES-01"
+        Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-CALCULO-CRITERIO-COM-OFICIALES-01"
         Ref: "KB-066-NORMA-DOCS-EXPEDIENTES-01"
         Req:
           - "Toda comunicación entre órganos será por medios electrónicos (Art. 9, Ley 19.880)."
@@ -592,6 +629,7 @@ Guia_de_Implementacion_CPAT:
 
   Primeros_Pasos:
     ID: "KB-066-IMPL-PRIMEROS-PASOS-01"
+    Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-IMPL-PRIMEROS-PASOS-01"
     Purp: "Buenas prácticas para iniciar el trabajo de identificación de procedimientos, previo al uso de la plataforma CPAT."
     Rec:
       - "Conformar equipo de trabajo representativo del quehacer institucional."
@@ -601,6 +639,7 @@ Guia_de_Implementacion_CPAT:
 
   Hoja_de_Ruta:
     ID: "KB-066-IMPL-HOJA-DE-RUTA-01"
+    Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-IMPL-HOJA-DE-RUTA-01"
     Etapas:
       - Etapa: "Etapa 1A (Grupo A)"
         Ctx: "Dln: Jun22-Dic23"
@@ -618,6 +657,7 @@ Guia_de_Implementacion_CPAT:
 
 Recursos_de_Apoyo:
   ID: "KB-066-RECURSOS-APOYO-01"
+  Src: "tde/kb_tde_066_guia_cpat_sts.md#KB-066-RECURSOS-APOYO-01"
   Ctx_Optional:
     - "Manual de usuarios/as de la Plataforma CPAT."
     - "Plantilla guía del CPAT."

@@ -9,7 +9,8 @@ _manifest:
     created_by: "Equipo KODA/TDE"
     created_at: "2025-12-11"
     source_corpus: "koda_internal"
-    source_files: []
+    source_files:
+      - "tde/knowledge/domains/tde/lineamientos/kb_tde_lineamientos_030_architectura_hub_agentes_tde_koda.yml"
     source_urls: []
     source_updated_at: []
   status: draft
@@ -92,7 +93,7 @@ Roles_Principales_de_Agentes:
       Purp: >-
         Ejecutar el workflow de transformación wikiguias→KODA (029) para nuevas
         fuentes o para versiones actualizadas de documentos.
-      Resp:
+      Act:
         - "Leer fuentes Markdown o PDF y producir borradores de artefactos KODA."
         - "Aplicar Fase 1–3 del workflow 029 (Análisis, Telegrafización,
           Deduplicación) de forma automatizada o semiautomatizada."
@@ -103,7 +104,7 @@ Roles_Principales_de_Agentes:
       Purp: >-
         Auditar artefactos KODA existentes frente a sus fuentes para asegurar
         FS=100%, TER≥30% y RD≥2.0.
-      Resp:
+      Act:
         - "Ejecutar Fase 4 del workflow 029 (Validación) sobre artefactos nuevos o
           modificados."
         - "Detectar MEAT faltante y proponer parches sobre los YAML."
@@ -113,20 +114,20 @@ Roles_Principales_de_Agentes:
         - "Número de hallazgos MEAT por artefacto."
     - Name: "TDE_ROUTER_ORQUESTADOR"
       Purp: "Recibir tareas de alto nivel y enrutar acciones entre agentes y personas."
-      Resp:
+      Act:
         - "Clasificar la tarea (transformar, auditar, consultar, mantener)."
         - "Asignar subtareas a KODA-TRANSFORMER, TDE_AUDITOR_KB u otros agentes."
         - "Consolidar resultados y devolver artefactos o respuestas al usuario."
     - Name: "TDE_EXPLORER_QA"
       Purp: "Responder consultas sobre la KB `tde` usando artefactos KODA como fuente."
-      Resp:
+      Act:
         - "Interpretar preguntas de usuario y localizar artefactos relevantes."
         - "Leer bloques Tier1 relevantes y componer respuestas con FS alta
           respecto al KODA."
         - "Proponer nuevas XRef cuando detecte relaciones no modeladas explícitamente."
     - Name: "TDE_INDEXADOR"
       Purp: "Mantener índices de búsqueda, embeddings y catálogos sobre la KB `tde`."
-      Resp:
+      Act:
         - "Actualizar índices cuando cambian artefactos (altas/bajas/modificaciones)."
         - "Sincronizar URNs y metadatos con catálogos maestros (ej. catalog_master_tde)."
 

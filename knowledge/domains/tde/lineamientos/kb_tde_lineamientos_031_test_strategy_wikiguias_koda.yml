@@ -9,7 +9,8 @@ _manifest:
     created_by: "Equipo KODA/TDE"
     created_at: "2025-12-11"
     source_corpus: "koda_internal"
-    source_files: []
+    source_files:
+      - "tde/knowledge/domains/tde/lineamientos/kb_tde_lineamientos_031_test_strategy_wikiguias_koda.yml"
     source_urls: []
     source_updated_at: []
   status: draft

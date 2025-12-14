@@ -153,6 +153,52 @@ Esquema_de_Metadatos_Resumen:
     - Flag: "MU"
       Def: "Metadatos de carácter múltiple, que permiten múltiples valores (por ejemplo, múltiples actores)."
 
+Tabla_1_Expedientes_Extracto:
+  ID: "TDE_LIN_META_EXP_TAB1_EX_001"
+  Items:
+    - Codificacion: "MGDEE51_2"
+      Grupo: "5"
+      Sub_N: "5.1.2"
+      Rotulo: "Nombre OAE productor"
+      Def: "Nombre institucional, en caso que el OAE productor no esté registrado en el codificador."
+    - Codificacion: "MGDEE51_5"
+      Grupo: "5"
+      Sub_N: "5.1.5"
+      Rotulo: "Nombre OAE relacionado"
+      Def: "Nombre institucional, en caso que sea el OAE productor que no esté registrado en el codificador."
+      Flags:
+        - "MU"
+    - Codificacion: "MGDEE7_2"
+      Grupo: "7"
+      Sub_N: "7.2"
+      Rotulo: "Nombre de procedimiento administrativo asociado"
+      Def: "Nombre del procedimiento administrativo, en caso de no encontrarse incorporado a CPAT."
+
+Tabla_2_Documentos_Extracto:
+  ID: "TDE_LIN_META_DOC_TAB2_EX_001"
+  Items:
+    - Codificacion: "MGDDE2_1"
+      Grupo: "2"
+      Sub_N: "2.1"
+      Rotulo: "Tamaño"
+      Def: "Volumen del documento estimado en Kb."
+
+Formato_Fechas_ISO_8601:
+  ID: "TDE_LIN_META_FMT_001"
+  Req:
+    - "Se genera automáticamente, según formato aaaa-mm-dd hh:mm:ss (ISO 8601)."
+    - "Debe tener posibilidad de ser modificado, pero dicho cambio debe quedar registrado."
+  Def: "Formato aaaa-mm-dd hh:mm:ss (ISO 8601)"
+
+Valores_y_Ejemplos_Extracto:
+  ID: "TDE_LIN_META_EX_001"
+  Items:
+    - Ctx: "Servicio interoperabilidad Códigos (Gescode)"
+    - Ex: "5076 (PA-UNI00002-00001- Convalidación de Programa de Perfeccionamiento Académico)"
+    - Ex: "Resolución exenta asigna presupuesto para compra de insumos"
+    - Ctx: "El valor a seleccionar desde lista controlada dependerá de un término genérico."
+    - Ctx: "Lista controlada de origen (ver sección 4. lista N° 8)."
+
 Obligaciones_de_Implementacion:
   ID: "TDE_LIN_META_REQ_001"
   Req:

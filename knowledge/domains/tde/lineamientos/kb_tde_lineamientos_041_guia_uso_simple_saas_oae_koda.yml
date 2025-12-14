@@ -10,7 +10,7 @@ _manifest:
     created_at: "2025-12-13"
     source_corpus: "koda_sources"
     source_files:
-      - "koda/sources/kb_tde_078_guia_simple_saas_sts.md"
+      - "tde/kb_tde_078_guia_simple_saas_sts.md"
     source_urls: []
     source_updated_at: []
   status: draft
@@ -373,6 +373,7 @@ Normas_Soporte_y_Documentacion:
       - "Todo proceso publicado en ambiente productivo debe ser visado previamente por el Equipo de Digitalización."
       - "Se debe contar obligatoriamente con todos los documentos de evidencia actualizados (descripción, diagramas BPMN, etc.)."
     Publicacion_sin_visado:
+      Ctx: "Absoluta responsabilidad de la institución."
       Req:
         - "La institución debe garantizar el correcto funcionamiento y responder ante problemas."
       Res: "Faculta a Gobierno Digital a no entregar soporte técnico por este incumplimiento."

@@ -364,6 +364,36 @@ Recomendaciones_para_Mejorar:
     resultado de la evaluacion, sino tambien la experiencia de las personas usuarias en el sitio
     o servicio digital evaluado.
 
+Guia_de_Voz_y_Tono_Extracto:
+  ID: "TDE_LIN_CALWEB_VOZTONO_001"
+  Ctx: >-
+    Para orientar la escritura de los documentos que se suben en esta Wiki. Se pretende escribir
+    de un modo conciso, claro, consistente. En la medida de lo posible, es recomendable "llamar"
+    a otras secciones que ya tienen conceptos establecidos.
+  Consejos_de_Estilo:
+    - "Redactar en primera persona."
+    - "Escribir positivamente: emplear un lenguaje positivo en lugar de negativo"
+    - "Cuidar la inclusión usando lenguaje genérico, sin importar el género del receptor"
+    - "Usar lenguaje simple pero formal."
+  Fechas_Exactas:
+    Rec: >-
+      Para fechas exactas, recomendamos los siguientes formatos: 22/03/2019 Sábado 09/03/2019
+  Formato_de_Horas:
+    Req: >-
+      Se debe utilizar un formato de: 00:00 (hora, signo dos puntos y minutos), y además estar
+      acompañado de la palabra “horas”, en la medida de lo posible.
+  Botones_y_Vinculos:
+    Req: >-
+      Los botones y los vínculos (link) siempre deben contener acciones, utiliza verbos
+      imperativos o infinitivos que llamen a la acción. A continuación, si es posible acompaña
+      el verbo con una palabra o frase que muestre lo que encontrará después de hacer clic.
+  Textos_Alternativos:
+    Ctx: "Aquellas imágenes que necesitamos describir, poseen una funcionalidad llamada texto alternativo o su nombre en inglés “alt text”"
+    Rec:
+      - "describir en no más de dos líneas una descripción que contenga el objetivo de la ilustración o la foto"
+    Prohib:
+      - "para aquellas imágenes que solo son decorativas y no agregan valor a los lectores de pantalla y sus personas usuarias"
+
 Glosario_Ref_Lexicon:
   Description: "Términos de esta guía apoyados en definiciones del Lexicon TDE."
   Terms:

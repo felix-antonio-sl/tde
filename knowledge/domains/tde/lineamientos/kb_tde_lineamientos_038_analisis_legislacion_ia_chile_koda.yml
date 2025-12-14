@@ -10,7 +10,7 @@ _manifest:
     created_at: "2025-12-12"
     source_corpus: "koda_sources"
     source_files:
-      - "koda/sources/kb_tde_090_ley-ia-chile_sts.md"
+      - "tde/kb_tde_090_ley-ia-chile_sts.md"
     source_urls: []
     source_updated_at: []
   status: draft
@@ -116,7 +116,7 @@ Estructura_y_Contenido_del_Proyecto_de_Ley_de_IA:
     ID: "KB-TDE-IA-LAW-STRUCTURE-SCOPE-01"
     Obj: "Promover la creación, desarrollo, innovación e implementación de sistemas de IA al servicio del ser humano, de manera coherente con los principios democráticos y los derechos fundamentales."
     Ambito_Aplicacion:
-      Ctx: "Todos los actores de la cadena de valor (desarrolladores, proveedores, implementadores, importadores, distribuidores y representantes autorizados) cuando las salidas del sistema se usen en territorio nacional."
+      Ctx: "Todos los actores de la cadena de valor (desarrolladores, proveedores, implementadores, importadores, distribuidores) cuando las salidas del sistema se usen en territorio nacional."
     Exclusiones:
       - Item: "Defensa-Nacional"
         Def: "Sistemas de IA desarrollados y usados con fines de defensa nacional."

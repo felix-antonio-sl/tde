@@ -161,6 +161,7 @@ Ejes_Estrategicos:
 Marco_Conceptual_y_Definiciones:
   - ID: "TDE_EST_CAP_DEF_001"
     Term: "Capacitacion_Segun_Estatuto_Administrativo"
+    Ctx: "Por lo mismo, antes de continuar es importante determinar qué se entiende por capacitación."
     Def: >-
       Conjunto de actividades permanentes, organizadas y sistemáticas destinadas a que
       funcionarias y funcionarios desarrollen, complementen, perfeccionen o actualicen
@@ -187,6 +188,11 @@ Experiencia_Internacional_Resumen:
       como Argentina, Colombia, Corea del Sur, Dinamarca, España, Estonia y Reino
       Unido, destacando diferencias en objetivos, modelos de competencias y públicos
       objetivo.
+
+  - ID: "TDE_EST_CAP_INT_003"
+    Ctx: >-
+      Por otra parte, se observa la importancia de innovar en los canales de capacitación, porque mientras
+      los cursos virtuales ofrecen una opción flexible en cuanto a los horarios en los que pueden acceder las personas a una
 
   - ID: "TDE_EST_CAP_INT_002"
     Ctx: >-
@@ -228,6 +234,11 @@ Plan_Accion_Resumen:
         monitorear su efectividad, incluyendo colaboraciones con universidades y otras
         instituciones para ampliar la oferta de cursos.
       Responsable: "Subsecretaría de Hacienda (SGD)"
+
+Recomendaciones_BID_2022_Extracto:
+  ID: "TDE_EST_CAP_REC_001"
+  Rec:
+    - "La creación de una herramienta única de capacitación la que debe definir los perfiles formativos para cada rol según la agrupación de las necesidades en común. Por lo mismo, es relevante el desarrollo de una formulación efectiva de un modelo de capacitación acompañado de una descripción detallada de las acciones formativas, que incluyan metodologías, contenidos, duración y cronogramas."
 
 Riesgos_y_Factores_Criticos:
   - ID: "TDE_EST_CAP_RISK_001"

@@ -104,7 +104,8 @@ Definiciones_Complementarias:
 
 Politica_Seguridad_Detallada:
   ID: "TDE_GUIA_SEG_POL_001"
-  Ref: "TDE_LIN_SEG07_POL_001"
+  XRef_Required:
+    - "urn:knowledge:tde:lineamientos:norma_seguridad_info_ciberseguridad:1.0.0#TDE_LIN_SEG07_POL_001"
   Contenidos_Minimos:
     - "Objetivos generales y específicos de seguridad y ciberseguridad, con indicadores asociados."
     - "Identificación y determinación del alcance (activos de información, roles, plataformas, procesos)."
@@ -160,7 +161,8 @@ Relacion_Proveedores_y_Servicios_Nube:
 
 Funcion_Proteccion_Controles:
   ID: "TDE_GUIA_SEG_PROT_001"
-  Ref: "TDE_LIN_SEG07_FUNC_001.Fucion_Proteccion"
+  XRef_Required:
+    - "urn:knowledge:tde:lineamientos:norma_seguridad_info_ciberseguridad:1.0.0#TDE_LIN_SEG07_FUNC_001"
   Gestion_Servidores:
     Req:
       - "Administración por usuarios con roles definidos y protocolos de asignación/revocación de privilegios."

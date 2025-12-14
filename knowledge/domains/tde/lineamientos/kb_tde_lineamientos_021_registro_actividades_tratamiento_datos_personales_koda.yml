@@ -115,6 +115,10 @@ Control_Versiones_RAT:
   Res: >-
     La guía mantiene un registro de versiones y actualizaciones del Registro de Actividades de
     Tratamiento, permitiendo rastrear cambios relevantes en el tiempo.
+  Tabla_Header:
+    - "Versión"
+    - "Fecha de creación o actualziación"
+    - "Cambios realizados"
   Tabla_Versiones:
     - Version: "1.0"
       Fecha: "21-11-2025"

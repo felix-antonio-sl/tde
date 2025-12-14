@@ -8,12 +8,9 @@ _manifest:
   provenance:
     created_by: "Transformación Digital del Estado - Secretaría de Gobierno Digital"
     created_at: "2025-12-11"
-    source_corpus: "wikiguias_corpus"
+    source_corpus: "koda_internal"
     source_files:
-      - "EstrategiasEstrategias/Estrategia_de_Gobierno_Digital_2030.md"
-      - "EstrategiasEstrategias/Estrategia_de_Datos_de_la_Administración_del_Estado.md"
-      - "EstrategiasEstrategias/Estrategia_de_identidad_digital.md"
-      - "EstrategiasEstrategias/Estrategia_de_capacitaciones_para_la_Transformación_Digital_del_Estado.md"
+      - "tde/knowledge/core/kb_tde_core_principios_y_objetivos_tde_koda.yml"
   status: draft
 
 ID: "TDE-CORE-PRINCIPIOS-OBJETIVOS-01"

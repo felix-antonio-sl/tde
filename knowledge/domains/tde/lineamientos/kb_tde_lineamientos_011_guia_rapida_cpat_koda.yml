@@ -95,8 +95,8 @@ Acceso_y_Documento_Detallado:
     La guía rápida CPAT en línea proporciona metadata básica, un extracto y un enlace al
     documento completo en formato PDF, que contiene el detalle de uso de la plataforma y pasos
     para su implementación.
-  Ref:
-    - "Guía descargable CPAT v.4 (PDF)."
+  Ctx_Required:
+    - "Guía descargable CPAT v.4 (PDF) disponible en /documentos/guia_rapida_del_cpat_v.4.pdf"
 
 Glosario_Ref_Lexicon:
   Description: "Términos clave asociados al CPAT referenciados en el Lexicon TDE."

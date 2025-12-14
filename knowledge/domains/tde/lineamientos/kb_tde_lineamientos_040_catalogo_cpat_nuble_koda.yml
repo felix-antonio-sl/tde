@@ -10,7 +10,7 @@ _manifest:
     created_at: "2025-12-13"
     source_corpus: "koda_sources"
     source_files:
-      - "koda/sources/kb_tde_096_catalogo_cpat_sts.md"
+      - "tde/kb_tde_096_catalogo_cpat_sts.md"
     source_urls: []
     source_updated_at: []
   status: draft
@@ -33,11 +33,11 @@ LLM_Parsing_Instructions:
     BEGIN_LLM_INSTRUCTIONS
     You are an AI agent consuming a KODA artifact. Parse with absolute fidelity.
 
-    FIDELITY: Preserve meat (essential information) and skeleton (structure: headers, IDs, lists, tables) with zero loss. Ignore fat (filler words, rhetoric).
+    FIDELITY: Preserve meat (essential information) and skeleton (structure: headers, IDs, lists, tables) with zero loss. Ignore fat (filler words, rhetoric, stylistic prose).
 
     LEXICON (expand before processing): Act->Action, Cond->Condition, Ctx->Context, Ctx_Required->Required External Reference, Ctx_Optional->Optional External Reference, Def->Definition, Ex->Example, Mssn->Mission, Obj->Objective, Proc->Process, Purp->Purpose, Ref->Reference, XRef->Cross-Artifact Reference, XRef_Required->Mandatory Cross-Artifact Reference, Req->Requirement, Res->Result, Src->Source, Prohib->Prohibition, Warn->Warning, Just->Justification, Rec->Recommendation
 
-    REFERENCE POLICY: Ref: is internal only—must point to existing ID within THIS document. XRef/XRef_Required: are external only—must point to a URN (optionally with #ID fragment) in another artifact.
+    REFERENCE POLICY: Ref: is internal only—must point to existing ID within THIS document. XRef/XRef_Required: are external only—must point to a URN (optionally with #ID fragment) in another artifact. External documents without specific ID use Ctx:, Ctx_Required:, or Ctx_Optional:.
 
     LANGUAGE POLICY: Keywords in English, content in original language. Never translate content.
     END_LLM_INSTRUCTIONS
@@ -72,12 +72,14 @@ Metadata_Original_STS:
 
 Resumen_Ejecutivo:
   ID: "TDE-CPAT-RESUMEN-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-RESUMEN-01"
 
   Lo_esencial:
     ID: "TDE-CPAT-RESUMEN-ESENCIAL-01"
+    Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-RESUMEN-ESENCIAL-01"
     Res:
-      - "Dominan los objetos Solicitud/Permiso y Certificado/Constancia (especialmente en municipios)."
-      - "Objetos secundarios dominantes son Pago/Arancel e Inscripción/Registro."
+      - "Dominan los objetos *Solicitud/Permiso* y *Certificado/Constancia* (especialmente en municipios)."
+      - "Objetos secundarios dominantes son *Pago/Arancel* e *Inscripción/Registro*."
       - "Existe una concentración de niveles 0–1 en las categorías dominantes."
       - "Oportunidad de salto a Nivel 3 (formulario + expediente + notificación) con retornos rápidos."
       - "Brecha existente entre la disponibilidad de una URL informativa y un canal transaccional completo."
@@ -91,9 +93,10 @@ Resumen_Ejecutivo:
 
   Que_hacer_ahora:
     ID: "TDE-CPAT-RESUMEN-ACCIONES-01"
+    Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-RESUMEN-ACCIONES-01"
     Obj: "Llevar los trámites priorizados a Nivel 3."
     Act:
-      - "Priorizar top 30–50 trámites de alto volumen/urgencia social en Solicitud/Permiso y Certificado/Constancia (Nivel 0–1)."
+      - "Priorizar top 30–50 trámites de alto volumen/urgencia social en *Solicitud/Permiso* y *Certificado/Constancia* (Nivel 0–1)."
       - "Estandarizar autenticación (ClaveÚnica por defecto donde aplique)."
       - "Crear plan de eliminación/migración de mecanismos de autenticación propios."
       - "Cerrar la brecha URL→Canal, convirtiendo páginas informativas en flujos completos con expediente y notificación."
@@ -105,9 +108,11 @@ Resumen_Ejecutivo:
 
 Alcance_Fuentes_y_Metodo:
   ID: "TDE-CPAT-METODOLOGIA-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-METODOLOGIA-01"
 
   Fuentes_y_Cobertura:
     ID: "TDE-CPAT-METODOLOGIA-FUENTES-01"
+    Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-METODOLOGIA-FUENTES-01"
     Ctx:
       - "Período de análisis 2024–2025."
       - "Cobertura GORE Ñuble."
@@ -120,6 +125,7 @@ Alcance_Fuentes_y_Metodo:
 
   Metodo_de_clasificacion:
     ID: "TDE-CPAT-METODOLOGIA-CLASIFICACION-01"
+    Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-METODOLOGIA-CLASIFICACION-01"
     Dimensiones:
       - Item: "A"
         Def: "Dimensión A – Objeto."
@@ -146,6 +152,7 @@ Alcance_Fuentes_y_Metodo:
 
   Criterios_y_Reglas_Transversales:
     ID: "TDE-CPAT-METODOLOGIA-REGLAS-01"
+    Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-METODOLOGIA-REGLAS-01"
     Ctx:
       - "Regla de propósito dominante."
       - "Regla de distinción Certificados vs Solicitudes."
@@ -157,6 +164,7 @@ Alcance_Fuentes_y_Metodo:
 
 Resultados_Consolidados:
   ID: "TDE-CPAT-RESULTADOS-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-RESULTADOS-01"
 
   GORE_Nuble:
     ID: "TDE-CPAT-RESULTADOS-GORE-01"
@@ -196,7 +204,7 @@ Resultados_Consolidados:
   Patrones_transversales:
     ID: "TDE-CPAT-RESULTADOS-PATRONES-01"
     Res:
-      - "Objetos Solicitud/Permiso y Certificado/Constancia concentran niveles bajos."
+      - "Objetos *Solicitud/Permiso* y *Certificado/Constancia* concentran niveles bajos."
       - "Uso de mecanismo propio de autenticación está extendido."
       - "ClaveÚnica está subutilizada."
       - "Muchas URLs son informativas y no tienen un flujo transaccional completo."
@@ -207,6 +215,7 @@ Resultados_Consolidados:
 
 Tipologia_CPAT_Sintesis_Operativa:
   ID: "TDE-CPAT-TIPOLOGIA-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-TIPOLOGIA-01"
 
   Objeto_del_registro_clasificacion_principal:
     ID: "TDE-CPAT-TIPOLOGIA-OBJETO-01"
@@ -238,6 +247,7 @@ Tipologia_CPAT_Sintesis_Operativa:
 
 Implicancias_para_TDE_con_foco_en_IA_responsable:
   ID: "TDE-CPAT-IMPLICANCIAS-IA-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-IMPLICANCIAS-IA-01"
 
   Mapa_de_riesgo_IA_automatizacion:
     Act: "Identificar alto riesgo sobre trámites Nivel ≥3 (decisiones que afectan derechos, subsidios, elegibilidad, priorización de proyectos)."
@@ -275,6 +285,7 @@ Implicancias_para_TDE_con_foco_en_IA_responsable:
 
 Hoja_de_Ruta_Priorizada_12_meses:
   ID: "TDE-CPAT-ROADMAP-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-ROADMAP-01"
 
   Dias_0_90_habilitadores_quick_wins:
     ID: "TDE-CPAT-ROADMAP-90D-01"
@@ -285,7 +296,7 @@ Hoja_de_Ruta_Priorizada_12_meses:
       - "Crear checklist de transparencia por trámite."
       - "Estandarizar autenticación (ClaveÚnica por defecto)."
       - "Crear planes de migración desde mecanismos de autenticación propios."
-      - "Crear plantillas de formulario, expediente y notificación para casos Solicitud/Permiso, Certificado y Pago."
+      - "Crear plantillas de formulario, expediente y notificación para casos *Solicitud/Permiso*, *Certificado* y *Pago*."
 
   Dias_90_180_aceleracion:
     ID: "TDE-CPAT-ROADMAP-180D-01"
@@ -307,6 +318,7 @@ Hoja_de_Ruta_Priorizada_12_meses:
 
 KPIs_y_tablero_regional:
   ID: "TDE-CPAT-KPIS-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-KPIS-01"
 
   Cobertura_y_madurez:
     ID: "TDE-CPAT-KPIS-MADUREZ-01"
@@ -347,6 +359,7 @@ KPIs_y_tablero_regional:
 
 Recomendaciones_tacticas_por_actor:
   ID: "TDE-CPAT-RECOMENDACIONES-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-RECOMENDACIONES-01"
 
   GORE_Nuble:
     ID: "TDE-CPAT-RECOMENDACIONES-GORE-01"
@@ -373,6 +386,7 @@ Recomendaciones_tacticas_por_actor:
 
 Arquitectura_de_solucion_estado_objetivo:
   ID: "TDE-CPAT-ARQUITECTURA-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-ARQUITECTURA-01"
 
   Capa_de_experiencia:
     ID: "TDE-CPAT-ARQUITECTURA-EXP-01"
@@ -417,6 +431,7 @@ Arquitectura_de_solucion_estado_objetivo:
 
 Playbook_de_implementacion_patrones_reutilizables:
   ID: "TDE-CPAT-PLAYBOOK-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-PLAYBOOK-01"
   Patrones:
     - Item: "1."
       Ctx: "Certificados/Constancias (L0–1→L3)"
@@ -439,6 +454,7 @@ Playbook_de_implementacion_patrones_reutilizables:
 
 Gestion_del_cambio_y_gobernanza:
   ID: "TDE-CPAT-GOBERNANZA-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-GOBERNANZA-01"
 
   Modelo_de_gobernanza:
     ID: "TDE-CPAT-GOBERNANZA-MODELO-01"
@@ -469,6 +485,7 @@ Gestion_del_cambio_y_gobernanza:
 
 Riesgos_y_mitigaciones:
   ID: "TDE-CPAT-RIESGOS-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-RIESGOS-01"
   Riesgos:
     - Warn: "R1: Subdeclaración/obsolescencia de niveles o URLs."
       Rec: "Validación periódica, pruebas de extremo a extremo, monitoreo de enlaces."
@@ -483,6 +500,7 @@ Riesgos_y_mitigaciones:
 
 Proximos_pasos_accionables_checklist:
   ID: "TDE-CPAT-NEXT-STEPS-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-NEXT-STEPS-01"
   Act:
     - "[ ] Validar dataset 2024 vs. 2025 y completar 6 comunas faltantes."
     - "[ ] Publicar catálogo único de URLs con control de versiones."
@@ -493,6 +511,7 @@ Proximos_pasos_accionables_checklist:
 
 Apendice_A_Codebook_resumido_uso_practico:
   ID: "TDE-CPAT-APENDICE-A-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-APENDICE-A-01"
 
   Definiciones_y_senales_objeto:
     ID: "TDE-CPAT-APENDICE-A1-01"
@@ -583,6 +602,7 @@ Apendice_A_Codebook_resumido_uso_practico:
 
 Apendice_B_Plantillas_reutilizables:
   ID: "TDE-CPAT-APENDICE-B-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-APENDICE-B-01"
 
   Ficha_de_Tramite_Digital_minimos:
     ID: "TDE-CPAT-APENDICE-B1-01"
@@ -622,6 +642,7 @@ Apendice_B_Plantillas_reutilizables:
 
 Apendice_C_Arbol_de_decision_de_clasificacion_texto:
   ID: "TDE-CPAT-APENDICE-C-01"
+  Src: "tde/kb_tde_096_catalogo_cpat_sts.md#TDE-CPAT-APENDICE-C-01"
   Proc:
     - "1. ¿El resultado es un documento acreditativo? → **Certificado/Constancia**."
     - "2. ¿Crea/modifica un asiento en un padrón? → **Inscripción/Registro**."

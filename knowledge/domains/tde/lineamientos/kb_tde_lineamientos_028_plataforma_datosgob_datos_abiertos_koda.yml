@@ -11,16 +11,13 @@ _manifest:
     source_corpus: "wikiguias_corpus"
     source_files:
       - "Lineamientos_TécnicosEstándares/Estándares_para_la_apertura_y_reutilización_de_Datos_Abiertos.md"
-      - "Plataformas_CompartidasManuales_de_Uso/Manual_del_Coordinadora_de_Transformación_Digital.md"
-      - "Lineamientos_TécnicosGuías/Guía_Técnica_Marco_para_las_inversiones_y_el_gasto_en_gobierno_digital_EVALTIC.md"
+      - "Plataformas_CompartidasManuales_de_Uso/Manual_del_Coordinadora_de_Transformación_Digital.md#datosgob"
     source_urls:
       - "https://wikiguias.digital.gob.cl/Est%C3%A1ndares/Datos-Abiertos"
       - "https://wikiguias.digital.gob.cl/Manuales/manual-del-coordinador"
-      - "https://wikiguias.digital.gob.cl/guias/guias/guia_evaltic"
     source_updated_at:
       - "2025-10-07T21:05:54.773Z"
       - "2025-11-14T14:28:29.734Z"
-      - "2025-10-07T23:07:45.456Z"
   status: draft
 
 ID: "TDE-PLAT-DATOSGOB-028"
@@ -150,6 +147,33 @@ Estandares_y_Alcance_DatosGOB:
     - "Usar como referencia los ejemplos de metadatos y estructuras publicados en los
       estándares de Datos Abiertos para construir catálogos y datasets institucionales
       coherentes con Datos.gob.cl."
+
+Metadatos_Estandar_Datos_Abiertos:
+  ID: "TDE_PLAT_DATOSGOB_META_001"
+  Ctx: "Metadatos solicitados por nivel (catálogo, conjunto de datos, recurso) según el estándar de Datos Abiertos."
+  Catalogo:
+    - Name: "Cobertura_geografica"
+      Def: "Descripción del ámbito geográfico que abarcan los datos del catálogo, pudiendo especificar niveles: País, Región, Provincia, Comuna."
+      Req_Level: "Recomendado"
+      Ex: "Chile, Región Metropolitana, Santiago"
+    - Name: "N_visitas"
+      Def: "Número de visitas acumuladas por los usuarios al catálogo, reflejando el grado de interacción pública."
+      Req_Level: "Recomendado"
+      Ex: "1000"
+  Conjunto_de_Datos:
+    - Name: "Fecha_de_la_version"
+      Def: "Fecha de la edición de la versión."
+      Req_Level: "Obligatorio"
+      Ex: "2023-01-01"
+  Recurso:
+    - Name: "Diccionario_de_variables"
+      Def: "Lista de campos que contiene un recurso tabular (no aplica para aquellas distribuciones que no sean tablas)."
+      Req_Level: "Obligatorio"
+      Ex: "fecha, estación, temperatura_max, temperatura_min"
+    - Name: "Formato_del_recurso"
+      Def: "Indica el formato del archivo del recurso."
+      Req_Level: "Recomendado"
+      Ex: "CSV"
 
 Licenciamiento_y_Condiciones_Uso:
   ID: "TDE_PLAT_DATOSGOB_LIC_001"
