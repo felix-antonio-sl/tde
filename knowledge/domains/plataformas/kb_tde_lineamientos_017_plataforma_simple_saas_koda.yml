@@ -210,7 +210,7 @@ XRef_Lineamientos_Relacionados:
   Description: "Lineamientos y normas que se relacionan con la digitalización de procesos usando SIMPLE."
   XRef:
     - "urn:knowledge:tde:lineamientos:sistema_transformacion_digital_2025:1.0.0"
-    - "urn:knowledge:tde:lineamientos:guia_rapida_cpat:1.0.0"
+    - "urn:knowledge:tde:lineamientos:guia_cpat_completa:1.0.0"
     - "urn:knowledge:tde:lineamientos:metodologia_gestion_proyectos:1.0.0"
     - "urn:knowledge:tde:lineamientos:guia_evaltic_marco_inversiones_gobierno_digital:1.0.0"
     - "urn:knowledge:tde:lineamientos:orientaciones_basicas_gestion_tic:1.0.0"

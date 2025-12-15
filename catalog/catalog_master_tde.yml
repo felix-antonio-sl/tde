@@ -196,13 +196,8 @@ Catalog:
       status: draft
 
     # ------------------------------------------------------------------------
-    # GUÍAS (19 artifacts)
+    # GUÍAS (16 artifacts) - Updated after redundancy cleanup
     # ------------------------------------------------------------------------
-    - urn: "urn:knowledge:tde:guias:anonimizacion_datos:1.0.0"
-      title: "Guía introductoria a la anonimización de datos"
-      file: "knowledge/domains/guias/kb_tde_lineamientos_001_guia_anonimizacion_datos_koda.yml"
-      subdomain: guias
-      status: draft
 
     - urn: "urn:knowledge:tde:guias:seguridad_ciberseguridad_v1:1.0.0"
       title: "Guía Técnica de Seguridad de la Información y Ciberseguridad (v1)"
@@ -255,18 +250,6 @@ Catalog:
     - urn: "urn:knowledge:tde:guias:sistema_tde_2025:1.0.0"
       title: "Guía Metodológica del Sistema de Transformación Digital 2025"
       file: "knowledge/domains/guias/kb_tde_lineamientos_010_sistema_transformacion_digital_2025_koda.yml"
-      subdomain: guias
-      status: draft
-
-    - urn: "urn:knowledge:tde:guias:cpat_rapida:1.0.0"
-      title: "Guía rápida CPAT"
-      file: "knowledge/domains/guias/kb_tde_lineamientos_011_guia_rapida_cpat_koda.yml"
-      subdomain: guias
-      status: draft
-
-    - urn: "urn:knowledge:tde:guias:seguridad_ciberseguridad_v2:1.0.0"
-      title: "Guía Técnica de Seguridad de la Información y Ciberseguridad (GU-CIBER-001)"
-      file: "knowledge/domains/guias/kb_tde_lineamientos_019_guia_seguridad_info_ciberseguridad_koda.yml"
       subdomain: guias
       status: draft
 
@@ -334,18 +317,18 @@ Catalog:
       status: draft
 
 Statistics:
-  total_artifacts: 47
+  total_artifacts: 44
   core_guides: 3
   agents: 1
   schemas: 0
   domains:
-    total: 44
+    total: 41
     estrategias: 4
     leyes: 5
     normas: 6
-    guias: 19
+    guias: 16
     plataformas: 7
     arquitectura: 3
   staging: 6
   last_updated: "2025-12-14"
-  notes: "Restructured per KODA/Hub standards. Eliminated redundant tde/ nesting. Organized domains into thematic subdomains."
+  notes: "Restructured per KODA/Hub. Eliminated 3 redundant artifacts: 001_anonimizacion (stub), 011_cpat (stub), 019_seguridad (duplicate). Preserved complete versions: 042_anonimizacion, 037_cpat_completa, 002_seguridad."

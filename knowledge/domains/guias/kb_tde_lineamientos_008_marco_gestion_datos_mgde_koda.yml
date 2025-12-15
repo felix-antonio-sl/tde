@@ -434,9 +434,11 @@ Glosario_Ref_Lexicon:
 XRef_Lineamientos_Relacionados:
   Description: "Lineamientos TDE asociados al MGDE."
   XRef_Required:
+    - "urn:knowledge:tde:lineamientos:guia_cpat_completa:1.0.0"
     - "urn:knowledge:tde:lineamientos:guia_metadatos_documentos_expedientes:1.0.0"
   XRef:
-    - "urn:knowledge:tde:lineamientos:guia_anonimizacion_datos:1.0.0"
+    - "urn:knowledge:tde:lineamientos:guia_anonimizacion_datos_kb080:1.0.0"
+    - "urn:knowledge:tde:lineamientos:guia_seguridad_informacion_ciberseguridad:1.0.0"
     - "urn:knowledge:tde:lineamientos:orientaciones_basicas_gestion_tic:1.0.0"
 
 Referencias_Resumen:

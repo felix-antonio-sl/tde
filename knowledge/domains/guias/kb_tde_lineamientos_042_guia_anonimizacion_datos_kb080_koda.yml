@@ -54,7 +54,6 @@ LLM_Instructions:
     - "Responder en es-CL, tono técnico, preservando estructura telegráfica, listas, tablas y referencias."
 
 XRef:
-  - "urn:knowledge:tde:lineamientos:guia_anonimizacion_datos:1.0.0"
   - "urn:knowledge:tde:lineamientos:ley_21719_proteccion_datos_personales:1.0.0"
 
 Metadata_Original_STS:
@@ -359,7 +358,7 @@ Framework_del_Proceso_de_Anonimizacion:
         Req:
           - "Debe ser único para cada identificador directo."
           - "Diseño debe impedir reversión por terceros no autorizados."
-        Ex: "Código generado aleatoriamente, sin relación matemática/lógica con dato original (e.g., \"José\" -> \"A3#m9Z!\")."
+        Ex: 'Código generado aleatoriamente, sin relación matemática/lógica con dato original (e.g., "José" -> "A3#m9Z!").'
       Gobernanza:
         Req: "Mantener una tabla segura (cifrada, acceso restringido) que vincule identificadores directos con seudónimos para gestión y cumplimiento legal."
 
@@ -419,7 +418,7 @@ Catalogo_de_Tecnicas_de_Anonimizacion:
         Rec: "Considerar impacto en análisis de datos (e.g., afecta precisión estadística de promedio, mediana)."
       - Tecnica: "Enmascaramiento de Caracteres"
         ID: "TDE-KB-080-TECNICAS-ENMASC-CARACTERES-01"
-        Def: "Sustitución de caracteres originales por alternativos (e.g., asteriscos, \"X\") para ocultar información sensible sin alterar estructura."
+        Def: 'Sustitución de caracteres originales por alternativos (e.g., asteriscos, "X") para ocultar información sensible sin alterar estructura.'
         Ctx: "Útil para proteger datos donde solo una parte es sensible (e.g., números de ID, emails) y el resto puede ser visible."
         Proc: "Reemplazar caracteres específicos manteniendo el formato original."
         Rec: "Asegurar que el método no sea predecible. Considerar enmascaramiento completo para ocultar totalmente la información."
