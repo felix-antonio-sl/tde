@@ -27,9 +27,9 @@ Catalog:
       file: "knowledge/core/kb_tde_core_lexicon_wikiguias_koda.yml"
       status: draft
 
-    - urn: "urn:knowledge:tde:core:ontology_categorical:1.0.0"
-      title: "Ontología Categórica TDE"
-      file: "knowledge/core/onto_tde_categorical.yaml"
+    - urn: "urn:knowledge:tde:core:intro_tde:1.0.0"
+      title: "Introducción a la Transformación Digital del Estado"
+      file: "knowledge/core/kb_tde_intro_tde_koda.yml"
       status: draft
 
   # ==========================================================================
@@ -330,5 +330,5 @@ Statistics:
     plataformas: 7
     arquitectura: 3
   staging: 6
-  last_updated: "2025-12-14"
-  notes: "Restructured per KODA/Hub. Eliminated 3 redundant artifacts: 001_anonimizacion (stub), 011_cpat (stub), 019_seguridad (duplicate). Preserved complete versions: 042_anonimizacion, 037_cpat_completa, 002_seguridad."
+  last_updated: "2025-12-15"
+  notes: "Saneado: eliminada entrada inexistente onto_tde_categorical, registrada kb_tde_intro_tde."
