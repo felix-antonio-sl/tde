@@ -27,24 +27,40 @@ _manifest:
       - urn: "urn:knowledge:tde:leyes:ley_19880_procedimientos:1.0.0"
       - urn: "urn:knowledge:tde:leyes:ley_21658_segdig:1.0.0"
       - urn: "urn:knowledge:tde:leyes:ley_21719_datos_personales:1.0.0"
+      - urn: "urn:knowledge:tde:leyes:legislacion_ia_chile:1.0.0"
       # Normas Técnicas
       - urn: "urn:knowledge:tde:normas:nt_documentos_expedientes:1.0.0"
       - urn: "urn:knowledge:tde:normas:nt_interoperabilidad:1.0.0"
       - urn: "urn:knowledge:tde:normas:nt_seguridad_ciberseguridad:1.0.0"
       - urn: "urn:knowledge:tde:normas:nt_autenticacion:1.0.0"
+      - urn: "urn:knowledge:tde:normas:nt_notificaciones:1.0.0"
+      - urn: "urn:knowledge:tde:normas:nt_calidad_plataformas:1.0.0"
       # Plataformas
       - urn: "urn:knowledge:tde:plataformas:claveunica:1.0.0"
       - urn: "urn:knowledge:tde:plataformas:simple_saas:1.0.0"
       - urn: "urn:knowledge:tde:plataformas:docdigital:1.0.0"
       - urn: "urn:knowledge:tde:plataformas:pisee:1.0.0"
+      - urn: "urn:knowledge:tde:plataformas:notificaciones:1.0.0"
+      - urn: "urn:knowledge:tde:plataformas:datosgob:1.0.0"
+      # Estrategias
+      - urn: "urn:knowledge:tde:estrategias:datos_administracion_estado:1.0.0"
+      - urn: "urn:knowledge:tde:estrategias:identidad_digital:1.0.0"
+      - urn: "urn:knowledge:tde:estrategias:gobierno_digital_2030:1.0.0"
+      - urn: "urn:knowledge:tde:estrategias:capacitaciones_tde:1.0.0"
       # Guías
       - urn: "urn:knowledge:tde:guias:cpat_completa:1.0.0"
       - urn: "urn:knowledge:tde:guias:mgde:1.0.0"
+      - urn: "urn:knowledge:tde:guias:cloud_publica:1.0.0"
+      - urn: "urn:knowledge:tde:guias:metadatos_documentos:1.0.0"
+      - urn: "urn:knowledge:tde:guias:evaltic:1.0.0"
+      - urn: "urn:knowledge:tde:guias:calidad_web:1.0.0"
+      - urn: "urn:knowledge:tde:guias:diseno_servicios:1.0.0"
+      - urn: "urn:knowledge:tde:guias:anonimizacion_datos_v2:1.0.0"
   provenance:
     created_by: "FS"
     created_at: "2025-12-15"
-    last_modified_at: "2025-12-15"
-    version_notes: "v1.0.0 - Initial KODA-SMITH construction"
+    last_modified_at: "2025-12-16"
+    version_notes: "v1.0.1 - KODA-TESTER audit: URN sync + S-CPAT transition"
     model_collaborators: ["IA-CLAUDE", "KODA-SMITH"]
 
 KODA_Runtime_Instructions:
@@ -158,6 +174,7 @@ public_behavior_workflows_and_states:
       transitions:
         - "IF resuelto → S-DISPATCHER"
         - "IF requiere estrategia → S-ESTRATEGIAS"
+        - "IF terminar → S-END"
 
     S-END:
       role: "Gestor de Cierre"
