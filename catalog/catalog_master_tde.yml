@@ -10,7 +10,7 @@ _manifest:
   provenance:
     created_by: "Transformación Digital del Estado"
     created_at: "2025-11-25"
-    last_modified_at: "2025-12-14"
+    last_modified_at: "2025-12-23"
 
 Catalog:
   # ==========================================================================
@@ -330,5 +330,5 @@ Statistics:
     plataformas: 7
     arquitectura: 3
   staging: 6
-  last_updated: "2025-12-15"
+  last_updated: "2025-12-23"
   notes: "Saneado: eliminada entrada inexistente onto_tde_categorical, registrada kb_tde_intro_tde."
